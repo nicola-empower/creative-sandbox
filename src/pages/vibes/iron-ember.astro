@@ -1,0 +1,637 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="The Iron & Ember">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Zilla+Slab:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="ember-wrapper">
+        <!-- Noise Texture Overlay -->
+        <div class="noise-overlay"></div>
+
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">
+                <span class="logo-text">The Iron & Ember</span>
+                <span class="est">EST. 1892</span>
+            </div>
+            <button class="book-btn">Book a Table</button>
+        </nav>
+
+        <!-- Hero (Parallax) -->
+        <header class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1 class="headline">Warmth in the <br />Wilderness.</h1>
+                <p class="subhead">
+                    A historic mill, a crackling fire, and a plate worth
+                    traveling for.
+                </p>
+            </div>
+
+            <!-- Menu Section -->
+            <div class="menu-section">
+                <div class="section-header">
+                    <h2>The Fare</h2>
+                    <p>Seasonal. Local. Honest.</p>
+                </div>
+
+                <div class="menu-grid">
+                    <!-- Image overlapping -->
+                    <div class="menu-image">
+                        <div class="img-placeholder"></div>
+                    </div>
+
+                    <!-- Menu Items -->
+                    <div class="menu-list">
+                        <div class="menu-item">
+                            <div class="item-head">
+                                <h3>Venison & Juniper Pie</h3>
+                                <span class="price">£24</span>
+                            </div>
+                            <p class="item-desc">
+                                Slow-cooked shoulder, suet pastry, roasted root
+                                vegetables.
+                            </p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-head">
+                                <h3>Smoked Haddock Chowder</h3>
+                                <span class="price">£18</span>
+                            </div>
+                            <p class="item-desc">
+                                Leeks, potato, crispy bacon, sourdough croutons.
+                            </p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-head">
+                                <h3>Roasted Pheasant</h3>
+                                <span class="price">£26</span>
+                            </div>
+                            <p class="item-desc">
+                                Bread sauce, game chips, watercress, red wine
+                                jus.
+                            </p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-head">
+                                <h3>Sticky Toffee Pudding</h3>
+                                <span class="price">£9</span>
+                            </div>
+                            <p class="item-desc">
+                                Muscovado sauce, clotted cream ice cream.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Sleep Page (Gallery) -->
+            <section class="sleep-section">
+                <div class="sleep-content">
+                    <h2>Stay the Night.</h2>
+                    <p>
+                        Retreat to one of our six restored rooms. Exposed beams,
+                        Egyptian cotton, and silence.
+                    </p>
+                    <button class="secondary-btn">View Rooms</button>
+                </div>
+                <div class="room-gallery">
+                    <div class="room-card room-1">
+                        <div class="room-img"></div>
+                        <span>The Miller's Suite</span>
+                    </div>
+                    <div class="room-card room-2">
+                        <div class="room-img"></div>
+                        <span>The River Room</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Booking Widget (Mock) -->
+            <section class="booking-section">
+                <div class="booking-widget">
+                    <h3>Reserve Your Table</h3>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Date</label>
+                            <select><option>Today, 2 Dec</option></select>
+                        </div>
+                        <div class="input-group">
+                            <label>Guests</label>
+                            <select><option>2 People</option></select>
+                        </div>
+                        <div class="input-group">
+                            <label>Time</label>
+                            <select><option>19:00</option></select>
+                        </div>
+                    </div>
+                    <button class="submit-btn">Find a Table</button>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <h4>The Iron & Ember</h4>
+                        <p>Old Mill Road, Yorkshire, Y01 2AB</p>
+                        <p>+44 (0) 1904 555 555</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Hours</h4>
+                        <p>Mon-Sun: 12pm - 11pm</p>
+                        <p>Kitchen closes at 9:30pm</p>
+                    </div>
+                </div>
+            </footer>
+            <VibeDNA
+                description="Slow-cooked, seasonal, and rooted in Yorkshire. A modern gastropub with a soul."
+                fontHeader="Zilla Slab"
+                fontBody="Merriweather"
+                palette={[
+                    { hex: "#D8C8B8", name: "Eggnog" },
+                    { hex: "#616852", name: "Holly" },
+                    { hex: "#78211E", name: "Mulled Wine" },
+                ]}
+            />
+
+            <style>
+                /* 
+    Palette:
+    Eggnog Cream: #D8C8B8
+    Holly Leaf: #616852
+    Mulled Wine: #78211E
+    Cinnamon Sugar: #BB9771
+    Frosty Silver: #BEB3AC
+  */
+
+                :root {
+                    --bg-color: #d8c8b8;
+                    --text-color: #616852;
+                    --accent-red: #78211e;
+                    --accent-gold: #bb9771;
+                    --neutral: #beb3ac;
+
+                    --font-heading: "Zilla Slab", serif;
+                    --font-body: "Merriweather", serif;
+                }
+
+                .ember-wrapper {
+                    background-color: var(--bg-color);
+                    color: var(--text-color);
+                    font-family: var(--font-body);
+                    min-height: 100vh;
+                    position: relative;
+                    overflow-x: hidden;
+                }
+
+                /* Noise Texture */
+                .noise-overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    pointer-events: none;
+                    z-index: 50;
+                    opacity: 0.05;
+                    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+                }
+
+                /* Nav */
+                .nav {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1.5rem 3rem;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: 10;
+                }
+
+                .logo {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .logo-text {
+                    font-family: var(--font-heading);
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                    color: var(--neutral); /* Frosty Silver on Hero */
+                    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                }
+
+                .est {
+                    font-size: 0.7rem;
+                    letter-spacing: 2px;
+                    color: var(--accent-gold);
+                    font-weight: 700;
+                }
+
+                .book-btn {
+                    background-color: var(--accent-red);
+                    color: #fff;
+                    border: none;
+                    padding: 0.8rem 1.5rem;
+                    font-family: var(--font-heading);
+                    font-weight: 600;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                    transition: transform 0.2s;
+                }
+
+                .book-btn:hover {
+                    transform: translateY(-2px);
+                }
+
+                /* Hero */
+                .hero {
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .hero-bg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 120%; /* For parallax */
+                    background:
+                        radial-gradient(
+                            circle,
+                            rgba(0, 0, 0, 0.3) 0%,
+                            rgba(0, 0, 0, 0.7) 100%
+                        ),
+                        #2c1e1a; /* Fallback/Placeholder for video */
+                    z-index: -1;
+                    transform: translateY(0);
+                    /* Simulated Parallax would go here with JS, keeping it simple css for now */
+                }
+
+                /* Fireplace effect placeholder */
+                .hero-bg::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 20%;
+                    width: 60%;
+                    height: 60%;
+                    background: radial-gradient(
+                        circle,
+                        rgba(255, 100, 0, 0.2) 0%,
+                        transparent 70%
+                    );
+                    filter: blur(50px);
+                    animation: flicker 4s infinite alternate;
+                }
+
+                .headline {
+                    font-family: var(--font-heading);
+                    font-size: 5rem;
+                    font-weight: 700;
+                    line-height: 1.1;
+                    color: #fff;
+                    margin-bottom: 1.5rem;
+                    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+                }
+
+                .subhead {
+                    font-size: 1.2rem;
+                    color: var(--neutral);
+                    max-width: 600px;
+                    font-style: italic;
+                }
+
+                .scroll-indicator {
+                    position: absolute;
+                    bottom: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
+                    color: var(--neutral);
+                    font-size: 0.7rem;
+                    letter-spacing: 2px;
+                }
+
+                .scroll-indicator .line {
+                    width: 1px;
+                    height: 60px;
+                    background-color: var(--neutral);
+                }
+
+                /* Menu Section */
+                .menu-section {
+                    padding: 6rem 2rem;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+
+                .section-header {
+                    text-align: center;
+                    margin-bottom: 4rem;
+                }
+
+                .section-header h2 {
+                    font-family: var(--font-heading);
+                    font-size: 3rem;
+                    color: var(--accent-red);
+                    margin-bottom: 0.5rem;
+                }
+
+                .section-header p {
+                    font-style: italic;
+                    color: var(--accent-gold);
+                    font-size: 1.2rem;
+                }
+
+                .menu-grid {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 4rem;
+                    align-items: center;
+                }
+
+                @media (min-width: 768px) {
+                    .menu-grid {
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+
+                .menu-image {
+                    position: relative;
+                    padding: 1rem;
+                    border: 1px solid var(--accent-gold);
+                    transform: rotate(-2deg);
+                }
+
+                .img-placeholder {
+                    width: 100%;
+                    height: 400px;
+                    background-color: var(--text-color);
+                    opacity: 0.2;
+                }
+
+                .menu-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                }
+
+                .menu-item {
+                    border-bottom: 1px dashed var(--accent-gold);
+                    padding-bottom: 1rem;
+                }
+
+                .item-head {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
+                    margin-bottom: 0.5rem;
+                }
+
+                .item-head h3 {
+                    font-family: var(--font-heading);
+                    font-size: 1.5rem;
+                    color: var(--accent-red);
+                    font-weight: 600;
+                }
+
+                .price {
+                    font-family: var(--font-heading);
+                    font-weight: 700;
+                    color: var(--accent-gold);
+                    font-size: 1.2rem;
+                }
+
+                .item-desc {
+                    font-size: 0.95rem;
+                    line-height: 1.6;
+                }
+
+                /* Sleep Section */
+                .sleep-section {
+                    background-color: var(--neutral); /* Frosty Silver */
+                    padding: 6rem 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4rem;
+                    align-items: center;
+                }
+
+                @media (min-width: 768px) {
+                    .sleep-section {
+                        flex-direction: row;
+                        justify-content: center;
+                    }
+                }
+
+                .sleep-content {
+                    max-width: 400px;
+                }
+
+                .sleep-content h2 {
+                    font-family: var(--font-heading);
+                    font-size: 3rem;
+                    color: #fff;
+                    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                    margin-bottom: 1rem;
+                }
+
+                .sleep-content p {
+                    color: var(--text-color);
+                    margin-bottom: 2rem;
+                    font-size: 1.1rem;
+                }
+
+                .secondary-btn {
+                    background: transparent;
+                    border: 2px solid var(--text-color);
+                    color: var(--text-color);
+                    padding: 0.8rem 2rem;
+                    font-family: var(--font-heading);
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                }
+
+                .secondary-btn:hover {
+                    background-color: var(--text-color);
+                    color: var(--neutral);
+                }
+
+                .room-gallery {
+                    display: flex;
+                    gap: 2rem;
+                }
+
+                .room-card {
+                    background-color: #fff;
+                    padding: 1rem;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                    transform: rotate(2deg);
+                    text-align: center;
+                    font-family: var(--font-heading);
+                    font-weight: 600;
+                    color: var(--text-color);
+                }
+
+                .room-card:nth-child(2) {
+                    transform: rotate(-3deg) translateY(20px);
+                }
+
+                .room-img {
+                    width: 200px;
+                    height: 250px;
+                    background-color: #eee;
+                    margin-bottom: 1rem;
+                }
+
+                /* Booking Widget */
+                .booking-section {
+                    padding: 6rem 2rem;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .booking-widget {
+                    background-color: #fff;
+                    padding: 3rem;
+                    border: 1px solid var(--accent-gold);
+                    box-shadow: 20px 20px 0 var(--accent-gold);
+                    max-width: 600px;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .booking-widget h3 {
+                    font-family: var(--font-heading);
+                    font-size: 2rem;
+                    color: var(--accent-red);
+                    margin-bottom: 2rem;
+                }
+
+                .form-row {
+                    display: flex;
+                    gap: 1rem;
+                    margin-bottom: 2rem;
+                    flex-wrap: wrap;
+                }
+
+                .input-group {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    min-width: 120px;
+                }
+
+                .input-group label {
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                    color: var(--text-color);
+                    margin-bottom: 0.5rem;
+                }
+
+                .input-group select {
+                    padding: 0.8rem;
+                    border: 1px solid var(--neutral);
+                    background-color: var(--bg-color);
+                    font-family: var(--font-body);
+                    color: var(--text-color);
+                }
+
+                .submit-btn {
+                    background-color: var(--accent-red);
+                    color: #fff;
+                    border: none;
+                    padding: 1rem 3rem;
+                    font-family: var(--font-heading);
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    width: 100%;
+                    transition: background-color 0.2s;
+                }
+
+                .submit-btn:hover {
+                    background-color: #5a1816;
+                }
+
+                /* Footer */
+                .footer {
+                    background-color: var(--text-color); /* Holly Leaf */
+                    color: var(--bg-color); /* Eggnog Cream */
+                    padding: 4rem 2rem;
+                }
+
+                .footer-content {
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+                }
+
+                .footer-col h4 {
+                    font-family: var(--font-heading);
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                    color: var(--neutral);
+                }
+
+                .footer-col p {
+                    margin-bottom: 0.5rem;
+                    opacity: 0.8;
+                }
+
+                @keyframes flicker {
+                    0% {
+                        opacity: 0.8;
+                        transform: scale(1);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: scale(1.05);
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .headline {
+                        font-size: 3rem;
+                    }
+                    .room-gallery {
+                        flex-direction: column;
+                    }
+                    .room-card {
+                        transform: rotate(0);
+                    }
+                    .room-card:nth-child(2) {
+                        transform: rotate(0);
+                    }
+                }
+            </style>
+        </header>
+    </div>
+</BlankLayout>

@@ -1,0 +1,351 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="Structura Systems">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="structura-wrapper">
+        <!-- Grid Overlay -->
+        <div class="grid-overlay"></div>
+
+        <!-- Header / Nav -->
+        <header class="header">
+            <div class="brand">STRUCTURA.IO</div>
+            <div class="meta">
+                <span>[EST. 2024]</span>
+                <span>[LDN_UK]</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="content-block">
+                <div class="label">:: SYSTEM_01 ::</div>
+                <h1 class="headline">RESIDENTIAL<br />FRAMEWORKS</h1>
+                <p class="subhead">
+                    Residential design stripped of ego. We utilize data-driven
+                    structural analysis to build frameworks that outlast trends.
+                </p>
+
+                <button class="cta-btn">
+                    <span class="btn-text">:: VIEW BLUEPRINTS ::</span>
+                    <span class="btn-glitch"></span>
+                </button>
+
+                <VibeDNA
+                    description="Structural Engineering. Data-driven frameworks. Stripped of ego."
+                    fontHeader="JetBrains Mono"
+                    fontBody="Inter"
+                    palette={[
+                        { hex: "#0F172A", name: "Slate Dark" },
+                        { hex: "#F8FAFC", name: "Ghost White" },
+                        { hex: "#3B82F6", name: "Terminal Blue" },
+                    ]}
+                />
+
+                <!-- Data Visualization / Decorative Elements -->
+                <div class="data-block">
+                    <div class="data-row">
+                        <span>LOAD_BEARING_CAPACITY</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 85%"></div>
+                        </div>
+                        <span>85%</span>
+                    </div>
+                    <div class="data-row">
+                        <span>MATERIAL_EFFICIENCY</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 92%"></div>
+                        </div>
+                        <span>92%</span>
+                    </div>
+                    <div class="data-row">
+                        <span>THERMAL_MASS</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 78%"></div>
+                        </div>
+                        <span>78%</span>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="footer-col">
+                        <h3>PROJECTS</h3>
+                        <a href="#">[01] RESIDENCE_A</a>
+                        <a href="#">[02] TOWER_BLOCK</a>
+                        <a href="#">[03] BRIDGE_LINK</a>
+                    </div>
+                    <div class="footer-col">
+                        <h3>CONTACT</h3>
+                        <a href="#">INFO@STRUCTURA.IO</a>
+                        <a href="#">+44 020 7946 0123</a>
+                    </div>
+                    <div class="footer-col copyright">
+                        <span>© 2025 STRUCTURA SYSTEMS</span>
+                        <span>ALL RIGHTS RESERVED</span>
+                    </div>
+                </footer>
+
+                <style>
+                    /* 
+    Palette:
+    Slate Dark: #0F172A
+    Ghost White: #F8FAFC
+    Terminal Blue: #3B82F6
+  */
+
+                    :root {
+                        --bg-color: #0f172a;
+                        --text-color: #f8fafc;
+                        --accent-color: #3b82f6;
+                        --grid-color: rgba(
+                            59,
+                            130,
+                            246,
+                            0.15
+                        ); /* Terminal Blue with low opacity */
+
+                        --font-mono: "JetBrains Mono", monospace;
+                        --font-body: "Inter", sans-serif;
+                    }
+
+                    .structura-wrapper {
+                        background-color: var(--bg-color);
+                        color: var(--text-color);
+                        font-family: var(--font-mono);
+                        min-height: 100vh;
+                        position: relative;
+                        overflow-x: hidden;
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    /* Exposed Grid Background */
+                    .grid-overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-image:
+                            linear-gradient(
+                                var(--grid-color) 1px,
+                                transparent 1px
+                            ),
+                            linear-gradient(
+                                90deg,
+                                var(--grid-color) 1px,
+                                transparent 1px
+                            );
+                        background-size: 50px 50px;
+                        pointer-events: none;
+                        z-index: 0;
+                    }
+
+                    /* Header */
+                    .header {
+                        position: relative;
+                        z-index: 10;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 2rem 3rem;
+                        border-bottom: 1px solid var(--accent-color);
+                    }
+
+                    .brand {
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        letter-spacing: -1px;
+                    }
+
+                    .meta {
+                        display: flex;
+                        gap: 2rem;
+                        font-size: 0.8rem;
+                        opacity: 0.7;
+                    }
+
+                    /* Main Content */
+                    .main-content {
+                        position: relative;
+                        z-index: 10;
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column; /* Mobile first */
+                        justify-content: center;
+                        padding: 2rem 3rem; /* Reduced padding */
+                        gap: 2rem; /* Reduced gap */
+                    }
+
+                    @media (min-width: 768px) {
+                        .main-content {
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                    }
+
+                    .content-block {
+                        max-width: 600px;
+                    }
+
+                    .label {
+                        color: var(--accent-color);
+                        font-size: 0.9rem;
+                        margin-bottom: 1rem;
+                        font-weight: 700;
+                    }
+
+                    .headline {
+                        font-size: 3.5rem; /* Reduced font size */
+                        line-height: 1;
+                        margin-bottom: 1.5rem;
+                        letter-spacing: -2px;
+                    }
+
+                    .subhead {
+                        font-family: var(--font-body);
+                        font-size: 1.1rem;
+                        line-height: 1.6;
+                        margin-bottom: 3rem;
+                        opacity: 0.8;
+                        border-left: 2px solid var(--accent-color);
+                        padding-left: 1.5rem;
+                    }
+
+                    /* CTA Button */
+                    .cta-btn {
+                        position: relative;
+                        background: transparent;
+                        border: 1px solid var(--accent-color);
+                        color: var(--accent-color);
+                        padding: 1rem 2rem;
+                        font-family: var(--font-mono);
+                        font-weight: 700;
+                        cursor: pointer;
+                        overflow: hidden;
+                        transition: all 0.3s ease;
+                    }
+
+                    .cta-btn:hover {
+                        background: var(--accent-color);
+                        color: var(--bg-color);
+                        box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+                    }
+
+                    /* Data Block */
+                    .data-block {
+                        width: 100%;
+                        max-width: 400px;
+                        border: 1px solid var(--grid-color);
+                        padding: 2rem;
+                        background: rgba(15, 23, 42, 0.8);
+                        backdrop-filter: blur(5px);
+                    }
+
+                    .data-row {
+                        margin-bottom: 1.5rem;
+                        font-size: 0.8rem;
+                    }
+
+                    .data-row:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .data-row span:first-child {
+                        display: block;
+                        margin-bottom: 0.5rem;
+                        opacity: 0.7;
+                    }
+
+                    .bar {
+                        width: 100%;
+                        height: 4px;
+                        background: rgba(255, 255, 255, 0.1);
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .fill {
+                        height: 100%;
+                        background: var(--accent-color);
+                    }
+
+                    /* Footer */
+                    .footer {
+                        position: relative;
+                        z-index: 10;
+                        display: grid;
+                        grid-template-columns: repeat(
+                            auto-fit,
+                            minmax(200px, 1fr)
+                        );
+                        gap: 2rem;
+                        padding: 3rem;
+                        border-top: 1px solid var(--accent-color);
+                        font-size: 0.9rem;
+                    }
+
+                    .footer-col h3 {
+                        color: var(--accent-color);
+                        margin-bottom: 1rem;
+                        font-size: 0.8rem;
+                    }
+
+                    .footer-col a {
+                        display: block;
+                        color: var(--text-color);
+                        text-decoration: none;
+                        margin-bottom: 0.5rem;
+                        opacity: 0.6;
+                        transition: opacity 0.2s;
+                    }
+
+                    .footer-col a:hover {
+                        opacity: 1;
+                        color: var(--accent-color);
+                    }
+
+                    .copyright {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        opacity: 0.4;
+                    }
+
+                    /* Responsive */
+                    @media (max-width: 768px) {
+                        .header {
+                            flex-direction: column;
+                            align-items: flex-start;
+                            gap: 1rem;
+                        }
+
+                        .meta {
+                            flex-direction: column;
+                            gap: 0.5rem;
+                        }
+
+                        .headline {
+                            font-size: 2.5rem;
+                        }
+
+                        .data-block {
+                            width: 100%;
+                        }
+                    }
+                </style>
+            </div>
+        </main>
+    </div></BlankLayout
+>

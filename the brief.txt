@@ -1,0 +1,1034 @@
+Here is the blueprint for Lumina Creative.
+
+1. The Visual Identity
+We are going for "Cyber-Minimalism." It looks expensive but energetic.
+
+Primary Colour: Electric Purple (#BF00FF) — This is your "action" colour (buttons, hover states).
+
+Background: Deep Black (#050505) — Not pure black, but close. Softens the eyes.
+
+Text: Off-White (#F0F0F0) — Pure white is too harsh on a black background.
+
+Secondary Accent: Acid Green (#CCFF00) — Use this sparingly (e.g., for the cursor or a single "New" badge).
+
+2. Typography
+Since you are coding this, let's grab some Google Fonts that scream "Digital Authority."
+
+Headings (The Loud Part): Syne or Clash Display.
+
+Why: They are bold, geometric, and look very "custom code" rather than "standard WordPress template."
+
+Body Text (The Readable Part): Space Grotesk or Inter.
+
+Why: Clean, tech-focused, and easy to read on dark backgrounds.
+
+3. Page Content & Structure
+Here is the copy and layout. You can literally copy-paste this into your HTML structure.
+
+Navigation Bar
+Left: LUMINA (Logo - text based, bold)
+
+Right: Work | Studio | Contact | [ ☀/☾ Toggle Icon ]
+
+Section 1: The Hero (The Tech Flex)
+Visual: Solid black background. Large, centred text.
+
+The Code Element: The typewriter effect on the last word.
+
+Headline (H1):
+
+We don't just build websites. We build [ Brands / Legacies / Hype ] (This part cycles/animates)
+
+Sub-headline:
+
+Digital strategies for the brave. Stop whispering. Start shouting.
+
+CTA Button: [ START THE PROJECT ] (Electric Purple background, sharp corners).
+
+Section 2: The "Flex" (Social Proof)
+Layout: A horizontal scrolling ticker or a simple 3-column grid.
+
+Content:
+
+400% ROI for Client X
+
+1.2M Impressions Generated
+
+No Boring Campaigns
+
+Section 3: Selected Work (The Images)
+Layout: Asymmetrical grid (one large image left, two small images right). This shows you can code CSS Grid, not just Flexbox.
+
+Caption:
+
+Project: Neon Drift Result: Viral Launch Link: View Case Study →
+
+Section 4: The Pitch (About Us)
+Heading: The Method.
+
+Copy:
+
+You’ve seen enough templates. So have your customers. Lumina creates bespoke digital experiences that stick. We combine raw creativity with clean code to disrupt your industry.
+
+Core Stack: Strategy / Design / Development.
+
+Section 5: Contact (The Smooth Scroll Destination)
+Heading: Ready to break the internet?
+
+Copy:
+
+Drop your details. We’ll bring the energy.
+
+Form Fields: Name, Email, "What's the vibe?" (Dropdown), Message.
+
+Submit Button: [ SEND IT ]
+
+Footer
+Lumina Creative © 2025.
+
+Small text: Coded by Empower Digital Solutions.
+
+4. Technical Checklist (For your Portfolio)
+To make sure this impresses potential clients for Empower Digital Solutions, ensure you hit these points:
+
+The Toggle: When they click the Sun/Moon, ensure the background flips to White and the Text to Black instantly (using CSS variables).
+
+Smooth Scroll: When clicking "Contact" in the nav, use scroll-behavior: smooth; in your CSS so it glides down.
+
+Responsiveness: Make sure that "Typewriter" text doesn't break on a mobile screen (use clamp() for font sizes).
+
+The Tech Stack (The "Flex")
+Don't use a basic HTML/CSS setup. Use a stack that clients pay premium for.
+
+Framework: Next.js (React).
+
+Why: It’s the industry standard for high-performance, SEO-friendly sites. It shows you can build "web apps," not just pages.
+
+Styling: Tailwind CSS.
+
+Why: It allows you to build that "Dark Mode" toggle efficiently using CSS variables.
+
+Animation: Framer Motion or GSAP.
+
+Why: This is how you get that "Typewriter" effect and the smooth scroll without it feeling clunky.
+
+Hosting: Vercel.
+
+Why: It’s free for portfolios, incredibly fast, and integrates perfectly with Next.js.
+
+2. The Imagery: "Cyber-Minimalism"
+You asked "Images of what?" Since the vibe is loud and tech-forward, avoid stock photos of "people shaking hands."
+
+Theme: Controlled Chaos.
+
+Hero Section: Abstract 3D Liquid/Chrome.
+
+Search Terms: "Liquid chrome shapes," "3D abstract metallic flow," "Neon fluid render."
+
+Vibe: Shiny, futuristic, slightly weird. It implies "we shape your brand."
+
+Team Section: Glitch Effect Portraits.
+
+Idea: Take a normal photo of a person (or use a stylistic AI generator) and apply a CSS filter that shifts the RGB channels slightly.
+
+Vibe: Shows you can manipulate images with code.
+
+Case Studies: Device Mockups on Dark Glass.
+
+Idea: Don't just show a screenshot of a website. Place the screenshot inside an iPhone frame that is floating on a dark, glassy background.
+
+Search Terms: "Clay iPhone mockup dark," "Glassmorphism UI presentation."
+
+Background Textures: Grain/Noise.
+
+Idea: Overlay a very subtle "noise" texture (like TV static) over the black background at 5% opacity. It makes the black look premium, not empty.
+
+3. Content: More than a Brochure
+A "Brochure Site" dies after the user reads it once. A "Digital Experience" keeps them clicking. To show off your backend/database skills (for Empower Automation), add these sections:
+
+A. The "Playground" (or "Labs")
+Instead of just a blog, call it Lumina Labs.
+
+Content: Small, interactive code experiments.
+
+Example: A button that explodes when clicked. A cursor that trails neon dust.
+
+Text Content: "We don't just follow trends. We code them. Welcome to our sandbox of digital experiments."
+
+Why: It proves you love code, not just templates.
+
+B. The "Manifesto" (Instead of 'About Us')
+"About Us" is boring. "The Manifesto" is Gen-Z.
+
+Headline: "Average is invisible."
+
+Copy:
+
+We believe the internet is crowded. To stand out, you don't need to be louder; you need to be different. We reject safe designs. We reject the template. We build digital violence—brands that smash through the noise and demand attention.
+
+Our Philosophy:
+
+Code is Art: If it loads slow, it’s ugly.
+
+User Obsessed: We stalk your customers (legally) to know what they click.
+
+Data Driven: Creativity without metrics is just decoration.
+
+C. "The Process" (Interactive Step-by-Step)
+Show how you work. Use a horizontal scroll here.
+
+Discovery: "We ask the uncomfortable questions."
+
+Strategy: "We build the war map."
+
+Development: "Clean code. No bloat. Pure speed."
+
+Launch: "We don't just push 'live'. We ignite."
+
+4. Summary of the Build
+Stack: Next.js + Tailwind.
+
+Key Feature: Dark/Light mode toggle that inverts the neon colours (Purple in dark mode -> Deep Green in light mode).
+
+Images: Chrome/Metallic 3D shapes and Glitch portraits.
+
+Extra Content: A "Manifesto" to show strong copywriting and a "Labs" section to show off JavaScript skills.
+
+This is the hardest part of building a portfolio site: making the "Light Mode" look as cool as the "Dark Mode" without blinding the user.To keep that Loud, Gen-Z, Disruptive vibe in both, we need to treat them differently:Dark Mode = The "Nightclub" (Cyber, Glowing, Immersive).Light Mode = The "Art Gallery" (Stark, Brutalist, High-Contrast).Here is your colour strategy.The Palette: "Electric Voids"We are locking in Electric Purple (#BF00FF) as your primary brand anchor because it pops aggressively on both black and white backgrounds.1. Dark Mode (The Default)The vibe: Coding at 3 AM, neon signs, deep tech.ElementHex CodeColour NameUsageBackground#050505Void BlackThe main canvas. Not pure black, but close.Text (Body)#E0E0E0Mist WhiteEasy on the eyes against the dark background.Headings#FFFFFFPure WhiteFor that "in your face" impact.Primary Brand#BF00FFElectric PurpleButtons, Icons, Links.The "Flex"#CCFF00Acid GreenUse sparingly for tiny details (cursors, borders).2. Light Mode (The Toggle)The vibe: High-end fashion magazine, brutalist, confident.Crucial change: We don't just invert the colours. We shift them slightly to maintain contrast.ElementHex CodeColour NameUsageBackground#FAFAFAGallery WhiteA very cool, crisp off-white.Text (Body)#171717Ink BlackSharp, heavy contrast.Headings#000000Pure BlackMaximum loudness.Primary Brand#BF00FFElectric PurpleIt stays the same! It pops huge against white.The "Flex"#000000Solid BlackChange: Acid Green disappears here. It becomes thick black borders or "Highlighter" style blocks.How to Style the Elements (The Vibe Check)To ensure they feel like the same brand, you must apply the colours differently in each mode.1. The ButtonsDark Mode: Solid Electric Purple background with White text. It glows.Light Mode: Transparent background with a thick 2px Black Border and Electric Purple text (or hover fill). This feels more "structural" and modern.2. The "Typewriter" TextDark Mode: Text is Acid Green (#CCFF00) or White. It looks like terminal code.Light Mode: Text is Electric Purple (#BF00FF) or Black with a purple background highlight (like a marker pen).3. The Cards (Case Studies)Dark Mode: Glassmorphism. Dark grey background (#1A1A1A) with a subtle white border (rgba(255,255,255, 0.1)).Light Mode: Brutalism. White background with a hard, solid Black shadow (box-shadow: 4px 4px 0px #000). This gives it a "sticker" or "pop-art" feel.The Code Implementation (CSS Variables)Since you are using Empower Digital Solutions to show off your code, use CSS Variables (Custom Properties). This makes the toggle switch instant and performant.Put this in your global CSS file:CSS:root {
+  /* Default to Dark Mode Variables */
+  --bg-primary: #050505;
+  --text-body: #E0E0E0;
+  --text-heading: #FFFFFF;
+  --brand-color: #BF00FF;
+  --accent-flex: #CCFF00; /* Acid Green */
+  --card-border: 1px solid rgba(255,255,255, 0.1);
+  --button-shadow: 0px 0px 15px rgba(191, 0, 255, 0.4); /* Glow effect */
+}
+
+[data-theme='light'] {
+  /* Light Mode Overrides */
+  --bg-primary: #FAFAFA;
+  --text-body: #171717;
+  --text-heading: #000000;
+  --brand-color: #BF00FF; /* Stays the same */
+  --accent-flex: #000000; /* Green becomes Black for contrast */
+  --card-border: 2px solid #000000;
+  --button-shadow: 4px 4px 0px #000000; /* Hard shadow, no glow */
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+Why this works for you:Dark Mode sells your coding ability (it looks like an IDE/Text Editor).Light Mode sells your design ability (it looks like a modern agency).The Switch: By changing the box-shadow from a "soft glow" in dark mode to a "hard black drop shadow" in light mode, you show attention to detail that standard WordPress themes don't have.
+
+Here is the manifesto text. Since we are ditching the standard "About Us," this copy needs to feel like a declaration of war against boring websites.
+
+I have written three versions. Choose the one that matches how "loud" you want to go.
+
+Option 1: The "Disruptor" (High Energy, Gen-Z Vibe)
+Use this if you want to show off the "Loud/Neon" aesthetic. It’s punchy, short, and aggressive.
+
+Headline: AVERAGE IS INVISIBLE.
+
+Body Copy: The internet is a crowded room. Most brands are just standing in the corner, hoping to be noticed. We don't do hope. We kick down the door.
+
+Lumina wasn't built to blend in. We exist to disrupt the scroll. We reject the template, the safe choice, and the "good enough."
+
+Our Code:
+
+Silence is Failure: If your brand doesn't provoke a reaction, it’s dead.
+
+Code is Art: We don't use drag-and-drop. We hand-craft digital violence.
+
+Data Over Ego: Pretty designs are vanity. Conversion is reality.
+
+CTA: Ready to make some noise? [ IGNITE THE BRAND ]
+
+Great choice. **Option 1** is the one that gets people to stop scrolling and start reading. It’s aggressive, confident, and fits the "Electric/Neon" aesthetic perfectly.
+
+Since you are building this in **Next.js** with **Tailwind CSS**, here is the code component for the Manifesto section.
+****now changed to ASTRO! not next.. 
+The Strategy: You treat the static parts (Text, Headers, Footer) as HTML (zero JS). You treat the complex parts (The Toggle, The Hover Menu) as React Islands.
+
+3. The New Stack (Astro Edition)
+Framework: Astro
+
+Styling: Tailwind CSS
+
+Interactivity: React (loaded only where needed).
+
+Motion: Framer Motion (inside the React islands) + Astro View Transitions (for page navigation).
+
+4. The "Secret Weapon": Astro View Transitions
+Since version 3.0, Astro has a built-in router that mimics the "App-like" feel of Next.js without the complexity.
+
+You add <ViewTransitions /> to your layout head, and suddenly your multi-page website feels like a Single Page App (SPA). The dark mode won't flicker when you change pages. The scroll position is preserved. It is seamless.
+
+How to Implement the "Lumina" features in Astro
+Here is how we adapt the code I gave you earlier to work in Astro.
+
+Step 1: The Setup
+Bash
+
+npm create astro@latest
+# Select: Empty, TypeScript (optional but recommended), Install dependencies
+npx astro add react tailwind
+Step 2: The Layout (Enable the "App Feel")
+In src/layouts/Layout.astro:
+
+Code snippet
+
+---
+import { ViewTransitions } from 'astro:transitions';
+import '../styles/global.css'; // Put your CSS variables here
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Lumina Creative</title>
+		<ViewTransitions /> {/* This is the magic line */}
+	</head>
+	<body class="bg-void-black text-white transition-colors duration-300">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+  /* Your font imports here */
+</style>
+Step 3: The "Arsenal" Menu (Using a React Island)
+You can literally reuse the React code I gave you for the Services page. You just file it as src/components/Arsenal.jsx.
+
+Then, use it in your Astro page like this:
+
+Code snippet
+
+---
+// src/pages/services.astro
+import Layout from '../layouts/Layout.astro';
+import Arsenal from '../components/Arsenal.jsx';
+---
+
+<Layout>
+  <main>
+    <h1>Our Services</h1>
+    
+    <Arsenal client:visible />
+    
+  </main>
+</Layout>
+Why this is better: In Next.js, the entire page would be hydrated as React. In Astro, the Header and Footer are plain HTML. The browser only downloads the React code for the Arsenal component when the user sees it.
+
+5. The Motion Plan (Astro Version)
+Since you are comfortable with your Automation site's typewriter effect, here is how we level it up for Lumina:
+
+Typewriter: Keep doing what you're doing (likely a small vanilla JS script or a React component).
+
+Smooth Page Swaps: Astro's <ViewTransitions /> handles this automatically. You can even customize it to "Slide Left" or "Fade".
+
+The "Hover Reveal": Use Framer Motion inside your React components.
+
+The Verdict: Stick to Astro.
+
+It respects your existing workflow.
+
+It's performant (which fits the "Empower" brand of efficiency).
+
+It handles the "Loud" creative effects via React Islands perfectly.
+
+It's not "heavy". It's lean and mean.
+
+I have set this up so:
+
+1.  **Dark Mode:** It glows. The text is white/grey. The accents are Neon Purple.
+2.  **Light Mode:** It’s stark. The text is heavy black. The accents act like highlighters.
+
+### The Component (`Manifesto.js`)
+
+You can copy-paste this directly into your project.
+
+```jsx
+import React from 'react';
+
+const Manifesto = () => {
+  return (
+    <section className="relative w-full py-24 px-6 md:px-12 transition-colors duration-300 bg-[#FAFAFA] dark:bg-[#050505]">
+      
+      {/* Background Noise Texture (Optional: Add a transparent noise png here if you want extra grit) */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none bg-noise mix-blend-overlay"></div>
+
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        
+        {/* LEFT COLUMN: The Headline */}
+        <div className="relative z-10">
+          <h2 className="font-display font-black text-6xl md:text-8xl tracking-tighter leading-[0.9]">
+            <span className="block text-black dark:text-white">AVERAGE</span>
+            <span className="block text-black dark:text-white">IS</span>
+            {/* The "Loud" Word: Purple in Dark Mode, Outlined in Light Mode */}
+            <span className="block text-[#BF00FF] dark:text-[#BF00FF] drop-shadow-none dark:drop-shadow-[0_0_15px_rgba(191,0,255,0.6)]">
+              INVISIBLE.
+            </span>
+          </h2>
+        </div>
+
+        {/* RIGHT COLUMN: The Copy */}
+        <div className="space-y-8 relative z-10 font-body">
+          <p className="text-xl md:text-2xl font-medium text-[#171717] dark:text-[#E0E0E0] leading-relaxed">
+            The internet is a crowded room. Most brands are just standing in the corner, hoping to be noticed. <span className="font-bold text-[#BF00FF]">We don't do hope.</span> We kick down the door.
+          </p>
+          
+          <p className="text-lg text-[#404040] dark:text-[#A0A0A0]">
+            Lumina wasn't built to blend in. We exist to disrupt the scroll. We reject the template, the safe choice, and the "good enough."
+          </p>
+
+          {/* The List: Styled like code/terminal output */}
+          <ul className="space-y-4 border-l-2 border-black dark:border-[#BF00FF] pl-6 mt-8">
+            <li className="text-lg text-black dark:text-white">
+              <span className="font-bold text-[#BF00FF] mr-2">01.</span>
+              Silence is Failure.
+            </li>
+            <li className="text-lg text-black dark:text-white">
+              <span className="font-bold text-[#BF00FF] mr-2">02.</span>
+              Code is Art.
+            </li>
+            <li className="text-lg text-black dark:text-white">
+              <span className="font-bold text-[#BF00FF] mr-2">03.</span>
+              Data Over Ego.
+            </li>
+          </ul>
+
+          {/* CTA Button */}
+          <div className="pt-6">
+            <button className="group relative px-8 py-4 bg-[#BF00FF] text-white font-bold text-lg uppercase tracking-widest overflow-hidden transition-transform active:scale-95">
+              {/* Button Hover Effect Layer */}
+              <div className="absolute inset-0 w-full h-full bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-12"></div>
+              
+              <span className="relative z-10">Ignite The Brand</span>
+              
+              {/* The "Hard Shadow" for Light Mode vs "Glow" for Dark Mode */}
+              <div className="absolute inset-0 border-2 border-black dark:border-white translate-x-1 translate-y-1 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform"></div>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Manifesto;
+```
+
+### The "Tech Flex" details explained:
+
+1.  **The Headline (`h2`):**
+      * **Light Mode:** It is heavy black text.
+      * **Dark Mode:** The word "INVISIBLE" gets a `drop-shadow` that makes it look like a real neon sign glowing against the black background.
+2.  **The List (`ul`):**
+      * I added a border on the left (`border-l-2`).
+      * **Light Mode:** The border is Black (Brutalist).
+      * **Dark Mode:** The border is Electric Purple (Tech/Cyber).
+3.  **The Button:**
+      * This is a custom CSS button. It has a "hard shadow" (the border offset) that moves when you hover. It feels tactile and mechanical, not soft and round like a standard website.
+
+### Fonts Reminder
+
+For this code to look right, make sure you have your fonts set up in your `tailwind.config.js`:
+
+  * **font-display:** 'Syne' or 'Clash Display' (For the big headers).
+  * **font-body:** 'Space Grotesk' or 'Inter' (For the reading text).
+For the Services Page, we need to avoid the standard "Laundry List" of bullet points. That is boring.
+
+Since "Lumina" is a disruptive agency, and Empower Digital Solutions is building it, this page needs to function like a Digital Menu. It should feel tactile, interactive, and heavy on the typography.
+
+Here is the concept: "The Arsenal."
+
+The Concept: Interactive Hover Reveal
+Instead of boxes with icons (which looks like a standard WordPress template), we use a massive vertical list.
+
+Default State: Just the Service Names in huge text (Syne/Clash Display font).
+
+Hover State: The text changes colour (Neon Purple), and a relevant image/GIF appears floating near the cursor (or in a fixed preview window).
+
+1. The Page Copy (Loud & Direct)
+Page Title: OUR ARSENAL. Subtitle: We don't sell hours. We sell unfair advantages.
+
+Service 01: Brand Identity
+The Hook: "Identity Engineering."
+
+The Copy:
+
+A logo is not a brand. A brand is a feeling. It's the gut reaction your customer has when they see you. We build visual systems that turn customers into cult members.
+
+Tags: Visual Language / Tone of Voice / Rebranding / Art Direction.
+
+Service 02: Digital Experience (Web)
+The Hook: "Immersive Architecture."
+
+The Copy:
+
+If your website looks like a template, your business looks like a commodity. We code bespoke, high-performance platforms that capture attention and refuse to let go.
+
+Tags: Next.js / 3D WebGL / eCommerce / UI & UX Design.
+
+Service 03: Growth & Hype
+The Hook: "Viral Mechanics."
+
+The Copy:
+
+Hope is not a strategy. We use data-driven aggression to hack the algorithm. We create the noise that makes your competitors uncomfortable.
+
+Tags: Social Strategy / Paid Media / Content Production / SEO.
+
+2. The Visual Layout (How to Code It)
+This is where you show off your CSS Grid and React State skills.
+
+The Layout Structure: Imagine a split screen (50/50) on Desktop.
+
+Left Side (The Menu): A static list of the service names. Huge font size (text-6xl or larger).
+
+Right Side (The Preview): A designated "Stage." When you hover over "Brand Identity" on the left, the Right Side displays a 3D rotating logo or a glitching brand video.
+
+The "Tech Flex" (Interaction):
+
+Dark Mode: The unselected items are Grey (#333). The hovered item turns White and glows Electric Purple.
+
+Light Mode: The unselected items are Outline Only (Stroke). The hovered item becomes Solid Black.
+
+3. The Code Snippet (React/Tailwind Structure)
+Here is a skeletal component for this "Hover Reveal" effect. You can drop this into your Services.js.
+
+JavaScript
+
+import React, { useState } from 'react';
+
+// Data Array - Easy to map through
+const services = [
+  {
+    id: '01',
+    title: 'Brand Identity',
+    description: 'We don\'t draw logos. We engineer identities that turn customers into cults.',
+    tags: ['Visual Systems', 'Art Direction', 'Rebranding']
+  },
+  {
+    id: '02',
+    title: 'Web Experience',
+    description: 'Pixels with purpose. High-performance code for high-performance brands.',
+    tags: ['Next.js', 'WebGL', 'UI/UX']
+  },
+  {
+    id: '03',
+    title: 'Viral Mechanics',
+    description: 'Viral isn\'t luck. It\'s math. We hack the algorithm to feed the beast.',
+    tags: ['Strategy', 'Content', 'Paid Media']
+  }
+];
+
+const Services = () => {
+  const [activeService, setActiveService] = useState(services[0]);
+
+  return (
+    <section className="min-h-screen w-full bg-[#FAFAFA] dark:bg-[#050505] py-20 px-6 md:px-12 flex flex-col md:flex-row items-center justify-center transition-colors duration-300">
+      
+      {/* LEFT SIDE: The List */}
+      <div className="w-full md:w-1/2 space-y-4 z-10">
+        <h2 className="text-sm font-bold text-[#BF00FF] tracking-widest mb-8 uppercase">Our Arsenal</h2>
+        
+        <div className="flex flex-col">
+          {services.map((service) => (
+            <div 
+              key={service.id}
+              onMouseEnter={() => setActiveService(service)}
+              className="group cursor-pointer py-4 border-b border-gray-300 dark:border-gray-800"
+            >
+              {/* The "Flex": Outline text in Light Mode, Filled in Hover */}
+              <h3 className={`
+                text-5xl md:text-7xl font-black transition-all duration-300
+                ${activeService.id === service.id 
+                  ? 'text-black dark:text-white translate-x-4' // Active State
+                  : 'text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-400 dark:from-gray-700 dark:to-gray-700 opacity-50'} // Inactive State
+              `}>
+                {service.title}
+              </h3>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* RIGHT SIDE: The Dynamic Preview Card */}
+      <div className="hidden md:flex w-full md:w-1/2 justify-center pl-12">
+        <div className="relative w-full max-w-md bg-white dark:bg-[#111] border-2 border-black dark:border-[#BF00FF] p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[0_0_30px_rgba(191,0,255,0.2)] transition-all duration-500">
+          
+          {/* Dynamic Content */}
+          <span className="text-6xl font-black text-[#BF00FF] opacity-20 absolute top-4 right-4">
+            {activeService.id}
+          </span>
+          
+          <h4 className="text-2xl font-bold text-black dark:text-white mb-4">
+            {activeService.title}
+          </h4>
+          
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+            {activeService.description}
+          </p>
+          
+          <div className="flex flex-wrap gap-2">
+            {activeService.tags.map((tag) => (
+              <span key={tag} className="px-3 py-1 bg-gray-100 dark:bg-[#222] text-xs font-mono uppercase tracking-wide text-black dark:text-[#BF00FF]">
+                {tag}
+              </span>
+            ))}
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  );
+};
+
+export default Services;
+Why this works for your Portfolio:
+State Management: It shows you can use useState in React to change content dynamically based on user interaction.
+
+Conditional Styling: It handles the visual logic of "Active vs Inactive" states perfectly.
+
+Visual Impact: It fits the "Gen-Z" vibe—big text, clean layout, immediate feedback when you move the mouse.
+
+Part 1: The FAQ Section ("The No-Fluff Zone")
+Agencies usually hide their prices and process. "Lumina" does the opposite. We answer the uncomfortable questions upfront. This shows confidence.
+
+The Design: Brutalist Accordion.
+
+Closed: Big text, solid border.
+
+Open: Smooth slide down, aggressive answer.
+
+Tech Flex: Animated rotation of the icon and smooth height transition.
+
+The Content (Copy)
+Q: How much does it cost?
+
+A: We aren't cheap. If you want a £500 website, go to Fiverr. If you want an asset that generates revenue, we start at £3k. Quality code costs money.
+
+Q: How long does it take?
+
+A: Average build is 4-6 weeks. We don't rush excellence, but we don't waste time. We move as fast as you can provide feedback.
+
+Q: Can you fix my existing WordPress site?
+
+A: No. We build custom. We don't patch up old, slow legacy code. We burn it down and build it better.
+
+Q: Do I own the code?
+
+A: 100%. Once the invoice is paid, the keys are yours. No hostage situations.
+
+The Code (FAQ Component)
+Add this below your Services component.
+
+JavaScript
+
+import React, { useState } from 'react';
+
+const faqs = [
+  {
+    question: "Is this going to be expensive?",
+    answer: "Define expensive. If you think investing in your business is a cost, we aren't a match. We build revenue-generating assets. Our custom builds start at £3,000."
+  },
+  {
+    question: "Do you use templates?",
+    answer: "Never. Templates are for hobbyists. We code bespoke solutions tailored to your specific brand goals using Next.js and modern architecture."
+  },
+  {
+    question: "Can you take over my Wix site?",
+    answer: "No. We don't polish mediocrity. We migrate you off limited platforms and onto scalable, custom infrastructure."
+  },
+  {
+    question: "What is the turnaround time?",
+    answer: "Typically 4-6 weeks for a full platform build. We sprint. We don't jog."
+  }
+];
+
+const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <section className="w-full py-20 px-6 md:px-12 bg-[#FAFAFA] dark:bg-[#050505] transition-colors duration-300">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-4xl font-black mb-12 text-black dark:text-white uppercase tracking-tighter">
+          Uncomfortable <span className="text-[#BF00FF]">Questions.</span>
+        </h2>
+
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div 
+              key={index} 
+              className="border-2 border-black dark:border-white/20 bg-white dark:bg-[#111] overflow-hidden"
+            >
+              <button 
+                onClick={() => toggleFAQ(index)}
+                className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
+              >
+                <span className="text-xl md:text-2xl font-bold text-black dark:text-white font-display">
+                  {faq.question}
+                </span>
+                {/* Animated Plus Icon */}
+                <span className={`text-2xl text-[#BF00FF] transform transition-transform duration-300 ${openIndex === index ? 'rotate-45' : 'rotate-0'}`}>
+                  +
+                </span>
+              </button>
+              
+              {/* Accordion Content with Height Transition */}
+              <div 
+                className={`transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-40 opacity-100 p-6 pt-0' : 'max-h-0 opacity-0 overflow-hidden'}`}
+              >
+                <p className="text-lg text-gray-600 dark:text-gray-300">
+                  {faq.answer}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FAQ;
+Part 2: The Work Page ("The Receipts")
+This page proves you can walk the walk. The vibe is "High Voltage."
+
+The Visual Strategy:
+
+Masonry Layout: Don't use a boring grid of perfect squares. Mix wide rectangles with tall vertical shots. It looks editorial.
+
+Data Over Everything: Don't just show a pretty picture. Overlay the stats immediately.
+
+Imagery: Use standard website screenshots, but put them inside "glitchy" device frames or floating in 3D space.
+
+The Content (The Projects)
+1. Project: NEON DRIFT
+
+Type: eCommerce / Fashion
+
+The Tech: Shopify Headless + Next.js
+
+The Stat: +400% ROI
+
+Vibe: Underground streetwear brand. Dark aesthetics.
+
+2. Project: APEX FINANCE
+
+Type: B2B SaaS Platform
+
+The Tech: React Dashboard + Firebase
+
+The Stat: 2.1s Load Time (Down from 8s)
+
+Vibe: Clean, corporate but edgy, data visualization.
+
+3. Project: VELVET CULT
+
+Type: Event Booking Site
+
+The Tech: Custom Booking Engine
+
+The Stat: Sold Out in 10 Min
+
+Vibe: Nightclub, loud colours, motion heavy.
+
+The Code (Work Grid Component)
+This component uses a CSS Grid approach to make the first item span two columns (the "Hero Project").
+
+JavaScript
+
+import React from 'react';
+
+const projects = [
+  {
+    id: 1,
+    client: "Neon Drift",
+    category: "eCommerce",
+    stat: "+400% ROI",
+    imageClass: "bg-purple-900", // Placeholder color for image
+    size: "col-span-1 md:col-span-2 row-span-2" // Big Hero Card
+  },
+  {
+    id: 2,
+    client: "Apex Finance",
+    category: "SaaS Platform",
+    stat: "2.1s Load Speed",
+    imageClass: "bg-blue-900",
+    size: "col-span-1" // Standard Card
+  },
+  {
+    id: 3,
+    client: "Velvet Cult",
+    category: "Event Booking",
+    stat: "Sold Out",
+    imageClass: "bg-pink-900",
+    size: "col-span-1" // Standard Card
+  }
+];
+
+const Work = () => {
+  return (
+    <section className="min-h-screen py-24 px-6 md:px-12 bg-[#FAFAFA] dark:bg-[#050505] transition-colors duration-300">
+      
+      {/* Header */}
+      <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b-2 border-black dark:border-white pb-6">
+        <h1 className="text-6xl md:text-8xl font-black text-black dark:text-white tracking-tighter">
+          THE <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF00FF] to-pink-500">RECEIPTS</span>
+        </h1>
+        <p className="text-xl font-mono text-black dark:text-gray-400 mt-4 md:mt-0">
+          Data > Opinions.
+        </p>
+      </div>
+
+      {/* Grid Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        {projects.map((project) => (
+          <div 
+            key={project.id} 
+            className={`group relative overflow-hidden border-2 border-black dark:border-white/10 ${project.size} min-h-[400px] cursor-pointer`}
+          >
+            {/* Background Image Placeholder */}
+            <div className={`absolute inset-0 ${project.imageClass} transition-transform duration-700 group-hover:scale-110 opacity-80`}></div>
+            
+            {/* Dark Overlay on Hover */}
+            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
+
+            {/* Content Overlay */}
+            <div className="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end">
+              
+              {/* The Stat (The Flex) */}
+              <div className="mb-4 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+                <span className="inline-block bg-[#BF00FF] text-white font-bold px-4 py-1 text-lg skew-x-[-10deg]">
+                  {project.stat}
+                </span>
+              </div>
+
+              <h3 className="text-4xl font-black text-white uppercase mb-1 drop-shadow-lg">
+                {project.client}
+              </h3>
+              <p className="text-sm font-mono text-gray-300 uppercase tracking-widest">
+                {project.category}
+              </p>
+            </div>
+
+            {/* Corner Icon */}
+            <div className="absolute top-6 right-6 bg-white text-black w-10 h-10 flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              ↗
+            </div>
+
+          </div>
+        ))}
+      </div>
+      
+      {/* Bottom CTA */}
+      <div className="mt-24 text-center">
+        <p className="text-black dark:text-white text-xl mb-6">Seen enough?</p>
+        <button className="px-12 py-4 bg-black dark:bg-white text-white dark:text-black font-bold uppercase tracking-widest hover:bg-[#BF00FF] dark:hover:bg-[#BF00FF] hover:text-white transition-colors duration-300">
+          Start Your Project
+        </button>
+      </div>
+
+    </section>
+  );
+};
+
+export default Work;
+
+
+The Contact Section and the Technical Setup Guide so you can actually start coding this today.
+
+Part 3: The Contact Section ("The Portal")
+We don't do "Please fill out the form below." That is weak. This form needs to feel like entering a command into a terminal. It is the destination of your smooth scroll.
+
+The Copy:
+
+Headline: START THE CHAOS.
+
+Sub-headline: You’ve seen the work. You know the vibe. Let’s build something that scares your competitors.
+
+The Button: [ INITIATE LAUNCH ]
+
+The Interaction:
+
+Inputs: No background colour. Just a thick bottom border. When you click, the border turns Electric Purple and glows.
+
+The "Vibe" Dropdown: Don't ask "Service Type." Ask "What’s the mission?" with options like "Total Rebrand", "Kill the Competition", or "World Domination".
+
+The Code (Contact Component)
+Add this as the final section of your page. Note the id="contact"—this is what makes the link in your nav bar scroll down to here.
+
+JavaScript
+
+import React from 'react';
+
+const Contact = () => {
+  return (
+    <section id="contact" className="relative py-24 px-6 md:px-12 bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden">
+      
+      {/* Decorative Background Element (The "Sun/Moon" glow) */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#BF00FF] rounded-full blur-[120px] opacity-10 dark:opacity-20 pointer-events-none"></div>
+
+      <div className="max-w-3xl mx-auto relative z-10 text-center">
+        
+        <h2 className="text-6xl md:text-8xl font-black text-black dark:text-white mb-6 tracking-tighter">
+          START THE <span className="text-[#BF00FF]">CHAOS.</span>
+        </h2>
+        
+        <p className="text-xl text-gray-600 dark:text-gray-300 mb-12">
+          Tell us about the project. We'll handle the digital violence.
+        </p>
+
+        <form className="space-y-8 text-left">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Name Input */}
+            <div className="group relative">
+              <input 
+                type="text" 
+                placeholder="YOUR NAME" 
+                className="w-full bg-transparent border-b-2 border-gray-300 dark:border-gray-700 py-4 text-xl font-bold text-black dark:text-white placeholder-gray-400 focus:outline-none focus:border-[#BF00FF] transition-colors duration-300"
+              />
+            </div>
+
+            {/* Email Input */}
+            <div className="group relative">
+              <input 
+                type="email" 
+                placeholder="YOUR EMAIL" 
+                className="w-full bg-transparent border-b-2 border-gray-300 dark:border-gray-700 py-4 text-xl font-bold text-black dark:text-white placeholder-gray-400 focus:outline-none focus:border-[#BF00FF] transition-colors duration-300"
+              />
+            </div>
+          </div>
+
+          {/* The "Vibe" Select */}
+          <div className="relative">
+            <select className="w-full bg-transparent border-b-2 border-gray-300 dark:border-gray-700 py-4 text-xl font-bold text-black dark:text-white focus:outline-none focus:border-[#BF00FF] appearance-none cursor-pointer">
+              <option value="" disabled selected>CHOOSE YOUR MISSION</option>
+              <option value="rebrand" className="text-black">Total Rebrand</option>
+              <option value="web" className="text-black">Custom Web Build</option>
+              <option value="domination" className="text-black">World Domination</option>
+            </select>
+            {/* Custom Arrow Icon */}
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-[#BF00FF]">▼</div>
+          </div>
+
+          {/* Message Area */}
+          <div>
+            <textarea 
+              rows="4" 
+              placeholder="TELL US THE PLAN..." 
+              className="w-full bg-transparent border-b-2 border-gray-300 dark:border-gray-700 py-4 text-xl font-bold text-black dark:text-white placeholder-gray-400 focus:outline-none focus:border-[#BF00FF] resize-none transition-colors duration-300"
+            ></textarea>
+          </div>
+
+          {/* Submit Button */}
+          <div className="text-center pt-8">
+            <button className="px-16 py-5 bg-black dark:bg-[#BF00FF] text-white font-black text-xl uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_20px_rgba(191,0,255,0.5)] transition-all duration-300">
+              Initiate Launch
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      {/* Footer / Copyright */}
+      <div className="mt-24 border-t border-gray-200 dark:border-gray-800 pt-8 flex justify-between items-center text-sm font-mono text-gray-500">
+        <p>© 2025 LUMINA CREATIVE.</p>
+        <p>CODED BY EMPOWER DIGITAL SOLUTIONS.</p>
+      </div>
+
+    </section>
+  );
+};
+
+export default Contact;
+Part 4: The Build (How to actually start)
+Since this is for your portfolio under Empower Digital Solutions, we want a clean, professional setup.
+
+Step 1: Open your terminal
+Navigate to where you keep your coding projects.
+
+Step 2: Create the Next.js App
+Run this command. It will set up React, Tailwind, and everything you need automatically. (Select "Yes" for all default options).
+
+Bash
+
+npx create-next-app@latest lumina-portfolio
+Step 3: Install the Animation Library
+We need Framer Motion for the smooth transitions and the typewriter effect.
+
+Bash
+
+cd lumina-portfolio
+npm install framer-motion
+Step 4: Configure the Fonts
+Go to layout.js (or layout.tsx) and import your Google Fonts so they work everywhere.
+
+JavaScript
+
+import { Syne, Space_Grotesk } from 'next/font/google'
+
+const syne = Syne({ 
+  subsets: ['latin'],
+  variable: '--font-syne',
+  display: 'swap',
+})
+
+const space = Space_Grotesk({ 
+  subsets: ['latin'],
+  variable: '--font-space',
+  display: 'swap',
+})
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className={`${syne.variable} ${space.variable} scroll-smooth`}>
+      <body>{children}</body>
+    </html>
+  )
+}
+Step 5: Configure Tailwind
+Go to tailwind.config.js and add your brand colours and fonts so you can use classes like bg-electric-purple.
+
+JavaScript
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: 'class', // Important for the toggle!
+  theme: {
+    extend: {
+      colors: {
+        'electric-purple': '#BF00FF',
+        'acid-green': '#CCFF00',
+        'void-black': '#050505',
+      },
+      fontFamily: {
+        display: ['var(--font-syne)'],
+        body: ['var(--font-space)'],
+      }
+    },
+  },
+  plugins: [],
+}
+Final Checklist for You
+Smooth Scroll: Notice in Step 4, inside the <html> tag, I added scroll-smooth. This is the CSS magic that makes the page glide when you click "Contact".
+
+Dark Mode: You will need to build a small button in your Navbar that toggles the dark class on the <html> element.
+
+

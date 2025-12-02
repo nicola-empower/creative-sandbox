@@ -1,0 +1,527 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="HAVNN.">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="havnn-wrapper">
+        <!-- Sticky Navigation -->
+        <nav class="glass-nav">
+            <div class="nav-content">
+                <a href="#" class="logo">HAVNN.</a>
+                <div class="nav-links">
+                    <a href="#">Shop</a>
+                    <a href="#">Our Story</a>
+                    <a href="#">Journal</a>
+                    <a href="#">Cart (0)</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-text">
+                <h1>Skincare rooted in the Earth.</h1>
+                <p>Small-batch. Sustainable. Scottish Highlands.</p>
+                <button class="cta-btn">Explore the Collection</button>
+            </div>
+            <div class="hero-image">
+                <img
+                    src="/images/havnnhero.png"
+                    alt="HAVNN Skincare"
+                    class="hero-img-full"
+                />
+
+                <!-- Product 1 -->
+                <div class="product-card p1">
+                    <div class="card-image">
+                        <img
+                            src="/images/product1.png"
+                            alt="Highland Moss Cleanser"
+                            class="prod-img"
+                        />
+                        <button class="add-to-cart">Add to Basket</button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Highland Moss Cleanser</h3>
+                        <p>£28.00</p>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card p2">
+                    <div class="card-image">
+                        <img
+                            src="/images/product2.png"
+                            alt="Sea Kelp Toner"
+                            class="prod-img"
+                        />
+                        <button class="add-to-cart">Add to Basket</button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Sea Kelp Toner</h3>
+                        <p>£24.00</p>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card p3">
+                    <div class="card-image">
+                        <img
+                            src="/images/product2 (2).png"
+                            alt="Heather Honey Balm"
+                            class="prod-img"
+                        />
+                        <button class="add-to-cart">Add to Basket</button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Heather Honey Balm</h3>
+                        <p>£32.00</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <VibeDNA
+            description="Conscious skincare for the modern soul. Rooted in the Earth. Small-batch, sustainable, and Scottish."
+            fontHeader="Playfair Display"
+            fontBody="Lato"
+            palette={[
+                { hex: "#DCDFD6", name: "Driftwood" },
+                { hex: "#879D91", name: "Sea Salt" },
+                { hex: "#134340", name: "Deep Harbor" },
+            ]}
+        />
+
+        <!-- The Ritual Section -->
+        <section class="ritual">
+            <div class="ritual-content">
+                <h2>The Ritual</h2>
+                <div class="steps">
+                    <div class="step">
+                        <span class="step-number">01</span>
+                        <h3>Cleanse</h3>
+                        <p>Wash away the day with gentle moss extracts.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">02</span>
+                        <h3>Tone</h3>
+                        <p>Balance your skin with mineral-rich sea waters.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">03</span>
+                        <h3>Moisturise</h3>
+                        <p>Lock in hydration with raw heather honey.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>HAVNN.</h2>
+                    <p>Conscious skincare for the modern soul.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="col">
+                        <h4>Shop</h4>
+                        <a href="#">All Products</a>
+                        <a href="#">Sets</a>
+                        <a href="#">Gift Cards</a>
+                    </div>
+                    <div class="col">
+                        <h4>Company</h4>
+                        <a href="#">Sustainability</a>
+                        <a href="#">Shipping</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 HAVNN Organics. Made in the Highlands.
+            </div>
+        </footer>
+    </div>
+</BlankLayout>
+
+<style>
+    /* 
+    Palette:
+    Driftwood Sand: #DCDFD6
+    Sea Salt Sage: #879D91
+    Misty Pine: #7C8C76
+    Deep Harbor: #134340
+  */
+
+    :root {
+        --bg-primary: #dcdfd6;
+        --bg-secondary: #879d91;
+        --accent: #7c8c76;
+        --text-main: #134340;
+        --font-heading: "Playfair Display", serif;
+        --font-body: "Lato", sans-serif;
+    }
+
+    .havnn-wrapper {
+        background-color: var(--bg-primary);
+        color: var(--text-main);
+        font-family: var(--font-body);
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* Typography Defaults */
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: var(--font-heading);
+        font-weight: 600;
+    }
+
+    a {
+        color: var(--text-main);
+        text-decoration: none;
+        transition: opacity 0.3s;
+    }
+
+    a:hover {
+        opacity: 0.7;
+    }
+
+    /* Sticky Glass Nav */
+    .glass-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 3rem;
+        background: rgba(220, 223, 214, 0.7); /* Driftwood Sand with opacity */
+        backdrop-filter: blur(10px);
+        z-index: 100;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(19, 67, 64, 0.05);
+    }
+
+    .nav-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 400;
+    }
+
+    /* Hero Section */
+    .hero {
+        display: flex;
+        min-height: 90vh;
+        padding-top: 80px; /* Space for nav */
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem 6rem;
+        position: relative;
+        z-index: 20; /* Ensure it's above everything */
+    }
+
+    .hero-text h1 {
+        font-size: 4.5rem;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        color: var(--text-main);
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+        opacity: 0.8;
+        color: var(--text-main);
+    }
+
+    .cta-btn {
+        background-color: var(--text-main);
+        color: var(--bg-primary);
+        border: none;
+        padding: 1rem 2.5rem;
+        font-family: var(--font-body);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        align-self: flex-start;
+        transition:
+            transform 0.3s ease,
+            background-color 0.3s ease;
+    }
+
+    .cta-btn:hover {
+        transform: translateY(-3px);
+        background-color: var(--accent);
+    }
+
+    .hero-image {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        background-color: #c8ccc4; /* Darker shade for contrast */
+        min-height: 600px; /* Increased height */
+    }
+
+    .hero-img-full {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    /* Floating Products */
+    .product-card {
+        position: absolute;
+        z-index: 10;
+        width: 200px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+    }
+
+    .p1 {
+        top: 10%;
+        right: 10%;
+    }
+    .p2 {
+        bottom: 15%;
+        right: 20%;
+    }
+    .p3 {
+        top: 40%;
+        left: 10%;
+    }
+
+    .card-image {
+        position: relative;
+        aspect-ratio: 3/4;
+        background-color: #fff;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        border-radius: 4px;
+    }
+
+    .prod-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.7s ease;
+    }
+
+    .product-card:hover .prod-img {
+        transform: scale(1.05);
+    }
+
+    .add-to-cart {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        background: var(--text-main);
+        color: var(--bg-primary);
+        border: none;
+        font-family: var(--font-body);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transform: translateY(100%); /* Hidden by default */
+        transition: transform 0.4s ease;
+    }
+
+    .product-card:hover .add-to-cart {
+        transform: translateY(0); /* Slide up */
+    }
+
+    .card-info {
+        text-align: center;
+    }
+
+    .card-info h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        font-family: var(--font-heading);
+    }
+
+    .card-info p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+
+    /* Ritual Section */
+    .ritual {
+        background-color: var(--bg-secondary);
+        padding: 8rem 3rem;
+        color: var(--text-main);
+    }
+
+    .ritual-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .ritual h2 {
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .steps {
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+    }
+
+    .step {
+        flex: 1;
+        position: relative;
+    }
+
+    .step-number {
+        display: block;
+        font-family: var(--font-heading);
+        font-size: 4rem;
+        opacity: 0.2;
+        margin-bottom: 1rem;
+    }
+
+    .step h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .step p {
+        line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+        background-color: var(--text-main);
+        color: var(--bg-primary);
+        padding: 6rem 3rem 2rem;
+    }
+
+    .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 6rem;
+    }
+
+    .footer-brand h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+        opacity: 0.7;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 6rem;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .col h4 {
+        font-family: var(--font-body);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .col a {
+        color: var(--bg-primary);
+        opacity: 0.7;
+    }
+
+    .col a:hover {
+        opacity: 1;
+    }
+
+    .copyright {
+        text-align: center;
+        opacity: 0.4;
+        font-size: 0.8rem;
+        border-top: 1px solid rgba(220, 223, 214, 0.1);
+        padding-top: 2rem;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+        }
+        .hero-text {
+            padding: 2rem;
+            min-height: 50vh;
+        }
+        .hero-text h1 {
+            font-size: 3rem;
+        }
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+        .steps {
+            flex-direction: column;
+            gap: 3rem;
+        }
+        .footer-content {
+            flex-direction: column;
+            gap: 4rem;
+        }
+        .footer-links {
+            flex-direction: column;
+            gap: 3rem;
+        }
+    }
+</style>

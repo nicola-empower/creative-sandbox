@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark Mode Variables (Default) */
+  --bg-primary: #050505;
+  --text-body: #E0E0E0;
+  --text-heading: #FFFFFF;
+  --brand-color: #BF00FF;
+  --accent-flex: #CCFF00;
+  --card-border: 1px solid rgba(255, 255, 255, 0.1);
+  --button-shadow: 0px 0px 15px rgba(191, 0, 255, 0.4);
+}
+
+[data-theme='light'] {
+  /* Light Mode Overrides */
+  --bg-primary: #FAFAFA;
+  --text-body: #171717;
+  --text-heading: #000000;
+  --brand-color: #BF00FF;
+  --accent-flex: #000000;
+  --card-border: 2px solid #000000;
+  --button-shadow: 4px 4px 0px #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-body);
+  font-family: 'Space Grotesk', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Noise Texture Overlay */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9900CC;
+}

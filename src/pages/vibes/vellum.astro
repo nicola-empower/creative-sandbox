@@ -1,0 +1,537 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="Vellum & Oak">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Raleway:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="vellum-wrapper">
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">VELLUM & OAK</div>
+            <div class="menu-icon">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="headline">
+                    Living <span class="italic">Art.</span>
+                </h1>
+                <div class="separator"></div>
+                <p class="subhead">
+                    Curating spaces for the few who understand the difference
+                    between a house and a sanctuary.
+                </p>
+
+                <button class="cta-btn">Inquire Within</button>
+            </div>
+
+            <!-- Architectural Visual -->
+            &nbsp; — &nbsp; NEW YORK &nbsp; — &nbsp; KYOTO &nbsp; — &nbsp; LONDON
+            &nbsp; — &nbsp; MILAN &nbsp; — &nbsp;
+        </header>
+        <VibeDNA
+            description="Designed for Eternity. Rare materials, light, and flow. Architecture that outlasts trends."
+            fontHeader="Cormorant Garamond"
+            fontBody="Raleway"
+            palette={[
+                { hex: "#F2E8D5", name: "Vellum" },
+                { hex: "#43302B", name: "Dark Oak" },
+                { hex: "#8D6E63", name: "Bronze" },
+            ]}
+        />
+    </div>
+
+    <!-- Feature Grid -->
+    <section class="features">
+        <div class="feature-card">
+            <span class="feature-num">01</span>
+            <h3>Sourcing</h3>
+            <p>Rare materials only.</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-num">02</span>
+            <h3>Light</h3>
+            <p>Sculpting with sun.</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-num">03</span>
+            <h3>Flow</h3>
+            <p>Invisible transitions.</p>
+        </div>
+    </section>
+
+    <!-- Selected Works -->
+    <section class="works-section">
+        <div class="section-header">
+            <h2>Selected Works</h2>
+            <div class="separator"></div>
+        </div>
+        <div class="works-grid">
+            <div class="work-item">
+                <div class="work-img">
+                    <img
+                        src="/images/work1.png"
+                        alt="The Glass Pavilion"
+                        class="work-image-full"
+                    />
+                </div>
+                <div class="work-info">
+                    <h3>The Glass Pavilion</h3>
+                    <p>Kyoto, Japan</p>
+                </div>
+            </div>
+            <div class="work-item">
+                <div class="work-img">
+                    <img
+                        src="/images/work2.png"
+                        alt="Stone House"
+                        class="work-image-full"
+                    />
+                </div>
+                <div class="work-info">
+                    <h3>Stone House</h3>
+                    <p>Reykjavik, Iceland</p>
+                </div>
+            </div>
+            <div class="work-item">
+                <div class="work-img">
+                    <img
+                        src="/images/work3.png"
+                        alt="Urban Sanctuary"
+                        class="work-image-full"
+                    />
+                </div>
+                <div class="work-info">
+                    <h3>Urban Sanctuary</h3>
+                    <p>London, UK</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="stat-item">
+            <span class="label">EST.</span>
+            <span class="value">1984</span>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="stat-item">
+            <span class="label">PROJECTS</span>
+            <span class="value">40</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>DESIGNED FOR ETERNITY.</p>
+    </footer>
+
+    <style>
+        /* 
+    Palette:
+    Vellum: #F2E8D5
+    Dark Oak: #43302B
+    Bronze: #8D6E63
+  */
+
+        :root {
+            --bg-color: #f2e8d5;
+            --text-color: #43302b;
+            --accent-color: #8d6e63;
+
+            --font-heading: "Cormorant Garamond", serif;
+            --font-body: "Raleway", sans-serif;
+        }
+
+        .vellum-wrapper {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            border: 1rem solid #fff; /* Frame effect */
+        }
+
+        /* Nav */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 3rem;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .menu-icon {
+            width: 30px;
+            cursor: pointer;
+        }
+
+        .line {
+            height: 1px;
+            background-color: var(--text-color);
+            margin-bottom: 6px;
+            transition: width 0.3s;
+        }
+
+        .line:first-child {
+            width: 100%;
+        }
+        .line:last-child {
+            width: 60%;
+            margin-left: auto;
+        }
+
+        .menu-icon:hover .line:last-child {
+            width: 100%;
+        }
+
+        /* Hero */
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                flex-direction: row;
+                text-align: left;
+                justify-content: space-between;
+                max-width: 1200px;
+                margin: 0 auto;
+                gap: 4rem;
+            }
+
+            .hero-content {
+                max-width: 500px;
+            }
+        }
+
+        .headline {
+            font-family: var(--font-heading);
+            font-size: 5rem;
+            font-weight: 400;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .italic {
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .separator {
+            width: 50px;
+            height: 1px;
+            background-color: var(--accent-color);
+            margin: 0 auto 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .separator {
+                margin: 0 0 2rem;
+            }
+        }
+
+        .subhead {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .cta-btn {
+            background: transparent;
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            padding: 1rem 2.5rem;
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        /* Visual */
+        .hero-visual {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-visual {
+                margin-top: 0;
+            }
+        }
+
+        .arch-frame {
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--text-color);
+            border-radius: 150px 150px 0 0;
+            position: relative;
+            overflow: hidden;
+            background-color: #ebe0cc;
+        }
+
+        .sun-beam {
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(
+                circle,
+                rgba(255, 255, 255, 0.4) 0%,
+                transparent 60%
+            );
+            transform: rotate(45deg);
+            animation: sunShift 10s infinite alternate ease-in-out;
+        }
+
+        .shadow-play {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to top right,
+                rgba(67, 48, 43, 0.1) 0%,
+                transparent 50%
+            );
+        }
+
+        /* Marquee */
+        .marquee-container {
+            border-top: 1px solid rgba(67, 48, 43, 0.2);
+            border-bottom: 1px solid rgba(67, 48, 43, 0.2);
+            padding: 1rem 0;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 4rem 0;
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 30s linear infinite;
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto 6rem;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .feature-card {
+            position: relative;
+        }
+
+        .feature-num {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: rgba(67, 48, 43, 0.1);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        /* Selected Works */
+        .works-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto 6rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .work-item {
+            cursor: pointer;
+        }
+
+        .work-img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background-color: #e6dac0;
+            margin-bottom: 1.5rem;
+            transition: opacity 0.3s;
+            overflow: hidden;
+        }
+
+        .work-image-full {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .work-item:hover .work-image-full {
+            transform: scale(1.05);
+        }
+
+        .work-item:hover .work-img {
+            opacity: 1; /* Reset opacity as we use transform now */
+        }
+
+        .work-info h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .work-info p {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            opacity: 0.6;
+        }
+
+        /* Stats */
+        .stats-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .label {
+            display: block;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            opacity: 0.6;
+        }
+
+        .value {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+        }
+
+        .vertical-line {
+            width: 1px;
+            height: 40px;
+            background-color: var(--text-color);
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            opacity: 0.5;
+            margin-top: auto;
+        }
+
+        /* Animations */
+        @keyframes sunShift {
+            0% {
+                transform: rotate(45deg) translate(0, 0);
+                opacity: 0.3;
+            }
+            100% {
+                transform: rotate(45deg) translate(20px, 20px);
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 3.5rem;
+            }
+            .vellum-wrapper {
+                border-width: 0.5rem;
+            }
+        }
+    </style>
+</BlankLayout>

@@ -1,0 +1,123 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import TheCode from "../../components/nexus/TheCode";
+import Collections from "../../components/nexus/Collections";
+import TheIntel from "../../components/nexus/TheIntel";
+import Lookbook from "../../components/nexus/Lookbook";
+import Waitlist from "../../components/nexus/Waitlist";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="NEXUS - Armor for the Digital Age">
+    <!-- Injecting Nexus-specific head elements -->
+    <Fragment slot="head">
+        <ViewTransitions />
+        <script is:inline>
+            const theme = (() => {
+                if (
+                    typeof localStorage !== "undefined" &&
+                    localStorage.getItem("theme")
+                ) {
+                    return localStorage.getItem("theme");
+                }
+                if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                    return "dark";
+                }
+                return "light";
+            })();
+
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark");
+            } else {
+                document.documentElement.classList.remove("dark");
+            }
+            document.documentElement.setAttribute("data-theme", theme);
+        </script>
+    </Fragment>
+
+    <div>
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >•</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >500 UNITS PER DROP</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >•</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >NO RESTOCKS EVER</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >•</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >DROP 001 SOLD OUT IN 48H</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >•</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >500 UNITS PER DROP</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >•</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >NO RESTOCKS EVER</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >•</span
+        >
+    </div>
+
+    <TheCode client:visible />
+    <Collections client:visible />
+    <TheIntel client:visible />
+    <Lookbook client:visible />
+    <Waitlist client:visible />
+
+    <VibeDNA
+        description="Cyberpunk streetwear for the digital age. High-contrast, tactical, and unapologetically futuristic."
+        fontHeader="Space Grotesk"
+        fontBody="Inter"
+        palette={[
+            { hex: "#000000", name: "Void Black" },
+            { hex: "#BF00FF", name: "Neon Purple" },
+            { hex: "#FFFFFF", name: "Static White" },
+        ]}
+    />
+</BlankLayout>
+
+<style>
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .animate-marquee {
+        animation: marquee 20s linear infinite;
+    }
+
+    /* Ensure the wrapper takes full height/width if needed, though BlankLayout body is 100vh */
+    .nexus-wrapper {
+        min-height: 100vh;
+        width: 100%;
+    }
+</style>

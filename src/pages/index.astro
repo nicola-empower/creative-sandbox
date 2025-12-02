@@ -1,0 +1,294 @@
+---
+import BlankLayout from "../layouts/BlankLayout.astro";
+---
+
+<BlankLayout title="Vibe Sandbox - Directory">
+    <main class="sandbox-container">
+        <div class="content">
+            <h1>VIBE SANDBOX</h1>
+            <p>Select a frequency.</p>
+
+            <div class="grid">
+                <a href="/vibes/silversound" class="card silversound">
+                    <h2>SILVERSOUND</h2>
+                    <p>Engineered Audio. Silence is Golden.</p>
+                </a>
+
+                <a href="/vibes/mint-condition" class="card mint-condition">
+                    <h2>MINT CONDITION</h2>
+                    <p>Fresh & Retro. Sneaker Restoration.</p>
+                </a>
+
+                <a href="/vibes/violet-hour" class="card violet-hour">
+                    <h2>THE VIOLET HOUR</h2>
+                    <p>Moody Luxury. Members Only Jazz.</p>
+                </a>
+
+                <a href="/vibes/violet-hour" class="card violet-hour">
+                    <h2>THE VIOLET HOUR</h2>
+                    <p>Moody Luxury. Members Only Jazz.</p>
+                </a>
+
+                <a href="/vibes/cloud-nine" class="card cloud-nine">
+                    <h2>CLOUD NINE</h2>
+                    <p>Gen Z Marketing. We Make Brands Pop.</p>
+                </a>
+
+                <a href="/vibes/nexus" class="card nexus">
+                    <h2>NEXUS</h2>
+                    <p>Cyberpunk Streetwear. Digital Armor.</p>
+                </a>
+
+                <a href="/vibes/havnn" class="card havnn">
+                    <h2>HAVNN</h2>
+                    <p>Conscious Calm. Organic Skincare.</p>
+                </a>
+
+                <a href="/vibes/structura" class="card structura">
+                    <h2>STRUCTURA</h2>
+                    <p>Brutalist Function. Form Follows Physics.</p>
+                </a>
+
+                <a href="/vibes/aurelia" class="card aurelia">
+                    <h2>AURELIA</h2>
+                    <p>Modern Luxury. The Ritual of Return.</p>
+                </a>
+
+                <a href="/vibes/northstar" class="card northstar">
+                    <h2>NORTH STAR</h2>
+                    <p>Institutional Scale. Moving The World.</p>
+                </a>
+
+                <a href="/vibes/slowroast" class="card slowroast">
+                    <h2>SLOW ROAST</h2>
+                    <p>Artisan Analog. Mornings, Reclaimed.</p>
+                </a>
+
+                <a href="/vibes/echo" class="card echo">
+                    <h2>ECHO CHAMBER</h2>
+                    <p>Audio Narrative. Stories That Linger.</p>
+                </a>
+
+                <a href="/vibes/pastel-whisk" class="card pastel-whisk">
+                    <h2>PASTEL WHISK</h2>
+                    <p>Soft Sweetness. Handcrafted Delights.</p>
+                </a>
+
+                <a href="/vibes/vellum" class="card vellum">
+                    <h2>VELLUM & OAK</h2>
+                    <p>Timeless Architecture. Designed for Eternity.</p>
+                </a>
+
+                <a href="/vibes/iron-ember" class="card iron-ember">
+                    <h2>IRON & EMBER</h2>
+                    <p>Rustic Gastropub. Seasonal Soul.</p>
+                </a>
+
+                <a href="/vibes/oritani" class="card oritani">
+                    <h2>THE ORITANI GROUP</h2>
+                    <p>Quiet Luxury. Preserving Legacy.</p>
+                </a>
+
+                <a href="/vibes/luna" class="card luna-sleep">
+                    <h2>LUNA</h2>
+                    <p>Sleep Science. The Quantified Self.</p>
+                </a>
+
+                <a href="/vibes/apex" class="card apex">
+                    <h2>APEX CAPITAL</h2>
+                    <p>Wealth Management 2.0. Compound Legacy.</p>
+                </a>
+
+                <a href="/vibes/velvet-cocoa" class="card velvet-cocoa">
+                    <h2>VELVET COCOA</h2>
+                    <p>Opulent Indulgence. The Art of Chocolate.</p>
+                </a>
+
+                <a href="/vibes/lumina" class="card lumina">
+                    <h2>LUMINA</h2>
+                    <p>Digital Violence. Agency Portfolio.</p>
+                </a>
+            </div>
+        </div>
+    </main>
+</BlankLayout>
+
+<style>
+    .sandbox-container {
+        background-color: #000;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Courier New", Courier, monospace;
+        color: #fff;
+        padding: 2rem;
+    }
+
+    .content {
+        text-align: center;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        letter-spacing: -2px;
+    }
+
+    p {
+        margin-bottom: 4rem;
+        opacity: 0.7;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .card {
+        display: block;
+        padding: 3rem 2rem;
+        border: 1px solid #333;
+        text-decoration: none;
+        color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+        opacity: 0.5;
+    }
+
+    /* Specific Card Styles */
+    .disruptor:hover {
+        background-color: #391b49;
+        border-color: #c29ce4;
+    }
+
+    .cloud-nine:hover {
+        background-color: #bed1e3;
+        color: #364156;
+        border-color: #f3a0ad;
+    }
+
+    .violet-hour:hover {
+        background-color: #461d3a;
+        color: #ecd0ec;
+        border-color: #ba71a2;
+        box-shadow: 0 0 20px rgba(186, 113, 162, 0.2);
+    }
+
+    .mint-condition:hover {
+        background-color: #f0f9f8;
+        color: #2c5e58;
+        border-color: #81bfb7;
+        box-shadow: 5px 5px 0px #f3a2be;
+    }
+
+    .silversound:hover {
+        background-color: #121524;
+        color: #c0c9db;
+        border-color: #9daccc;
+        box-shadow: 0 0 15px rgba(157, 172, 204, 0.3);
+    }
+
+    .nexus:hover {
+        background-color: #050505;
+        border-color: #bf00ff;
+        box-shadow: 0 0 20px rgba(191, 0, 255, 0.3);
+    }
+
+    .havnn:hover {
+        background-color: #dcdfd6;
+        color: #134340;
+        border-color: #134340;
+    }
+
+    .structura:hover {
+        background-color: #0f172a;
+        color: #3b82f6;
+        border-color: #3b82f6;
+    }
+
+    .aurelia:hover {
+    }
+
+    .northstar:hover {
+        background-color: #001f3f;
+        color: #add8e6;
+        border-color: #add8e6;
+    }
+
+    .slowroast:hover {
+        background-color: #f5f0eb;
+        color: #4a3b32;
+        border-color: #c06c47;
+    }
+
+    .echo:hover {
+        background-color: #0a0a12;
+        color: #e0e0e0;
+        border-color: #ff3366;
+    }
+
+    .apex:hover {
+        background-color: #064e3b;
+        color: #f1f5f9;
+        border-color: #d97706;
+    }
+
+    .vellum:hover {
+        background-color: #f2e8d5;
+        color: #43302b;
+        border-color: #8d6e63;
+    }
+
+    .iron-ember:hover {
+        background-color: #d8c8b8;
+        color: #616852;
+        border-color: #78211e;
+    }
+
+    .oritani:hover {
+        background-color: #071739;
+        color: #e3c39d;
+        border-color: #e3c39d;
+    }
+
+    .pastel-whisk:hover {
+        background-color: #edd9be;
+        color: #4a4046;
+        border-color: #f283ae;
+    }
+
+    .luna-sleep:hover {
+        background-color: #011c40;
+        color: #54acbf;
+        border-color: #a7ebf2;
+    }
+
+    .lumina:hover {
+        background-color: #fafafa;
+        color: #000;
+        border-color: #000;
+    }
+
+    .velvet-cocoa:hover {
+        background-color: #190608;
+        color: #ffc7d5;
+        border-color: #c32349;
+    }
+</style>

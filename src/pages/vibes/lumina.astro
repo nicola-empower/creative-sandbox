@@ -1,0 +1,114 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import Manifesto from "../../components/Manifesto";
+import Arsenal from "../../components/Arsenal";
+import FAQ from "../../components/FAQ";
+import Work from "../../components/Work";
+import Contact from "../../components/Contact";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="Lumina Creative - Digital Violence">
+    <!-- Injecting Lumina-specific head elements -->
+    <Fragment slot="head">
+        <ViewTransitions />
+        <script is:inline>
+            const theme = (() => {
+                // Force dark mode for Lumina
+                return "dark";
+            })();
+
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark");
+            } else {
+                document.documentElement.classList.remove("dark");
+            }
+            document.documentElement.setAttribute("data-theme", theme);
+        </script>
+    </Fragment>
+
+    <div>
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >•</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >1.2M IMPRESSIONS GENERATED</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >•</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >NO BORING CAMPAIGNS</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >•</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >400% ROI FOR CLIENT X</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >•</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >1.2M IMPRESSIONS GENERATED</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >•</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >NO BORING CAMPAIGNS</span
+        >
+        <span
+            class="text-2xl font-black text-white dark:text-black font-display"
+            >•</span
+        >
+    </div>
+
+    <VibeDNA
+        description="Digital Violence. Agency Portfolio. No boring campaigns."
+        fontHeader="Syne"
+        fontBody="Space Grotesk"
+        palette={[
+            { hex: "#000000", name: "Void" },
+            { hex: "#BF00FF", name: "Neon Purple" },
+            { hex: "#CCFF00", name: "Acid Green" },
+        ]}
+    />
+
+    <Manifesto client:visible />
+    <Arsenal client:visible />
+    <FAQ client:visible />
+    <Work client:visible />
+    <Contact client:visible />
+</BlankLayout>
+
+<style>
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .animate-marquee {
+        animation: marquee 20s linear infinite;
+    }
+
+    .lumina-wrapper {
+        min-height: 100vh;
+        width: 100%;
+    }
+</style>

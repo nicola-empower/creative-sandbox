@@ -1,0 +1,482 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="The Pastel Whisk">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="whisk-wrapper">
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">The Pastel Whisk</div>
+            <div class="nav-links">
+                <a href="#">Shop</a>
+                <a href="#">Our Story</a>
+                <a href="#">Weddings</a>
+                <a href="#" class="cart-link">Cart (0)</a>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-blob-1"></div>
+            <div class="hero-blob-2"></div>
+
+            <div class="hero-content">
+                <span class="script-tag">Handcrafted with love</span>
+                <h1 class="headline">Life is Sweet.</h1>
+                <p class="subhead">
+                    Intricate macarons, wedding favours, and elegant afternoon
+
+                    <div class="scroll-container">
+                        <!-- Rose Card -->
+                        <div class="flavour-card card-rose">
+                            <div class="card-blob"></div>
+                            <img
+                                src="/images/flavour1.png"
+                                alt="Rose & Raspberry"
+                                class="flavour-img"
+                            />
+                            <h4>Rose & Raspberry</h4>
+                            <p>
+                                Delicate rosewater buttercream with a tart
+                                raspberry jam core.
+                            </p>
+                            <span class="price-tag">£24.00</span>
+                        </div>
+
+                        <!-- Pistachio Card -->
+                        <div class="flavour-card card-pistachio">
+                            <div class="card-blob"></div>
+                            <img
+                                src="/images/flavour2.png"
+                                alt="Sicilian Pistachio"
+                                class="flavour-img"
+                            />
+                            <h4>Sicilian Pistachio</h4>
+                            <p>
+                                Roasted pistachio ganache rolled in crushed
+                                nuts.
+                            </p>
+                            <span class="price-tag">£26.00</span>
+                        </div>
+
+                        <!-- Earl Grey Card -->
+                        <div class="flavour-card card-lavender">
+                            <div class="card-blob"></div>
+                            <img
+                                src="/images/flavour3.png"
+                                alt="Earl Grey & Honey"
+                                class="flavour-img"
+                            />
+                            <h4>Earl Grey & Honey</h4>
+                            <p>
+                                Infused black tea ganache with a drop of local
+                                wildflower honey.
+                            </p>
+                            <span class="price-tag">£25.00</span>
+                        </div>
+
+                        <!-- Lemon Card -->
+                        <div class="flavour-card card-lemon">
+                            <div class="card-blob"></div>
+                            <img
+                                src="/images/flavour4.png"
+                                alt="Amalfi Lemon"
+                                class="flavour-img"
+                            />
+                            <h4>Amalfi Lemon</h4>
+                            <p>
+                                Zesty lemon curd with a white chocolate shell.
+                            </p>
+                            <span class="price-tag">£24.00</span>
+                        </div>
+                    </div>
+                </p>
+
+                <VibeDNA
+                    description="Handcrafted with love. Intricate macarons, wedding favours, and elegant afternoon teas."
+                    fontHeader="Lora"
+                    fontBody="Lato"
+                    palette={[
+                        { hex: "#EDD9BE", name: "Flower Box" },
+                        { hex: "#F283AE", name: "Pink Tulips" },
+                        { hex: "#4A4046", name: "Charcoal" },
+                    ]}
+                />
+
+                <!-- Weddings & Events -->
+                <section class="weddings-section">
+                    <div class="wedding-content">
+                        <h2 class="script-heading white-script">
+                            Celebrations
+                        </h2>
+                        <h3>Weddings & Events</h3>
+                        <p>
+                            Make your special day unforgettable with our bespoke
+                            dessert tables and macaron towers.
+                        </p>
+                        <button class="secondary-btn">Enquire Now</button>
+                    </div>
+                    <div class="wedding-visual">
+                        <img
+                            src="/images/weddingcake.png"
+                            alt="Wedding Cake"
+                            class="cake-img"
+                        />
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="curved-top">
+                        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                            <path
+                                fill="#C59FBE"
+                                fill-opacity="1"
+                                d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <div class="footer-content">
+                        <div class="insta-grid">
+                            <div class="insta-item"></div>
+                            <div class="insta-item"></div>
+                            <div class="insta-item"></div>
+                            <div class="insta-item"></div>
+                        </div>
+                        <div class="footer-info">
+                            <h3>The Pastel Whisk</h3>
+                            <p>12 Sweet Street, Bath, BA1 1AA</p>
+                            <div class="socials">
+                                <span>Instagram</span>
+                                <span>Pinterest</span>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </header>
+
+        <style>
+            /* 
+    Palette:
+    Flower Box: #EDD9BE (Background)
+    Soft Roses: #FAC1B5 (Highlights)
+    Lavender: #C59FBE (Accents)
+    Pink Tulips: #F283AE (Buttons)
+    Eucalyptus: #98B8B9 (Balance)
+    Tulip Stems: #C6C870 (Fresh accents)
+    Text: #4A4046 (Deep Warm Charcoal)
+  */
+
+            :root {
+                --bg-cream: #edd9be;
+                --highlight-rose: #fac1b5;
+                --accent-lavender: #c59fbe;
+                --btn-pink: #f283ae;
+                --balance-teal: #98b8b9;
+                --accent-green: #c6c870;
+                --text-charcoal: #4a4046;
+
+                --font-script: "Pinyon Script", cursive;
+                --font-heading: "Lora", serif;
+                --font-body: "Lato", sans-serif;
+            }
+
+            .whisk-wrapper {
+                background-color: var(--bg-cream);
+                color: var(--text-charcoal);
+                font-family: var(--font-body);
+                min-height: 100vh;
+                overflow-x: hidden;
+            }
+
+            /* Nav */
+            .nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2rem 3rem;
+            }
+
+            .logo {
+                font-family: var(--font-script);
+                font-size: 2rem;
+                color: var(--btn-pink);
+                font-weight: 400;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: var(--text-charcoal);
+                font-weight: 400;
+                font-size: 0.95rem;
+                transition: color 0.2s;
+            }
+
+            .nav-links a:hover {
+                color: var(--btn-pink);
+            }
+
+            .cart-link {
+                font-weight: 700 !important;
+            }
+
+            /* Hero */
+            .hero {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 4rem 2rem;
+                position: relative;
+                min-height: 80vh;
+                justify-content: center;
+            }
+
+            @media (min-width: 768px) {
+                .hero {
+                    flex-direction: row;
+                    text-align: left;
+                    justify-content: space-between;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+                .hero-content {
+                    max-width: 500px;
+                    z-index: 2;
+                }
+            }
+
+            .hero-blob-1 {
+                position: absolute;
+                top: -10%;
+                left: -10%;
+                width: 500px;
+                height: 500px;
+                background-color: var(--highlight-rose);
+                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+                opacity: 0.8; /* Increased opacity */
+                z-index: 0;
+                filter: blur(40px);
+            }
+
+            .hero-blob-2 {
+                position: absolute;
+                bottom: 10%;
+                right: -5%;
+                width: 400px;
+                height: 400px;
+                background-color: var(--accent-lavender);
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+                opacity: 0.7; /* Increased opacity */
+                z-index: 0;
+                filter: blur(40px);
+            }
+
+            /* ... */
+
+            .flavour-img {
+                width: 150px;
+                height: 150px;
+                background-color: #fff;
+                border: 2px solid rgba(0, 0, 0, 0.05); /* Added border */
+                border-radius: 50%;
+                margin: 0 auto 2rem;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+                object-fit: cover;
+            }
+
+            .flavour-card h4 {
+                font-family: var(--font-heading);
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .flavour-card p {
+                font-size: 0.95rem;
+                margin-bottom: 2rem;
+                line-height: 1.5;
+            }
+
+            .price-tag {
+                background-color: var(--accent-green);
+                color: #fff;
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                font-weight: 700;
+                font-size: 0.9rem;
+            }
+
+            /* Weddings */
+            .weddings-section {
+                background-color: var(--balance-teal);
+                padding: 6rem 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4rem;
+                position: relative;
+            }
+
+            @media (min-width: 768px) {
+                .weddings-section {
+                    flex-direction: row;
+                    justify-content: center;
+                }
+            }
+
+            .wedding-content {
+                max-width: 500px;
+                color: #fff;
+            }
+
+            .white-script {
+                color: #fff !important;
+            }
+
+            .wedding-content h3 {
+                font-family: var(--font-heading);
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .wedding-content p {
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+                opacity: 0.9;
+            }
+
+            .secondary-btn {
+                background-color: #fff;
+                color: var(--balance-teal);
+                border: none;
+                padding: 1rem 2.5rem;
+                border-radius: 50px;
+                font-family: var(--font-body);
+                font-weight: 700;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+            .secondary-btn:hover {
+                background-color: var(--highlight-rose);
+                color: var(--text-charcoal);
+            }
+
+            .wedding-visual {
+                position: relative;
+            }
+
+            .cake-img {
+                width: 350px;
+                height: 450px;
+                object-fit: cover;
+                border-radius: 150px 150px 0 0;
+                box-shadow: 20px -20px 0 rgba(255, 255, 255, 0.2);
+            }
+
+            /* Footer */
+            .footer {
+                background-color: var(--accent-lavender);
+                position: relative;
+                padding-bottom: 4rem;
+            }
+
+            .curved-top {
+                position: absolute;
+                top: -150px;
+                left: 0;
+                width: 100%;
+                line-height: 0;
+                transform: rotate(180deg);
+            }
+
+            .curved-top svg {
+                display: block;
+                width: 100%;
+                height: 150px;
+            }
+
+            .curved-top path {
+                fill: var(--accent-lavender);
+            }
+
+            .footer-content {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 4rem 2rem 0;
+                text-align: center;
+                position: relative;
+                z-index: 2;
+            }
+
+            .insta-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem;
+                margin-bottom: 4rem;
+            }
+
+            .insta-item {
+                aspect-ratio: 1;
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 10px;
+                transition: transform 0.2s;
+            }
+
+            .insta-item:hover {
+                transform: scale(1.05);
+            }
+
+            .footer-info h3 {
+                font-family: var(--font-script);
+                font-size: 2.5rem;
+                color: #fff;
+                margin-bottom: 1rem;
+            }
+
+            .footer-info p {
+                color: #fff;
+                margin-bottom: 1.5rem;
+            }
+
+            .socials {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                color: #fff;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+            }
+
+            @media (max-width: 768px) {
+                .headline {
+                    font-size: 3rem;
+                }
+                .insta-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        </style>
+    </div>
+</BlankLayout>

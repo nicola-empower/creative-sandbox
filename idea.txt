@@ -1,0 +1,143 @@
+Since you are using **Astro**, this is perfect. Astro is built for this kind of thing because it lets you create isolated pages easily without complex routing setups.
+
+Since this is your "Sandbox" project (separate from the main site), you want a structure that lets you spin up **The Disruptor**, **The Titan**, etc., quickly, record them, and move on.
+
+Here is the cleanest file and folder set up for your **Astro Vibe Lab**.
+
+### **1. The File Structure (Visual Tree)**
+
+You want to keep each "Vibe" isolated so their CSS doesn't bleed into each other.
+
+```text
+/my-astro-sandbox
+├── public/
+│   └── images/              <-- Put your raw background images here
+├── src/
+│   ├── layouts/
+│   │   └── BlankLayout.astro  <-- VITAL: A layout with NO header/footer
+│   ├── pages/
+│   │   └── vibes/           <-- Create this folder
+│   │       ├── disruptor.astro
+│   │       ├── titan.astro
+│   │       └── curator.astro
+│   └── styles/              <-- Optional: if you want shared reset.css
+└── astro.config.mjs
+```
+
+### **2. The "Blank" Layout**
+
+**Why you need this:** Your default Astro layout probably has a Navbar and Footer. You don't want those in your "Vibe" video recordings. You want a clean slate.
+
+Create `src/layouts/BlankLayout.astro`:
+
+```astro
+---
+// src/layouts/BlankLayout.astro
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <style is:global>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body { width: 100%; height: 100vh; overflow-x: hidden; }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+```
+
+### **3. The Vibe Page (e.g., The Disruptor)**
+
+Now, create the specific page. This is where you paste the Hex codes and fonts we discussed.
+
+Create `src/pages/vibes/disruptor.astro`.
+*(You can now access this in your browser at `localhost:4321/vibes/disruptor`)*
+
+```astro
+---
+// src/pages/vibes/disruptor.astro
+import BlankLayout from '../../layouts/BlankLayout.astro';
+
+// THE PALETTE (Just for your reference while coding)
+// Background: #391B49 (Russian Violet)
+// Accent: #C29CE4 (Bright Lavender)
+// Glitch: #9570C6 (Amethyst)
+---
+
+<BlankLayout title="The Disruptor - Vibe Check">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <main class="disruptor-container">
+    <div class="content">
+      <h1 class="glitch-text" data-text="DISRUPTOR">DISRUPTOR</h1>
+      <p>Visual Volume. Maximum Impact.</p>
+      <button class="neon-btn">ENTER VAULT</button>
+    </div>
+  </main>
+
+</BlankLayout>
+
+<style>
+  /* Scoped CSS - only affects this page */
+  .disruptor-container {
+    background-color: #391B49; /* Russian Violet */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Syne', sans-serif;
+    color: #fff;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #C29CE4; /* Bright Lavender */
+    /* Add glitch CSS here later */
+  }
+
+  p {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    color: #999ECF; /* Ceil */
+  }
+
+  .neon-btn {
+    background: transparent;
+    border: 2px solid #9570C6;
+    color: #9570C6;
+    padding: 1rem 3rem;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 0 15px #9570C6;
+  }
+</style>
+```
+
+### **Summary of Steps:**
+
+1.  **Create** `src/layouts/BlankLayout.astro` (The clean slate).
+2.  **Create** `src/pages/vibes/` folder.
+3.  **Create** `disruptor.astro` inside that folder.
+4.  **Run** `npm run dev`.
+5.  **Go to** `http://localhost:4321/vibes/disruptor`.
+
+copy the exisiting nexus and lumina into this format and make sure to update the colors and fonts
+
+the plan is to use this project as a sandbox to test new ideas and concepts no global css, each project/ completed page will have their own css and layout

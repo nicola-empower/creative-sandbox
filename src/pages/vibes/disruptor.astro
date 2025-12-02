@@ -1,0 +1,80 @@
+---
+// src/pages/vibes/disruptor.astro
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import VibeDNA from "../../components/VibeDNA.astro";
+
+// THE PALETTE (Just for your reference while coding)
+// Background: #391B49 (Russian Violet)
+// Accent: #C29CE4 (Bright Lavender)
+// Glitch: #9570C6 (Amethyst)
+---
+
+<BlankLayout title="The Disruptor - Vibe Check">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet"
+    />
+
+    <main class="disruptor-container">
+        <div class="content">
+            <h1 class="glitch-text" data-text="DISRUPTOR">DISRUPTOR</h1>
+            <p>Visual Volume. Maximum Impact.</p>
+            <button class="neon-btn">ENTER VAULT</button>
+            <VibeDNA
+                description="Visual Volume. Maximum Impact. Break the mold."
+                fontHeader="Syne"
+                fontBody="Syne"
+                palette={[
+                    { hex: "#391B49", name: "Russian Violet" },
+                    { hex: "#C29CE4", name: "Bright Lavender" },
+                    { hex: "#9570C6", name: "Amethyst" },
+                ]}
+            />
+        </div>
+    </main>
+</BlankLayout>
+
+<style>
+    /* Scoped CSS - only affects this page */
+    .disruptor-container {
+        background-color: #391b49; /* Russian Violet */
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Syne", sans-serif;
+        color: #fff;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #c29ce4; /* Bright Lavender */
+        /* Add glitch CSS here later */
+    }
+
+    p {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+        color: #999ecf; /* Ceil */
+    }
+
+    .neon-btn {
+        background: transparent;
+        border: 2px solid #9570c6;
+        color: #9570c6;
+        padding: 1rem 3rem;
+        font-family: "Syne", sans-serif;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 0 15px #9570c6;
+    }
+</style>

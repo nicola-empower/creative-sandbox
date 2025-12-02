@@ -1,0 +1,579 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="Slow Roast Coffee">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&family=Outfit:wght@300;500;700&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="slowroast-wrapper">
+        <!-- Grain Overlay -->
+        <div class="grain-overlay"></div>
+
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">SLOW ROAST.</div>
+            <div class="cart">BAG (0)</div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-content">
+                <span class="badge">EST. 2024</span>
+                <h1 class="headline">
+                    Mornings, <br /><span class="italic">Reclaimed.</span>
+                </h1>
+                <p class="subhead">
+                    We don't automate our roast. We listen to the beans. Small
+                    batch coffee for people who sit down to drink it.
+                </p>
+                <button class="cta-btn">Shop The Roast</button>
+            </div>
+
+            GUATEMALA ANTIGUA ~ BRAZIL SANTOS ~
+        </header>
+        <VibeDNA
+            description="Mornings, Reclaimed. Small batch coffee for people who sit down to drink it."
+            fontHeader="Fraunces"
+            fontBody="Outfit"
+            palette={[
+                { hex: "#F5F0EB", name: "Cream" },
+                { hex: "#4A3B32", name: "Warm Brown" },
+                { hex: "#C06C47", name: "Terracotta" },
+            ]}
+        />
+    </div>
+
+    <!-- Feature Grid -->
+    <section class="features">
+        <div class="feature-card">
+            <h3>Fair Trade</h3>
+            <p>Farmers first. Always.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Small Batch</h3>
+            <p>Roasted Tuesdays.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Grind</h3>
+            <p>Perfect consistency.</p>
+        </div>
+    </section>
+
+    <!-- Current Roasts -->
+    <section class="roast-list">
+        <div class="roast-header">
+            <h2>Current Roasts</h2>
+            <div class="line"></div>
+        </div>
+        <div class="roast-grid">
+            <div class="roast-item">
+                <div class="bean-bag">
+                    <img
+                        src="/images/beanbag1.png"
+                        alt="Ethiopia Yirgacheffe"
+                        class="bean-img"
+                    />
+                </div>
+                <h3>Ethiopia Yirgacheffe</h3>
+                <p>Floral. Citrus. Bright.</p>
+                <span class="price">£14.00</span>
+            </div>
+            <div class="roast-item">
+                <div class="bean-bag">
+                    <img
+                        src="/images/beanbag2.png"
+                        alt="Colombia Huila"
+                        class="bean-img"
+                    />
+                </div>
+                <h3>Colombia Huila</h3>
+                <p>Caramel. Nutty. Smooth.</p>
+                <span class="price">£12.50</span>
+            </div>
+            <div class="roast-item">
+                <div class="bean-bag">
+                    <img
+                        src="/images/beanbag3.png"
+                        alt="Sumatra Mandheling"
+                        class="bean-img"
+                    />
+                </div>
+                <h3>Sumatra Mandheling</h3>
+                <p>Earthy. Spicy. Bold.</p>
+                <span class="price">£13.00</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Receipt Stats -->
+    <section class="receipt-section">
+        <div class="receipt">
+            <div class="receipt-header">
+                <span>BATCH #4092</span>
+                <span>24/10/25</span>
+            </div>
+            <div class="dashed-line"></div>
+            <div class="receipt-row">
+                <span>ROASTED:</span>
+                <span>YESTERDAY</span>
+            </div>
+            <div class="receipt-row">
+                <span>ACIDITY:</span>
+                <span>MEDIUM</span>
+            </div>
+            <div class="receipt-row">
+                <span>NOTES:</span>
+                <span>CHOCOLATE, FIG</span>
+            </div>
+            <div class="dashed-line"></div>
+            <div class="receipt-footer">THANK YOU FOR SLOWING DOWN.</div>
+        </div>
+    </section>
+
+    <style>
+        /* 
+    Palette:
+    Cream: #F5F0EB
+    Warm Brown: #4A3B32
+    Terracotta: #C06C47
+  */
+
+        :root {
+            --bg-color: #f5f0eb;
+            --text-color: #4a3b32;
+            --accent-color: #c06c47;
+
+            --font-heading: "Fraunces", serif;
+            --font-body: "Outfit", sans-serif;
+        }
+
+        .slowroast-wrapper {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Grain Overlay */
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.4;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .cart {
+            border: 2px solid var(--text-color);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cart:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        /* Hero */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                flex-direction: row;
+                text-align: left;
+                justify-content: space-between;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 6rem 2rem;
+            }
+
+            .hero-content {
+                max-width: 50%;
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .headline {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .italic {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--accent-color);
+        }
+
+        .subhead {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(74, 59, 50, 0.2);
+        }
+
+        /* Visual */
+        .hero-visual {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-visual {
+                margin-top: 0;
+                margin-right: 4rem;
+            }
+        }
+
+        .blob {
+            width: 100%;
+            height: 100%;
+            background-color: var(--text-color);
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            animation: morph 8s ease-in-out infinite;
+        }
+
+        .steam {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            filter: blur(10px);
+            animation: rise 3s infinite ease-in;
+            opacity: 0;
+        }
+
+        .steam-1 {
+            width: 20px;
+            height: 40px;
+            top: 20%;
+            left: 40%;
+            animation-delay: 0.5s;
+        }
+
+        .steam-2 {
+            width: 30px;
+            height: 50px;
+            top: 30%;
+            left: 60%;
+            animation-delay: 1.5s;
+        }
+
+        /* Marquee */
+        .marquee-container {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 1rem 0;
+            overflow: hidden;
+            white-space: nowrap;
+            font-family: var(--font-heading);
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .feature-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        /* Current Roasts */
+        .roast-list {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .roast-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .roast-header h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            white-space: nowrap;
+        }
+
+        .roast-header .line {
+            height: 1px;
+            background-color: var(--text-color);
+            width: 100%;
+            opacity: 0.2;
+        }
+
+        .roast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .roast-item {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .roast-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .bean-bag {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background-color: #e8e0d5;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bean-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .roast-item:hover .bean-img {
+            transform: scale(1.05);
+        }
+
+        .bean-bag::after {
+            content: "ROASTED";
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            opacity: 0.3;
+            transform: rotate(-90deg);
+            transform-origin: bottom right;
+            z-index: 2;
+        }
+
+        .roast-item h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .roast-item p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        /* Receipt */
+        .receipt-section {
+            padding: 4rem 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .receipt {
+            background-color: #fff;
+            padding: 2rem;
+            width: 300px;
+            font-family: "Courier New", Courier, monospace;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transform: rotate(-2deg);
+            position: relative;
+        }
+
+        .receipt::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: radial-gradient(
+                    circle,
+                    transparent,
+                    transparent 50%,
+                    #fff 50%,
+                    #fff 100%
+                ) -7px -8px /
+                16px 16px repeat-x;
+        }
+
+        .receipt::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: radial-gradient(
+                    circle,
+                    transparent,
+                    transparent 50%,
+                    #fff 50%,
+                    #fff 100%
+                ) -7px -2px /
+                16px 16px repeat-x;
+            transform: rotate(180deg);
+        }
+
+        .receipt-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .dashed-line {
+            border-bottom: 1px dashed #ccc;
+            margin: 1rem 0;
+        }
+
+        .receipt-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .receipt-footer {
+            text-align: center;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        /* Animations */
+        @keyframes morph {
+            0% {
+                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            }
+            34% {
+                border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+            }
+            67% {
+                border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+            }
+            100% {
+                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            }
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-40px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</BlankLayout>

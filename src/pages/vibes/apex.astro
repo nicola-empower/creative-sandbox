@@ -1,0 +1,583 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="Apex Capital">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="apex-wrapper">
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span>APEX CAPITAL</span>
+            </div>
+            <div class="nav-links">
+                <a href="#">Private Wealth</a>
+                <a href="#">Advisory</a>
+                <a href="#">Insights</a>
+                <button class="login-btn">Client Login</button>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-content">
+                <span class="pill">WEALTH MANAGEMENT 2.0</span>
+                <h1 class="headline">
+                    COMPOUND YOUR <span class="highlight">LEGACY.</span>
+                </h1>
+                <p class="subhead">
+                    Wealth management for the digital age. Secure, transparent,
+                    and built for generational growth.
+                </p>
+
+                <div class="cta-group">
+                    <button class="primary-btn">Open Account</button>
+                    <button class="secondary-btn">View Performance</button>
+                </div>
+            </div>
+
+            <!-- Abstract Graph Visual -->
+            <div class="hero-visual">
+                <div class="graph-container">
+                    <svg
+                        width="100%"
+                        height="100%"
+                        viewBox="0 0 400 300"
+                        preserveAspectRatio="none"
+                    >
+                        <path
+                            d="M0,300 L0,100 Q50,50 100,80 T200,120 T300,60 T400,20"
+                            fill="none"
+                            stroke="var(--primary)"
+                            stroke-width="4"
+                            class="graph-line-svg"></path>
+                        <path
+                            d="M0,300 L0,100 Q50,50 100,80 T200,120 T300,60 T400,20 L400,300 Z"
+                            fill="url(#gradient)"
+                            opacity="0.1"></path>
+                        <defs>
+                            <linearGradient
+                                id="gradient"
+                                x1="0%"
+                                y1="0%"
+                                x2="0%"
+                                y2="100%"
+                            >
+                                <stop offset="0%" stop-color="var(--primary)"
+                                ></stop>
+                                <stop offset="100%" stop-color="white"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <div class="data-point p1" style="bottom: 60%; left: 25%;">
+                        <span class="tooltip">+$12,400</span>
+                    </div>
+                    <div class="data-point p2" style="bottom: 80%; left: 75%;">
+                        <span class="tooltip">+$45,200</span>
+                        <div class="ticker-item">
+                            NASDAQ <span class="up">▲ 0.8%</span>
+                        </div>
+                        <div class="ticker-item">
+                            FTSE <span class="down">▼ 0.1%</span>
+                        </div>
+                        <div class="ticker-item">
+                            CRYPTO <span class="up">▲ 4.5%</span>
+                        </div>
+                        <div class="ticker-item">
+                            BONDS <span class="flat">▬ 0.0%</span>
+                        </div>
+                        <div class="ticker-item">
+                            REAL ESTATE <span class="up">▲ 0.5%</span>
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="ticker-item">
+                            S&P 500 <span class="up">▲ 1.2%</span>
+                        </div>
+                        <div class="ticker-item">
+                            NASDAQ <span class="up">▲ 0.8%</span>
+                        </div>
+                        <div class="ticker-item">
+                            FTSE <span class="down">▼ 0.1%</span>
+                        </div>
+                        <div class="ticker-item">
+                            CRYPTO <span class="up">▲ 4.5%</span>
+                        </div>
+                        <div class="ticker-item">
+                            BONDS <span class="flat">▬ 0.0%</span>
+                        </div>
+                        <div class="ticker-item">
+                            REAL ESTATE <span class="up">▲ 0.5%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <section class="stats-section">
+                    <div class="stat-box">
+                        <span class="stat-value">$4B</span>
+                        <span class="stat-label">ASSETS UNDER MANAGEMENT</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">0%</span>
+                        <span class="stat-label">HIDDEN FEES</span>
+                    </div>
+                </section>
+
+                <!-- Feature Grid -->
+                <section class="features">
+                    <div class="feature-card">
+                        <div class="icon-box">🔒</div>
+                        <h3>Security</h3>
+                        <p>Bank-grade encryption.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">🤝</div>
+                        <h3>Advisory</h3>
+                        <p>Human experts, AI assisted.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">💧</div>
+                        <h3>Liquidity</h3>
+                        <p>Access your cash instantly.</p>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="footer-content">
+                        <p>&copy; 2025 APEX CAPITAL PARTNERS. MEMBER SIPC.</p>
+                    </div>
+                </footer>
+            </div>
+        </header>
+        <VibeDNA
+            description="Wealth Management 2.0. Compound your legacy. Secure and transparent."
+            fontHeader="Montserrat"
+            fontBody="Inter"
+            palette={[
+                { hex: "#064E3B", name: "Emerald Green" },
+                { hex: "#D97706", name: "Gold" },
+                { hex: "#F8FAFC", name: "Slate" },
+            ]}
+        />
+
+        <style>
+            /* 
+    Palette:
+    Emerald Green: #064E3B
+    Slate: #F1F5F9
+    Gold: #D97706
+    Dark Text: #0F172A
+  */
+
+            :root {
+                --primary: #064e3b;
+                --bg-color: #f8fafc;
+                --accent: #d97706;
+                --text-dark: #0f172a;
+                --text-light: #64748b;
+
+                --font-heading: "Montserrat", sans-serif;
+                --font-body: "Inter", sans-serif;
+            }
+
+            .apex-wrapper {
+                background-color: var(--bg-color);
+                color: var(--text-dark);
+                font-family: var(--font-body);
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                overflow-x: hidden;
+            }
+
+            /* Nav */
+            .nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.5rem 3rem;
+                background-color: #fff;
+                border-bottom: 1px solid #e2e8f0;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+                font-family: var(--font-heading);
+                font-weight: 800;
+                font-size: 1.2rem;
+                letter-spacing: -0.5px;
+                color: var(--primary);
+            }
+
+            .logo-icon {
+                width: 24px;
+                height: 24px;
+                background: linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--accent)
+                );
+                border-radius: 4px;
+            }
+
+            .nav-links {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                font-size: 0.9rem;
+                font-weight: 500;
+            }
+
+            .nav-links a {
+                color: var(--text-dark);
+                text-decoration: none;
+                transition: color 0.2s;
+            }
+
+            .nav-links a:hover {
+                color: var(--primary);
+            }
+
+            .login-btn {
+                background-color: var(--primary);
+                color: #fff;
+                border: none;
+                padding: 0.6rem 1.2rem;
+                border-radius: 6px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+
+            .login-btn:hover {
+                background-color: #047857;
+            }
+
+            /* Hero */
+            .hero {
+                display: flex;
+                align-items: center;
+                padding: 6rem 3rem;
+                max-width: 1200px;
+                margin: 0 auto;
+                gap: 4rem;
+            }
+
+            @media (max-width: 768px) {
+                .hero {
+                    flex-direction: column;
+                    padding: 4rem 2rem;
+                }
+            }
+
+            .hero-content {
+                flex: 1;
+            }
+
+            .pill {
+                display: inline-block;
+                background-color: #dcfce7;
+                color: var(--primary);
+                padding: 0.4rem 0.8rem;
+                border-radius: 50px;
+                font-size: 0.75rem;
+                font-weight: 700;
+                margin-bottom: 1.5rem;
+                letter-spacing: 1px;
+            }
+
+            .headline {
+                font-family: var(--font-heading);
+                font-size: 3.5rem;
+                font-weight: 800;
+                line-height: 1.1;
+                margin-bottom: 1.5rem;
+                color: var(--text-dark);
+            }
+
+            .highlight {
+                color: var(--primary);
+                position: relative;
+            }
+
+            .highlight::after {
+                content: "";
+                position: absolute;
+                bottom: 5px;
+                left: 0;
+                width: 100%;
+                height: 10px;
+                background-color: #fef3c7; /* Light gold */
+                z-index: -1;
+                opacity: 0.6;
+            }
+
+            .subhead {
+                font-size: 1.1rem;
+                color: var(--text-light);
+                margin-bottom: 2.5rem;
+                line-height: 1.6;
+                max-width: 500px;
+            }
+
+            .cta-group {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .primary-btn {
+                background-color: var(--primary);
+                color: #fff;
+                border: none;
+                padding: 1rem 2rem;
+                border-radius: 6px;
+                font-weight: 600;
+                cursor: pointer;
+                box-shadow: 0 4px 12px rgba(6, 78, 59, 0.2);
+                transition: transform 0.2s;
+            }
+
+            .primary-btn:hover {
+                transform: translateY(-2px);
+            }
+
+            .secondary-btn {
+                background-color: #fff;
+                color: var(--text-dark);
+                border: 1px solid #cbd5e1;
+                padding: 1rem 2rem;
+                border-radius: 6px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: border-color 0.2s;
+            }
+
+            .secondary-btn:hover {
+                border-color: var(--primary);
+                color: var(--primary);
+            }
+
+            /* Visual */
+            .hero-visual {
+                flex: 1;
+                height: 400px;
+                background-color: #fff;
+                border-radius: 20px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+                padding: 2rem;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .graph-container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                border-left: 2px solid #e2e8f0;
+                border-bottom: 2px solid #e2e8f0;
+            }
+
+            .graph-line {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                width: 90%;
+                height: 80%;
+                border-top: 3px solid var(--primary);
+                border-right: 3px solid var(--primary);
+                border-radius: 0 100px 0 0;
+                opacity: 0.8;
+            }
+
+            .data-point {
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                background-color: #fff;
+                border: 3px solid var(--accent);
+                border-radius: 50%;
+                cursor: pointer;
+                transition: transform 0.2s;
+            }
+
+            .data-point:hover {
+                transform: scale(1.2);
+            }
+
+            .p1 {
+                bottom: 30%;
+                left: 20%;
+            }
+            .p2 {
+                bottom: 50%;
+                left: 50%;
+            }
+            .p3 {
+                bottom: 80%;
+                left: 85%;
+            }
+
+            .tooltip {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: var(--text-dark);
+                color: #fff;
+                padding: 0.3rem 0.6rem;
+                border-radius: 4px;
+                font-size: 0.7rem;
+                font-weight: 600;
+                opacity: 0;
+                transition: opacity 0.2s;
+                pointer-events: none;
+                white-space: nowrap;
+            }
+
+            .data-point:hover .tooltip {
+                opacity: 1;
+            }
+
+            /* Marquee */
+            .ticker-wrap {
+                background-color: var(--text-dark);
+                color: #fff;
+                padding: 1rem 0;
+                overflow: hidden;
+            }
+
+            .ticker {
+                display: flex;
+                gap: 3rem;
+                animation: ticker 30s linear infinite;
+                white-space: nowrap;
+            }
+
+            .ticker-item {
+                font-weight: 600;
+                font-size: 0.9rem;
+            }
+
+            .up {
+                color: #34d399;
+                margin-left: 5px;
+            }
+            .down {
+                color: #f87171;
+                margin-left: 5px;
+            }
+            .flat {
+                color: #9ca3af;
+                margin-left: 5px;
+            }
+
+            /* Stats */
+            .stats-section {
+                display: flex;
+                justify-content: center;
+                gap: 4rem;
+                padding: 4rem 2rem;
+                background-color: #fff;
+                border-bottom: 1px solid #e2e8f0;
+            }
+
+            .stat-box {
+                text-align: center;
+            }
+
+            .stat-value {
+                display: block;
+                font-family: var(--font-heading);
+                font-size: 3rem;
+                font-weight: 800;
+                color: var(--primary);
+            }
+
+            .stat-label {
+                font-size: 0.8rem;
+                font-weight: 600;
+                color: var(--text-light);
+                letter-spacing: 1px;
+            }
+
+            /* Features */
+            .features {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                max-width: 1200px;
+                margin: 4rem auto;
+                padding: 0 2rem;
+            }
+
+            .feature-card {
+                background-color: #fff;
+                padding: 2rem;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+                border: 1px solid #e2e8f0;
+                transition: transform 0.3s;
+            }
+
+            .feature-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            }
+
+            .icon-box {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .feature-card h3 {
+                font-family: var(--font-heading);
+                font-size: 1.2rem;
+                margin-bottom: 0.5rem;
+                color: var(--text-dark);
+            }
+
+            .feature-card p {
+                color: var(--text-light);
+                font-size: 0.95rem;
+            }
+
+            /* Footer */
+            .footer {
+                margin-top: auto;
+                background-color: #fff;
+                padding: 2rem;
+                text-align: center;
+                border-top: 1px solid #e2e8f0;
+            }
+
+            .footer p {
+                font-size: 0.8rem;
+                color: var(--text-light);
+            }
+
+            @keyframes ticker {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+        </style>
+    </div>
+</BlankLayout>

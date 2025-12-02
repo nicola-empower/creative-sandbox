@@ -1,0 +1,568 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="Cloud Nine Creatives">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Outfit:wght@400;700;900&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="cloud-wrapper">
+        <!-- Custom Cursor -->
+        <div class="cursor-dot" id="cursor-dot"></div>
+        <div class="cursor-outline" id="cursor-outline"></div>
+
+        <!-- Aurora Background -->
+        <div class="aurora-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">cloud nine.</div>
+            <div class="nav-links">
+                <a href="#">Work</a>
+                <a href="#">Services</a>
+                <a href="#">Vibe</a>
+                <button class="contact-btn">Let's Talk</button>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="headline">
+                    We make brands <span class="highlight">go pop.</span>
+                </h1>
+                <p class="subhead">
+                    TikTok-first marketing for the digitally native.
+                </p>
+            </div>
+        </header>
+
+        <!-- Work Reel (iPhone Frame) -->
+        <section class="work-reel">
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="screen">
+                    <div class="video-placeholder">
+                        <span>SHOWREEL_2025.mp4</span>
+                        <div class="play-icon">▶</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services">
+            <div class="service-col col-1">
+                <div class="service-card">
+                    <h3>Content Creation</h3>
+                    <p>
+                        Lo-fi, high-impact video that feels native to the feed.
+                    </p>
+                </div>
+            </div>
+            <div class="service-col col-2">
+                <div class="service-card">
+                    <h3>Strategy</h3>
+                    <p>Trend forecasting and viral loop engineering.</p>
+                </div>
+            </div>
+            <div class="service-col col-3">
+                <div class="service-card">
+                    <h3>Influencers</h3>
+                    <p>Authentic partnerships with creators who get it.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact">
+            <div class="contact-box">
+                <h2>Ready to trend?</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Brand Name" />
+                    <input type="email" placeholder="Email" />
+                    <button type="submit" class="submit-btn">SEND IT</button>
+                </form>
+            </div>
+        </section>
+
+        <VibeDNA
+            description="Fresh, digital-native, and fun. A weightless aesthetic for the TikTok generation."
+            fontHeader="Outfit"
+            fontBody="DM Sans"
+            palette={[
+                { hex: "#CCA1C9", name: "Lilac Fizz" },
+                { hex: "#FFD3DD", name: "Cotton Candy" },
+                { hex: "#F3A0AD", name: "Mauvelous" },
+                { hex: "#BED1E3", name: "Polar Sky" },
+                { hex: "#92A1C3", name: "Denim" },
+            ]}
+        />
+    </div>
+</BlankLayout>
+
+<script>
+    // Custom Cursor Logic
+    const cursorDot = document.getElementById("cursor-dot");
+    const cursorOutline = document.getElementById("cursor-outline");
+
+    window.addEventListener("mousemove", (e) => {
+        const posX = e.clientX;
+        const posY = e.clientY;
+
+        if (cursorDot && cursorOutline) {
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            cursorOutline.animate(
+                {
+                    left: `${posX}px`,
+                    top: `${posY}px`,
+                },
+                { duration: 500, fill: "forwards" },
+            );
+        }
+    });
+
+    // Hover effects for cursor
+    const interactiveElements = document.querySelectorAll(
+        "a, button, .service-card",
+    );
+    interactiveElements.forEach((el) => {
+        el.addEventListener("mouseenter", () => {
+            cursorOutline?.classList.add("hovered");
+        });
+        el.addEventListener("mouseleave", () => {
+            cursorOutline?.classList.remove("hovered");
+        });
+    });
+</script>
+
+<style>
+    /* 
+    Palette:
+    Lilac Fizz: #CCA1C9
+    Cotton Candy: #FFD3DD
+    Mauvelous: #F3A0AD
+    Polar Sky: #BED1E3
+    Denim: #92A1C3
+    Dark Text: #364156
+    */
+
+    :root {
+        --lilac: #cca1c9;
+        --cotton: #ffd3dd;
+        --mauve: #f3a0ad;
+        --polar: #bed1e3;
+        --denim: #92a1c3;
+        --dark-text: #364156;
+
+        --font-heading: "Outfit", sans-serif;
+        --font-body: "DM Sans", sans-serif;
+    }
+
+    .cloud-wrapper {
+        background-color: #fff;
+        color: var(--dark-text);
+        font-family: var(--font-body);
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+        cursor: none; /* Hide default cursor */
+    }
+
+    /* Custom Cursor */
+    .cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--mauve);
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 9999;
+    }
+
+    .cursor-outline {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--mauve);
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 9998;
+        transition:
+            width 0.2s,
+            height 0.2s,
+            background-color 0.2s;
+        mix-blend-mode: difference;
+    }
+
+    .cursor-outline.hovered {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(243, 160, 173, 0.5);
+        border-color: transparent;
+    }
+
+    /* Aurora Background */
+    .aurora-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.6;
+        animation: float 20s infinite alternate;
+    }
+
+    .blob-1 {
+        top: -10%;
+        left: -10%;
+        width: 50vw;
+        height: 50vw;
+        background-color: var(--cotton);
+        animation-delay: 0s;
+    }
+
+    .blob-2 {
+        bottom: -10%;
+        right: -10%;
+        width: 60vw;
+        height: 60vw;
+        background-color: var(--polar);
+        animation-delay: -5s;
+    }
+
+    .blob-3 {
+        top: 40%;
+        left: 40%;
+        width: 40vw;
+        height: 40vw;
+        background-color: var(--lilac);
+        animation-delay: -10s;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        100% {
+            transform: translate(100px, 50px) rotate(20deg);
+        }
+    }
+
+    /* Nav */
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 3rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .logo {
+        font-family: var(--font-heading);
+        font-weight: 900;
+        font-size: 1.8rem;
+        letter-spacing: -1px;
+        color: var(--denim);
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--dark-text);
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+        color: var(--mauve);
+    }
+
+    .contact-btn {
+        background: linear-gradient(135deg, var(--mauve), var(--lilac));
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 50px;
+        color: #fff;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .contact-btn:hover {
+        transform: scale(1.05);
+    }
+
+    /* Hero */
+    .hero {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        padding: 6rem 2rem 4rem;
+    }
+
+    .headline {
+        font-family: var(--font-heading);
+        font-size: 6rem;
+        font-weight: 900;
+        line-height: 0.9;
+        letter-spacing: -3px;
+        color: var(--denim);
+        margin-bottom: 1.5rem;
+    }
+
+    .highlight {
+        color: var(--mauve);
+        position: relative;
+        display: inline-block;
+    }
+
+    .highlight::after {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background-color: var(--cotton);
+        z-index: -1;
+        transform: rotate(-2deg);
+        border-radius: 10px;
+    }
+
+    .subhead {
+        font-size: 1.5rem;
+        color: var(--dark-text);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Work Reel */
+    .work-reel {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8rem;
+    }
+
+    .phone-frame {
+        width: 300px;
+        height: 600px;
+        background-color: #fff;
+        border-radius: 40px;
+        border: 8px solid #f0f0f0;
+        box-shadow: 0 20px 60px rgba(146, 161, 195, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .notch {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 30px;
+        background-color: #f0f0f0;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        z-index: 20;
+    }
+
+    .screen {
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .video-placeholder {
+        color: #fff;
+        text-align: center;
+        font-family: monospace;
+    }
+
+    .play-icon {
+        font-size: 3rem;
+        margin-top: 1rem;
+        opacity: 0.8;
+    }
+
+    /* Services */
+    .services {
+        position: relative;
+        z-index: 10;
+        max-width: 1200px;
+        margin: 0 auto 8rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .service-col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-1 {
+        margin-top: 0;
+    }
+    .col-2 {
+        margin-top: 4rem;
+    }
+    .col-3 {
+        margin-top: 8rem;
+    }
+
+    .service-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 3rem 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(146, 161, 195, 0.2);
+        transition: transform 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .service-card h3 {
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+        color: var(--denim);
+        margin-bottom: 1rem;
+    }
+
+    .service-card p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    /* Contact */
+    .contact {
+        position: relative;
+        z-index: 10;
+        padding: 4rem 2rem 8rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-box {
+        background: #fff;
+        padding: 4rem;
+        border-radius: 30px;
+        box-shadow: 0 20px 50px rgba(146, 161, 195, 0.2);
+        text-align: center;
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .contact-box h2 {
+        font-family: var(--font-heading);
+        font-size: 3rem;
+        color: var(--denim);
+        margin-bottom: 2rem;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact-form input {
+        padding: 1rem 1.5rem;
+        border: 2px solid #f0f0f0;
+        border-radius: 15px;
+        font-family: var(--font-body);
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.3s;
+    }
+
+    .contact-form input:focus {
+        border-color: var(--mauve);
+    }
+
+    .submit-btn {
+        background: linear-gradient(90deg, var(--mauve), var(--lilac));
+        color: #fff;
+        border: none;
+        padding: 1.2rem;
+        border-radius: 15px;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .submit-btn:hover {
+        transform: scale(1.02);
+    }
+
+    @media (max-width: 768px) {
+        .headline {
+            font-size: 3.5rem;
+        }
+        .services {
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .col-1,
+        .col-2,
+        .col-3 {
+            margin-top: 0;
+        }
+        .cursor-dot,
+        .cursor-outline {
+            display: none;
+        } /* Hide custom cursor on touch */
+        .cloud-wrapper {
+            cursor: auto;
+        }
+    }
+</style>

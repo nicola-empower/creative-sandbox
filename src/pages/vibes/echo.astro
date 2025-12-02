@@ -1,0 +1,396 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="Echo Chamber">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;500;700&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="echo-wrapper">
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">
+                <span class="rec-dot"></span> ECHO CHAMBER
+            </div>
+            <div class="menu">
+                <span>EPISODES</span>
+                <span>ABOUT</span>
+                <span>SUBMIT</span>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="headline">
+                    Stories That <span class="italic">Linger.</span>
+                </h1>
+                <p class="subhead">
+                    An independent network for audio documentaries. Put on your
+                    headphones and drift away.
+                </p>
+
+                <div class="player-cta">
+                    <button class="play-btn">
+                        <div class="play-icon"></div>
+                    </button>
+                    <span class="cta-text">Start Listening</span>
+                </div>
+            </div>
+
+            <!-- Audio Visualizer Animation -->
+            <div class="visualizer">
+                <div class="bar"></div><div class="bar"></div><div class="bar">
+                </div><div class="bar"></div>
+                <div class="bar"></div><div class="bar"></div><div class="bar">
+                    >
+                </div>
+            </div>
+
+            <!-- Stats / Receipts -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <span class="stat-label">DOWNLOADS</span>
+                    <span class="stat-value">5M+</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <span class="stat-label">RATING</span>
+                    <span class="stat-value">5.0</span>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </section>
+
+            <!-- Feature Grid -->
+            <section class="features">
+                <div class="feature-item">
+                    <h3>Production</h3>
+                    <p>Immersive audio.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Hosts</h3>
+                    <p>Award-winning journalists.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Community</h3>
+                    <p>Live tapings.</p>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>LISTENING IS AN ACT OF LOVE.</p>
+            </footer>
+        </header>
+        <VibeDNA
+            description="Audio Documentaries. Stories that linger. An independent network."
+            fontHeader="DM Serif Display"
+            fontBody="Space Grotesk"
+            palette={[
+                { hex: "#0A0A12", name: "Dark Void" },
+                { hex: "#E0E0E0", name: "Silver" },
+                { hex: "#FF3366", name: "Recording Red" },
+            ]}
+        />
+    </div>
+
+    <style>
+        /* 
+    Palette:
+    Dark Void: #0A0A12
+    Silver: #E0E0E0
+    Recording Red: #FF3366
+  */
+
+        :root {
+            --bg-color: #0a0a12;
+            --text-color: #e0e0e0;
+            --accent-color: #ff3366;
+
+            --font-heading: "DM Serif Display", serif;
+            --font-body: "Space Grotesk", sans-serif;
+        }
+
+        .echo-wrapper {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Nav */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 3rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .rec-dot {
+            width: 12px;
+            height: 12px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+
+        .menu {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            opacity: 0.7;
+        }
+
+        /* Hero */
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+        }
+
+        .headline {
+            font-family: var(--font-heading);
+            font-size: 5rem;
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
+
+        .italic {
+            font-style: italic;
+            color: var(--accent-color);
+        }
+
+        .subhead {
+            font-size: 1.2rem;
+            max-width: 500px;
+            margin-bottom: 3rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .player-cta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            cursor: pointer;
+        }
+
+        .play-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--text-color);
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 16px solid var(--bg-color);
+            margin-left: 4px;
+        }
+
+        .cta-text {
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Visualizer */
+        .visualizer {
+            display: flex;
+            align-items: flex-end;
+            gap: 6px;
+            height: 60px;
+            margin-top: 4rem;
+        }
+
+        .bar {
+            width: 6px;
+            background-color: var(--accent-color);
+            animation: equalizer 1s ease-in-out infinite;
+        }
+
+        .bar:nth-child(odd) {
+            animation-duration: 0.8s;
+        }
+        .bar:nth-child(2n) {
+            animation-duration: 1.1s;
+        }
+        .bar:nth-child(3n) {
+            animation-duration: 1.3s;
+        }
+        .bar:nth-child(4n) {
+            animation-duration: 0.9s;
+        }
+
+        /* Marquee */
+        .marquee-container {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem 0;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 4rem 0;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 25s linear infinite;
+            font-family: var(--font-heading);
+            font-style: italic;
+            font-size: 1.5rem;
+            opacity: 0.5;
+        }
+
+        /* Stats */
+        .stats-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            opacity: 0.5;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .stars {
+            color: var(--accent-color);
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 6rem;
+            text-align: center;
+        }
+
+        .feature-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .feature-item p {
+            opacity: 0.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            opacity: 0.3;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        /* Animations */
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes equalizer {
+            0% {
+                height: 10px;
+            }
+            50% {
+                height: 50px;
+            }
+            100% {
+                height: 10px;
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 3rem;
+            }
+            .nav {
+                padding: 1.5rem;
+            }
+            .menu {
+                display: none;
+            }
+            .stats-section {
+                gap: 2rem;
+            }
+        }
+    </style>
+</BlankLayout>

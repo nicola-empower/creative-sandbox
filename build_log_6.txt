@@ -1,0 +1,95 @@
+
+> lumina-creative@0.0.1 build
+> astro check && astro build
+
+18:21:30 [types] Generated 784ms
+18:21:30 [check] Getting diagnostics for Astro files in C:\Users\nicol\OneDrive\Desktop\the websites\lumina creative...
+[96msrc/components/Arsenal.jsx[0m:[93m1[0m:[93m8[0m - [93mwarning[0m[90m ts(6133): [0m'React' is declared but its value is never read.
+
+[7m1[0m import React, { useState } from 'react';
+[7m [0m [93m       ~~~~~[0m
+
+[96msrc/components/Contact.jsx[0m:[93m1[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'React' is declared but its value is never read.
+
+[7m1[0m import React from 'react';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/FAQ.jsx[0m:[93m1[0m:[93m8[0m - [93mwarning[0m[90m ts(6133): [0m'React' is declared but its value is never read.
+
+[7m1[0m import React, { useState } from 'react';
+[7m [0m [93m       ~~~~~[0m
+
+[96msrc/components/Hero.jsx[0m:[93m1[0m:[93m8[0m - [93mwarning[0m[90m ts(6133): [0m'React' is declared but its value is never read.
+
+[7m1[0m import React, { useState, useEffect } from 'react';
+[7m [0m [93m       ~~~~~[0m
+
+[96msrc/components/Manifesto.jsx[0m:[93m1[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'React' is declared but its value is never read.
+
+[7m1[0m import React from 'react';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/Navigation.jsx[0m:[93m1[0m:[93m8[0m - [93mwarning[0m[90m ts(6133): [0m'React' is declared but its value is never read.
+
+[7m1[0m import React, { useState, useEffect } from 'react';
+[7m [0m [93m       ~~~~~[0m
+
+[96msrc/components/Work.jsx[0m:[93m1[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'React' is declared but its value is never read.
+
+[7m1[0m import React from 'react';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/nexus/Collections.jsx[0m:[93m1[0m:[93m8[0m - [93mwarning[0m[90m ts(6133): [0m'React' is declared but its value is never read.
+
+[7m1[0m import React, { useState } from 'react';
+[7m [0m [93m       ~~~~~[0m
+
+[96msrc/components/nexus/Lookbook.jsx[0m:[93m1[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'React' is declared but its value is never read.
+
+[7m1[0m import React from 'react';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/nexus/NexusHero.jsx[0m:[93m1[0m:[93m8[0m - [93mwarning[0m[90m ts(6133): [0m'React' is declared but its value is never read.
+
+[7m1[0m import React, { useState, useEffect } from 'react';
+[7m [0m [93m       ~~~~~[0m
+
+[96msrc/components/nexus/TheCode.jsx[0m:[93m1[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'React' is declared but its value is never read.
+
+[7m1[0m import React from 'react';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/nexus/TheIntel.jsx[0m:[93m1[0m:[93m8[0m - [93mwarning[0m[90m ts(6133): [0m'React' is declared but its value is never read.
+
+[7m1[0m import React, { useState } from 'react';
+[7m [0m [93m       ~~~~~[0m
+
+[96msrc/components/nexus/Waitlist.jsx[0m:[93m1[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'React' is declared but its value is never read.
+
+[7m1[0m import React from 'react';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+Result (35 files): 
+- 0 errors
+- 0 warnings
+- 13 hints
+
+18:21:54 [types] Generated 242ms
+18:21:54 [build] output: "static"
+18:21:54 [build] directory: C:\Users\nicol\OneDrive\Desktop\the websites\lumina creative\dist\
+18:21:54 [build] Collecting build info...
+18:21:54 [build] ✓ Completed in 561ms.
+18:21:54 [build] Building static entrypoints...
+18:21:58 [ERROR] [vite] [31mx[39m Build failed in 4.19s
+[astro:build] Unknown word ---
+file: C:/Users/nicol/OneDrive/Desktop/the websites/lumina creative/src/pages/index.astro:126:1
+  Error reference:
+    https://docs.astro.build/en/reference/errors/csssyntax-error/
+  Location:
+    C:/Users/nicol/OneDrive/Desktop/the websites/lumina creative/src/pages/index.astro:126:1
+  Stack trace:
+    at Input.error (C:\Users\nicol\OneDrive\Desktop\the websites\lumina creative\node_modules\postcss\lib\input.js:135:16)
+    at Parser.other (C:\Users\nicol\OneDrive\Desktop\the websites\lumina creative\node_modules\postcss\lib\parser.js:437:12)
+    at parse (C:\Users\nicol\OneDrive\Desktop\the websites\lumina creative\node_modules\postcss\lib\parse.js:11:12)
+    at Processor.process (C:\Users\nicol\OneDrive\Desktop\the websites\lumina creative\node_modules\postcss\lib\processor.js:53:14)
+    at async preprocessCSS (file:///C:/Users/nicol/OneDrive/Desktop/the%20websites/lumina%20creative/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:37005:10)

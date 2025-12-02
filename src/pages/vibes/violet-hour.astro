@@ -1,0 +1,554 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="The Violet Hour">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Marcellus&family=Raleway:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="violet-wrapper">
+        <!-- Hero -->
+        <header class="hero">
+            <div class="cinemagraph-bg">
+                <!-- Placeholder for smoke cinemagraph -->
+                <div class="smoke-effect"></div>
+            </div>
+            <div class="hero-content fade-in-delayed">
+                <h1 class="logo">THE VIOLET HOUR</h1>
+                <p class="est">EST. 2025</p>
+            </div>
+            <div class="scroll-hint fade-in-delayed-2">
+                <span>ENTER</span>
+            </div>
+        </header>
+
+        <!-- The Menu -->
+        <section class="menu-section observer-fade">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="cocktails"
+                    >COCKTAILS</button
+                >
+                <button class="tab-btn" data-tab="plates">SMALL PLATES</button>
+            </div>
+
+            <div class="menu-content active" id="cocktails">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Velvet Revolver</h3>
+                        <span class="price">£16</span>
+                    </div>
+                    <p>Bourbon. Coffee Liqueur. Burnt Orange.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Midnight in Paris</h3>
+                        <span class="price">£18</span>
+                    </div>
+                    <p>Cognac. Blackberry. Champagne Foam.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>The Violet Hour</h3>
+                        <span class="price">£16</span>
+                    </div>
+                    <p>Gin. Crème de Violette. Lemon. Maraschino.</p>
+                </div>
+            </div>
+
+            <div class="menu-content" id="plates">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Truffle Arancini</h3>
+                        <span class="price">£12</span>
+                    </div>
+                    <p>Black Truffle. Parmesan. Aioli.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Seared Scallops</h3>
+                        <span class="price">£16</span>
+                    </div>
+                    <p>Cauliflower Purée. Pancetta Crisp.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservations -->
+        <section class="reservations observer-fade">
+            <div class="reservation-box">
+                <h2>Secure Your Table</h2>
+                <p>Reservations are essential. Walk-ins are rare.</p>
+
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label for="date">DATE</label>
+                        <input type="date" id="date" class="custom-date" />
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">GUESTS</label>
+                        <select id="guests" class="custom-select">
+                            <option>2 Guests</option>
+                            <option>4 Guests</option>
+                            <option>6 Guests</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="reserve-btn"
+                        >MAKE RESERVATION</button
+                    >
+                </form>
+            </div>
+        </section>
+
+        <!-- Membership -->
+        <section class="membership observer-fade">
+            <div class="lock-icon">🔒</div>
+            <h2>Members Only</h2>
+            <p>Enter your access code to view private events.</p>
+            <div class="code-input">
+                <input type="password" placeholder="ACCESS CODE" />
+                <button>→</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>GLASGOW WEST END. DRESS CODE APPLIED.</p>
+        </footer>
+
+        <VibeDNA
+            description="A digital velvet rope. Dark, atmospheric, and seductive. For those who know."
+            fontHeader="Marcellus"
+            fontBody="Raleway"
+            palette={[
+                { hex: "#461D3A", name: "Brown Coffee" },
+                { hex: "#502A50", name: "Japanese Violet" },
+                { hex: "#7E2A53", name: "Dark Raspberry" },
+                { hex: "#BA71A2", name: "Pearly Purple" },
+                { hex: "#ECD0EC", name: "Classic Rose" },
+            ]}
+        />
+    </div>
+</BlankLayout>
+
+<script>
+    // Intersection Observer for fade-in effects
+    const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.2,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll(".observer-fade").forEach((el) => {
+        observer.observe(el);
+    });
+
+    // Tab Logic
+    const tabs = document.querySelectorAll(".tab-btn");
+    const contents = document.querySelectorAll(".menu-content");
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            // Remove active class from all
+            tabs.forEach((t) => t.classList.remove("active"));
+            contents.forEach((c) => c.classList.remove("active"));
+
+            // Add active class to clicked
+            tab.classList.add("active");
+            const targetId = tab.getAttribute("data-tab");
+            if (targetId) {
+                document.getElementById(targetId)?.classList.add("active");
+            }
+        });
+    });
+</script>
+
+<style>
+    /* 
+    Palette:
+    Brown Coffee: #461D3A
+    Japanese Violet: #502A50
+    Dark Raspberry: #7E2A53
+    Pearly Purple: #BA71A2
+    Classic Rose: #ECD0EC
+    */
+
+    :root {
+        --bg-base: #461d3a;
+        --bg-secondary: #502a50;
+        --accent-dark: #7e2a53;
+        --accent-light: #ba71a2;
+        --text-main: #ecd0ec;
+
+        --font-display: "Marcellus", serif;
+        --font-body: "Raleway", sans-serif;
+    }
+
+    .violet-wrapper {
+        background-color: var(--bg-base);
+        color: var(--text-main);
+        font-family: var(--font-body);
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* Typography */
+    h1,
+    h2,
+    h3 {
+        font-family: var(--font-display);
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+
+    /* Hero */
+    .hero {
+        height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .cinemagraph-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-color: #000;
+    }
+
+    .smoke-effect {
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at 50% 80%,
+            rgba(80, 42, 80, 0.4) 0%,
+            rgba(0, 0, 0, 0.9) 70%
+        );
+        /* Subtle smoke animation simulation */
+        filter: blur(20px);
+        opacity: 0.6;
+        animation: smokePulse 8s infinite alternate;
+    }
+
+    @keyframes smokePulse {
+        0% {
+            opacity: 0.5;
+            transform: scale(1);
+        }
+        100% {
+            opacity: 0.7;
+            transform: scale(1.1);
+        }
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 10;
+        opacity: 0; /* Start hidden */
+        animation: fadeIn 2s ease-out forwards;
+        animation-delay: 1s;
+    }
+
+    .logo {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        text-shadow: 0 0 20px rgba(186, 113, 162, 0.3);
+    }
+
+    .est {
+        font-size: 0.9rem;
+        letter-spacing: 4px;
+        opacity: 0.7;
+    }
+
+    .scroll-hint {
+        position: absolute;
+        bottom: 3rem;
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+        opacity: 0;
+        animation: fadeIn 2s ease-out forwards;
+        animation-delay: 2.5s;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Observer Fade Effect */
+    .observer-fade {
+        opacity: 0;
+        transform: translateY(50px);
+        transition:
+            opacity 1s ease,
+            transform 1s ease;
+    }
+
+    .observer-fade.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Menu Section */
+    .menu-section {
+        padding: 8rem 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 4rem;
+        border-bottom: 1px solid rgba(186, 113, 162, 0.2);
+        padding-bottom: 1rem;
+    }
+
+    .tab-btn {
+        background: transparent;
+        border: none;
+        color: var(--text-main);
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: opacity 0.3s;
+    }
+
+    .tab-btn.active {
+        opacity: 1;
+        text-shadow: 0 0 10px var(--accent-light);
+    }
+
+    .menu-content {
+        display: none;
+        animation: fadeSlide 0.5s ease-out;
+    }
+
+    .menu-content.active {
+        display: block;
+    }
+
+    @keyframes fadeSlide {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .menu-item {
+        margin-bottom: 2.5rem;
+        border-bottom: 1px solid rgba(186, 113, 162, 0.1);
+        padding-bottom: 1rem;
+    }
+
+    .item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 0.5rem;
+    }
+
+    .item-header h3 {
+        font-size: 1.5rem;
+        color: var(--accent-light);
+    }
+
+    .price {
+        font-family: var(--font-body);
+        font-weight: 300;
+    }
+
+    .menu-item p {
+        font-size: 0.9rem;
+        opacity: 0.7;
+        font-style: italic;
+    }
+
+    /* Reservations */
+    .reservations {
+        background-color: var(--bg-secondary);
+        padding: 8rem 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .reservation-box {
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .reservation-box h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .reservation-box p {
+        margin-bottom: 3rem;
+        opacity: 0.8;
+    }
+
+    .booking-form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+        color: var(--accent-light);
+    }
+
+    /* Custom Form Styling */
+    .custom-date,
+    .custom-select {
+        width: 100%;
+        background-color: var(--bg-base);
+        border: 1px solid var(--accent-dark);
+        color: var(--text-main);
+        padding: 1rem;
+        font-family: var(--font-body);
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.3s;
+    }
+
+    .custom-date:focus,
+    .custom-select:focus {
+        border-color: var(--accent-light);
+        box-shadow: 0 0 15px rgba(186, 113, 162, 0.2);
+    }
+
+    /* Customizing the calendar icon is tricky cross-browser, but we can style the input itself */
+    ::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    .reserve-btn {
+        background-color: var(--accent-dark);
+        color: var(--text-main);
+        border: 1px solid var(--accent-light);
+        padding: 1.2rem;
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-top: 1rem;
+        box-shadow: 0 0 20px rgba(126, 42, 83, 0.3);
+    }
+
+    .reserve-btn:hover {
+        background-color: var(--accent-light);
+        color: var(--bg-base);
+    }
+
+    /* Membership */
+    .membership {
+        padding: 8rem 2rem;
+        text-align: center;
+        background: linear-gradient(to bottom, var(--bg-base), #000);
+    }
+
+    .lock-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        opacity: 0.5;
+    }
+
+    .code-input {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        gap: 1rem;
+    }
+
+    .code-input input {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid var(--accent-light);
+        color: var(--text-main);
+        padding: 0.5rem;
+        text-align: center;
+        letter-spacing: 5px;
+        width: 200px;
+        outline: none;
+    }
+
+    .code-input button {
+        background: transparent;
+        border: 1px solid var(--accent-light);
+        color: var(--accent-light);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .code-input button:hover {
+        background-color: var(--accent-light);
+        color: var(--bg-base);
+    }
+
+    /* Footer */
+    .footer {
+        padding: 4rem;
+        text-align: center;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        opacity: 0.4;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    @media (max-width: 768px) {
+        .logo {
+            font-size: 3rem;
+        }
+        .menu-section {
+            padding: 4rem 1rem;
+        }
+    }
+</style>

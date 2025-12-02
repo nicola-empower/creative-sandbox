@@ -1,0 +1,648 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="Mint Condition">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Chonburi&family=Poppins:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="mint-wrapper">
+        <!-- Sticky Mobile Button -->
+        <a href="#book" class="sticky-btn">BOOK YOUR CLEAN</a>
+
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">MINT CONDITION.</div>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#book" class="nav-cta">Book Now</a>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-split text-side">
+                <h1>
+                    Give your kicks a <span class="highlight">second life.</span
+                    >
+                </h1>
+                <p>Premium sneaker restoration. Fresh out the box feel.</p>
+                <button class="hero-btn">START YOUR ORDER</button>
+            </div>
+            <div class="hero-split img-side">
+                <div class="sparkle-container">
+                    <!-- CSS Sparkles -->
+                    <div class="sparkle s1">✦</div>
+                    <div class="sparkle s2">✦</div>
+                    <div class="sparkle s3">✦</div>
+                    <div class="shoe-illustration">👟</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Comparison Slider -->
+        <section class="comparison">
+            <div class="section-header">
+                <h2>The Transformation</h2>
+                <p>Drag to see the magic.</p>
+            </div>
+
+            <div class="slider-container">
+                <div class="image-wrapper">
+                    <!-- After Image (Clean) -->
+                    <div class="img-after">
+                        <div class="label">AFTER</div>
+                    </div>
+                    <!-- Before Image (Dirty) - Clipped -->
+                    <div class="img-before" id="img-before">
+                        <div class="label">BEFORE</div>
+                    </div>
+                    <!-- Handle -->
+                    <div class="slider-handle" id="slider-handle">
+                        <div class="handle-line"></div>
+                        <div class="handle-circle">↔</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services" id="services">
+            <div class="service-card">
+                <h3>The Quick Scrub</h3>
+                <p class="price">$35</p>
+                <p class="desc">
+                    Essential upper clean, midsole scrub, and lace refresh.
+                </p>
+            </div>
+            <div class="service-card featured">
+                <div class="badge">POPULAR</div>
+                <h3>The Deep Clean</h3>
+                <p class="price">$55</p>
+                <p class="desc">
+                    Deep stain removal, insole deodorizing, and undersole
+                    detail.
+                </p>
+            </div>
+            <div class="service-card">
+                <h3>The Resurrection</h3>
+                <p class="price">$85+</p>
+                <p class="desc">
+                    Full restoration, repaint, un-yellowing, and waterproofing.
+                </p>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery" id="gallery">
+            <h2>Fresh Kicks</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="wave-divider">
+                <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        fill="#81BFB7"
+                        fill-opacity="1"
+                        d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                    ></path>
+                </svg>
+            </div>
+            <div class="footer-content">
+                <div class="socials">
+                    <a href="#">INSTAGRAM</a>
+                    <a href="#">TIKTOK</a>
+                    <a href="#">TWITTER</a>
+                </div>
+                <p>&copy; 2025 MINT CONDITION.</p>
+            </div>
+        </footer>
+
+        <VibeDNA
+            description="Fresh, retro, and satisfying. 1950s diner meets modern sneaker culture."
+            fontHeader="Chonburi"
+            fontBody="Poppins"
+            palette={[
+                { hex: "#F3A2BE", name: "Bubble Gum" },
+                { hex: "#FFD3DD", name: "Cotton Candy" },
+                { hex: "#F0F9F8", name: "Candy Floss" },
+                { hex: "#C6E6E3", name: "Mint" },
+                { hex: "#81BFB7", name: "Wintergreen" },
+            ]}
+        />
+    </div>
+</BlankLayout>
+
+<script>
+    // @ts-nocheck
+    // Comparison Slider Logic
+    const sliderContainer = document.querySelector(".slider-container");
+    const imgBefore = document.getElementById("img-before");
+    const handle = document.getElementById("slider-handle");
+
+    let isDragging = false;
+
+    if (sliderContainer && imgBefore && handle) {
+        // @ts-ignore
+        const updateSlider = (x) => {
+            const rect = sliderContainer.getBoundingClientRect();
+            let percentage = ((x - rect.left) / rect.width) * 100;
+
+            // Clamp percentage
+            percentage = Math.max(0, Math.min(100, percentage));
+
+            imgBefore.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+            handle.style.left = `${percentage}%`;
+        };
+
+        // Mouse Events
+        handle.addEventListener("mousedown", () => (isDragging = true));
+        window.addEventListener("mouseup", () => (isDragging = false));
+        window.addEventListener("mousemove", (e) => {
+            if (!isDragging) return;
+            updateSlider(e.clientX);
+        });
+
+        // Touch Events
+        handle.addEventListener("touchstart", () => (isDragging = true));
+        window.addEventListener("touchend", () => (isDragging = false));
+        window.addEventListener("touchmove", (e) => {
+            if (!isDragging) return;
+            updateSlider(e.touches[0].clientX);
+        });
+
+        // Click on container to jump
+        sliderContainer.addEventListener("click", (e) => {
+            updateSlider(e.clientX);
+        });
+    }
+</script>
+
+<style>
+    /* 
+    Palette:
+    Bubble Gum: #F3A2BE
+    Cotton Candy: #FFD3DD
+    Candy Floss: #F0F9F8
+    Mint: #C6E6E3
+    Wintergreen: #81BFB7
+    */
+
+    :root {
+        --bg-main: #f0f9f8;
+        --bg-card: #c6e6e3;
+        --accent-primary: #f3a2be;
+        --accent-secondary: #ffd3dd;
+        --text-main: #81bfb7;
+        --text-dark: #2c5e58; /* Darker version of Wintergreen for readability */
+
+        --font-heading: "Chonburi", serif;
+        --font-body: "Poppins", sans-serif;
+    }
+
+    .mint-wrapper {
+        background-color: var(--bg-main);
+        color: var(--text-dark);
+        font-family: var(--font-body);
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* Typography */
+    h1,
+    h2,
+    h3 {
+        font-family: var(--font-heading);
+        font-weight: 400;
+    }
+
+    /* Sticky Button (Mobile) */
+    .sticky-btn {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 400px;
+        background-color: var(--accent-primary);
+        color: #000;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 50px;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 4px 4px 0px #000;
+        z-index: 100;
+        display: none; /* Hidden on desktop by default */
+    }
+
+    @media (max-width: 768px) {
+        .sticky-btn {
+            display: block;
+        }
+    }
+
+    /* Nav */
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 3rem;
+    }
+
+    .logo {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        color: var(--text-main);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 500;
+    }
+
+    .nav-cta {
+        background-color: var(--accent-primary);
+        color: #000 !important;
+        padding: 0.5rem 1.5rem;
+        border-radius: 30px;
+        box-shadow: 3px 3px 0px #000;
+        transition: transform 0.2s;
+    }
+
+    .nav-cta:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 5px 5px 0px #000;
+    }
+
+    /* Hero */
+    .hero {
+        display: flex;
+        min-height: 80vh;
+        padding: 2rem 3rem;
+        gap: 2rem;
+    }
+
+    .hero-split {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .text-side h1 {
+        font-size: 4rem;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        color: var(--text-dark);
+    }
+
+    .highlight {
+        color: var(--accent-primary);
+        text-shadow: 2px 2px 0px #000;
+    }
+
+    .text-side p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        max-width: 500px;
+    }
+
+    .hero-btn {
+        align-self: flex-start;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 1rem 2rem;
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        cursor: pointer;
+        box-shadow: 5px 5px 0px var(--accent-primary);
+        transition: transform 0.2s;
+    }
+
+    .hero-btn:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 7px 7px 0px var(--accent-primary);
+    }
+
+    .img-side {
+        position: relative;
+        align-items: center;
+    }
+
+    .sparkle-container {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background-color: var(--accent-secondary);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .shoe-illustration {
+        font-size: 10rem;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .sparkle {
+        position: absolute;
+        font-size: 3rem;
+        color: var(--accent-primary);
+        animation: sparkle 2s infinite;
+    }
+
+    .s1 {
+        top: 20%;
+        right: 20%;
+        animation-delay: 0s;
+    }
+    .s2 {
+        bottom: 20%;
+        left: 20%;
+        animation-delay: 0.5s;
+    }
+    .s3 {
+        top: 10%;
+        left: 40%;
+        animation-delay: 1s;
+    }
+
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes sparkle {
+        0%,
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.5);
+            opacity: 0.5;
+        }
+    }
+
+    /* Comparison Slider */
+    .comparison {
+        padding: 6rem 2rem;
+        text-align: center;
+    }
+
+    .section-header h2 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .slider-container {
+        max-width: 800px;
+        margin: 3rem auto;
+        position: relative;
+        border: 4px solid var(--text-main);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 10px 10px 0px var(--bg-card);
+    }
+
+    .image-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 60%; /* Aspect Ratio */
+        background-color: #ddd;
+    }
+
+    .img-after,
+    .img-before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .img-after {
+        background-color: #fff; /* Placeholder for clean image */
+        background-image: radial-gradient(circle, #fff 20%, #eee 80%);
+    }
+
+    .img-before {
+        background-color: #555; /* Placeholder for dirty image */
+        background-image: radial-gradient(circle, #777 20%, #444 80%);
+        clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%); /* Initial state */
+    }
+
+    .label {
+        position: absolute;
+        top: 20px;
+        padding: 0.5rem 1rem;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        font-weight: 700;
+        border-radius: 5px;
+    }
+
+    .img-after .label {
+        right: 20px;
+    }
+    .img-before .label {
+        left: 20px;
+    }
+
+    .slider-handle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 4px;
+        background-color: #fff;
+        cursor: ew-resize;
+        z-index: 10;
+        transform: translateX(-50%);
+    }
+
+    .handle-circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        background-color: var(--accent-primary);
+        border: 3px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        color: #000;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Services */
+    .services {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 4rem 2rem;
+        flex-wrap: wrap;
+    }
+
+    .service-card {
+        background-color: var(--bg-card);
+        border: 2px solid var(--text-main);
+        padding: 2rem;
+        border-radius: 20px;
+        width: 300px;
+        text-align: center;
+        transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .service-card.featured {
+        background-color: #fff;
+        border-color: var(--accent-primary);
+        box-shadow: 8px 8px 0px var(--accent-primary);
+        position: relative;
+    }
+
+    .badge {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--accent-primary);
+        color: #000;
+        padding: 0.3rem 1rem;
+        border-radius: 20px;
+        font-weight: 700;
+        font-size: 0.8rem;
+        border: 2px solid #000;
+    }
+
+    .service-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+    }
+
+    /* Gallery */
+    .gallery {
+        padding: 6rem 2rem;
+        text-align: center;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        max-width: 1000px;
+        margin: 3rem auto;
+    }
+
+    .gallery-item {
+        aspect-ratio: 1;
+        background-color: var(--bg-card);
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+        transform: scale(1.05);
+    }
+
+    /* Footer */
+    .footer {
+        background-color: var(--text-main);
+        color: #fff;
+        text-align: center;
+        position: relative;
+    }
+
+    .wave-divider {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        line-height: 0;
+    }
+
+    .footer-content {
+        padding: 4rem 2rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+    }
+
+    .socials a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+            text-align: center;
+        }
+        .hero-split {
+            align-items: center;
+        }
+        .text-side h1 {
+            font-size: 3rem;
+        }
+        .nav-links {
+            display: none;
+        } /* Simplified for mobile */
+    }
+</style>
