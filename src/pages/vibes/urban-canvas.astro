@@ -35,7 +35,12 @@ import { SprayCan } from "lucide-react";
         </nav>
 
         <!-- Hero -->
+        <!-- Hero -->
         <header id="hero" class="hero">
+            <div class="hero-bg">
+                <img src="/images/urban-hero.jpg" alt="Urban Canvas Hero" />
+                <div class="hero-overlay"></div>
+            </div>
             <div class="hero-content">
                 <h1 class="headline">
                     PAINTING THE <br />
@@ -50,7 +55,11 @@ import { SprayCan } from "lucide-react";
             </div>
             <div class="hero-visual">
                 <div class="spray-drip"></div>
-                <div class="graffiti-tag">DEV</div>
+                <img
+                    src="/images/dev-urban.png"
+                    alt="DEV Graffiti"
+                    class="graffiti-img"
+                />
             </div>
         </header>
 
@@ -238,16 +247,44 @@ import { SprayCan } from "lucide-react";
         min-height: 90vh;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-between; /* Split layout */
         padding: 4rem;
         position: relative;
         z-index: 10;
         overflow: hidden;
+        text-align: left; /* Left align text */
+    }
+
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .hero-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.6;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(26, 26, 26, 0.7);
+        z-index: 1;
     }
 
     .hero-content {
-        flex: 1;
-        z-index: 2;
+        position: relative;
+        z-index: 10;
+        max-width: 800px;
     }
 
     .headline {
@@ -332,6 +369,42 @@ import { SprayCan } from "lucide-react";
         );
         filter: blur(40px);
         opacity: 0.6;
+        z-index: 1;
+    }
+
+    .hero-visual {
+        position: relative; /* Part of flow */
+        width: 50%; /* Take up right half */
+        height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        z-index: 5;
+        opacity: 0.9;
+    }
+
+    .graffiti-img {
+        width: 150%; /* Even bigger */
+        max-width: 1200px;
+        height: auto;
+        transform: rotate(-10deg) translateX(-50px); /* Move left */
+        filter: drop-shadow(0 0 20px var(--hot-pink));
+        z-index: 2;
+        opacity: 0.9;
+    }
+
+    .spray-drip {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+            circle,
+            var(--hot-pink) 0%,
+            transparent 70%
+        );
+        filter: blur(60px);
+        opacity: 0.4;
         z-index: 1;
     }
 
