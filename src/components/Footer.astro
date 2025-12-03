@@ -217,8 +217,8 @@ const siteUrl = "https://empowerdigitalsolutions.co.uk";
             </div>
         </div>
 
-        <script lang="ts">
-            let deferredPrompt: any;
+        <script>
+            let deferredPrompt;
             const installButton = document.getElementById("installApp");
 
             if (installButton) {
@@ -234,7 +234,7 @@ const siteUrl = "https://empowerdigitalsolutions.co.uk";
                     installButton.classList.remove("flex");
                     if (deferredPrompt) {
                         deferredPrompt.prompt();
-                        deferredPrompt.userChoice.then((choiceResult: any) => {
+                        deferredPrompt.userChoice.then((choiceResult) => {
                             if (choiceResult.outcome === "accepted") {
                                 console.log("User accepted the A2HS prompt");
                             } else {
