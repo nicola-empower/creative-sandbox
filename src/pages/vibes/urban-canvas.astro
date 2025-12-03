@@ -1,0 +1,594 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+import { SprayCan } from "lucide-react";
+---
+
+<BlankLayout title="Urban Canvas | Painting the Digital Landscape">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Mono:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="urban-wrapper">
+        <!-- Background Texture -->
+        <div class="wall-texture"></div>
+
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">
+                <SprayCan className="w-8 h-8 text-neon-green" />
+                <span>URBAN_CANVAS</span>
+            </div>
+            <div class="nav-links">
+                <a href="#hero">THE_DROP</a>
+                <a href="#skills">ARSENAL</a>
+                <a href="#gallery">GALLERY</a>
+                <a href="#contact">TAG_ME</a>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header id="hero" class="hero">
+            <div class="hero-content">
+                <h1 class="headline">
+                    PAINTING THE <br />
+                    <span class="highlight">DIGITAL</span> LANDSCAPE
+                </h1>
+                <p class="subhead">
+                    // CODING WITH ATTITUDE. DESIGNING WITH SOUL.
+                </p>
+                <div class="cta-group">
+                    <a href="#gallery" class="btn primary">SEE THE ART</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="spray-drip"></div>
+                <div class="graffiti-tag">DEV</div>
+            </div>
+        </header>
+
+        <!-- Skills Wall -->
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">MY ARSENAL</h2>
+            <div class="wall-grid">
+                <div class="sticker sticker-1">
+                    <span class="tag-text">REACT</span>
+                </div>
+                <div class="sticker sticker-2">
+                    <span class="tag-text">ASTRO</span>
+                </div>
+                <div class="sticker sticker-3">
+                    <span class="tag-text">JS</span>
+                </div>
+                <div class="sticker sticker-4">
+                    <span class="tag-text">CSS</span>
+                </div>
+                <div class="sticker sticker-5">
+                    <span class="tag-text">NODE</span>
+                </div>
+                <div class="sticker sticker-6">
+                    <span class="tag-text">UI/UX</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Gallery -->
+        <section id="gallery" class="gallery-section">
+            <h2 class="section-title">STREET GALLERY</h2>
+            <div class="gallery-grid">
+                <div class="poster">
+                    <div class="poster-content">
+                        <h3>NEON_CITY</h3>
+                        <p>Cyberpunk E-Commerce</p>
+                    </div>
+                    <div class="tape top-left"></div>
+                    <div class="tape top-right"></div>
+                </div>
+                <div class="poster">
+                    <div class="poster-content">
+                        <h3>GRAFFITI_API</h3>
+                        <p>Backend Service</p>
+                    </div>
+                    <div class="tape top-left"></div>
+                    <div class="tape bottom-right"></div>
+                </div>
+                <div class="poster">
+                    <div class="poster-content">
+                        <h3>SKETCHBOOK</h3>
+                        <p>Digital Portfolio</p>
+                    </div>
+                    <div class="tape top-right"></div>
+                    <div class="tape bottom-left"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact-section">
+            <div class="sketchbook">
+                <div class="binding"></div>
+                <div class="page">
+                    <h2>LEAVE A TAG</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">HANDLE:</label>
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="@yourname"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="msg">MESSAGE:</label>
+                            <textarea
+                                id="msg"
+                                rows="4"
+                                placeholder="Write something dope..."
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="btn secondary"
+                            >SPRAY IT</button
+                        >
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <p>© 2025 URBAN CANVAS. ALL RIGHTS RESERVED.</p>
+        </footer>
+
+        <VibeDNA
+            description="Underground, Rebellious, and Artistic. A portfolio for the street artist coder."
+            fontHeader="Permanent Marker"
+            fontBody="Roboto Mono"
+            palette={[
+                { hex: "#1a1a1a", name: "Asphalt" },
+                { hex: "#2d2d2d", name: "Concrete" },
+                { hex: "#39ff14", name: "Neon Green" },
+                { hex: "#ff0099", name: "Hot Pink" },
+                { hex: "#00f3ff", name: "Electric Blue" },
+            ]}
+        />
+    </div>
+</BlankLayout>
+
+<style>
+    :root {
+        --asphalt: #1a1a1a;
+        --concrete: #2d2d2d;
+        --neon-green: #39ff14;
+        --hot-pink: #ff0099;
+        --electric-blue: #00f3ff;
+        --spray-white: #f0f0f0;
+
+        --font-graffiti: "Permanent Marker", cursive;
+        --font-mono: "Roboto Mono", monospace;
+    }
+
+    .urban-wrapper {
+        background-color: var(--asphalt);
+        color: var(--spray-white);
+        font-family: var(--font-mono);
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .wall-texture {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    /* Nav */
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 4rem;
+        position: relative;
+        z-index: 20;
+        background: rgba(26, 26, 26, 0.9);
+        border-bottom: 2px solid var(--concrete);
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--font-graffiti);
+        font-size: 1.5rem;
+        color: var(--spray-white);
+        transform: rotate(-2deg);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        color: var(--spray-white);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: var(--neon-green);
+        text-decoration: line-through;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem;
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        flex: 1;
+        z-index: 2;
+    }
+
+    .headline {
+        font-family: var(--font-graffiti);
+        font-size: 5rem;
+        line-height: 1;
+        margin-bottom: 2rem;
+        text-shadow: 4px 4px 0px var(--hot-pink);
+        transform: rotate(-1deg);
+    }
+
+    .highlight {
+        color: var(--neon-green);
+    }
+
+    .subhead {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 3rem;
+        background: var(--concrete);
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        transform: rotate(1deg);
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        font-family: var(--font-graffiti);
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: transform 0.2s;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn.primary {
+        background: var(--electric-blue);
+        color: var(--asphalt);
+        box-shadow: 5px 5px 0px var(--spray-white);
+        transform: rotate(-2deg);
+    }
+
+    .btn.primary:hover {
+        transform: rotate(0deg) scale(1.05);
+        box-shadow: 8px 8px 0px var(--spray-white);
+    }
+
+    .btn.secondary {
+        background: var(--hot-pink);
+        color: white;
+        box-shadow: 5px 5px 0px var(--asphalt);
+    }
+
+    .hero-visual {
+        flex: 1;
+        position: relative;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .graffiti-tag {
+        font-family: var(--font-graffiti);
+        font-size: 10rem;
+        color: transparent;
+        -webkit-text-stroke: 4px var(--neon-green);
+        transform: rotate(-10deg);
+        filter: drop-shadow(10px 10px 0px var(--hot-pink));
+        z-index: 2;
+    }
+
+    .spray-drip {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(
+            circle,
+            var(--hot-pink) 0%,
+            transparent 70%
+        );
+        filter: blur(40px);
+        opacity: 0.6;
+        z-index: 1;
+    }
+
+    /* Skills Wall */
+    .skills-section {
+        padding: 6rem 4rem;
+        position: relative;
+        z-index: 10;
+        background-color: var(--concrete);
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 19px,
+                #111 20px
+            ),
+            repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 39px,
+                #111 40px
+            );
+    }
+
+    .section-title {
+        font-family: var(--font-graffiti);
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 4rem;
+        color: var(--spray-white);
+        text-shadow: 3px 3px 0px var(--asphalt);
+    }
+
+    .wall-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .sticker {
+        background: var(--spray-white);
+        color: var(--asphalt);
+        padding: 1.5rem 2.5rem;
+        font-family: var(--font-graffiti);
+        font-size: 1.5rem;
+        border: 2px solid white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s;
+        cursor: default;
+    }
+
+    .sticker:hover {
+        transform: scale(1.1) !important;
+        z-index: 10;
+    }
+
+    .sticker-1 {
+        transform: rotate(-5deg);
+        background: var(--neon-green);
+    }
+    .sticker-2 {
+        transform: rotate(3deg);
+        background: var(--hot-pink);
+        color: white;
+    }
+    .sticker-3 {
+        transform: rotate(-8deg);
+        background: var(--electric-blue);
+    }
+    .sticker-4 {
+        transform: rotate(6deg);
+        background: #ffcc00;
+    }
+    .sticker-5 {
+        transform: rotate(-3deg);
+        background: #ff5733;
+        color: white;
+    }
+    .sticker-6 {
+        transform: rotate(4deg);
+        background: #c70039;
+        color: white;
+    }
+
+    /* Gallery */
+    .gallery-section {
+        padding: 6rem 4rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .poster {
+        background: var(--spray-white);
+        padding: 1rem;
+        position: relative;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .poster:hover {
+        transform: scale(1.02);
+    }
+
+    .poster-content h3 {
+        font-family: var(--font-graffiti);
+        font-size: 2rem;
+        color: var(--asphalt);
+        margin-bottom: 0.5rem;
+    }
+
+    .poster-content p {
+        color: #666;
+        font-weight: 700;
+    }
+
+    .tape {
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.6);
+        transform: rotate(-45deg);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .top-left {
+        top: -10px;
+        left: -30px;
+        transform: rotate(-35deg);
+    }
+    .top-right {
+        top: -10px;
+        right: -30px;
+        transform: rotate(35deg);
+    }
+    .bottom-left {
+        bottom: -10px;
+        left: -30px;
+        transform: rotate(35deg);
+    }
+    .bottom-right {
+        bottom: -10px;
+        right: -30px;
+        transform: rotate(-35deg);
+    }
+
+    /* Contact */
+    .contact-section {
+        padding: 6rem 4rem;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    .sketchbook {
+        background: #f5f5f5;
+        width: 100%;
+        max-width: 600px;
+        padding: 2rem;
+        border-radius: 4px;
+        position: relative;
+        box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .binding {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        width: 40px;
+        height: 100%;
+        border-right: 2px dashed #ccc;
+    }
+
+    .page {
+        margin-left: 40px;
+    }
+
+    .page h2 {
+        font-family: var(--font-graffiti);
+        color: var(--asphalt);
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: 700;
+        color: var(--asphalt);
+        margin-bottom: 0.5rem;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: 2px solid var(--asphalt);
+        background: transparent;
+        font-family: var(--font-mono);
+        font-size: 1rem;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border-color: var(--hot-pink);
+        box-shadow: 4px 4px 0px var(--hot-pink);
+    }
+
+    .page-footer {
+        text-align: center;
+        padding: 2rem;
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .headline {
+            font-size: 3rem;
+        }
+
+        .hero-visual {
+            display: none;
+        }
+
+        .nav {
+            padding: 1.5rem;
+        }
+
+        .nav-links {
+            display: none;
+        }
+    }
+</style>

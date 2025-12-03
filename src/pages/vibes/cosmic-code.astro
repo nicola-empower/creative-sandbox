@@ -1,0 +1,887 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+import {
+    Code,
+    Cpu,
+    Globe,
+    Zap,
+    Terminal,
+    Database,
+    Layers,
+    Rocket,
+    Send,
+} from "lucide-react";
+---
+
+<BlankLayout title="Cosmic Code | Architecting the Future">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="cosmic-wrapper">
+        <!-- Starfield Background -->
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">
+                <Code className="w-6 h-6 text-cyan-glow" />
+                <span>COSMIC_CODE</span>
+            </div>
+            <div class="nav-links">
+                <a href="#mission">MISSION</a>
+                <a href="#tech">TECH_STACK</a>
+                <a href="#deployed">DEPLOYED</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </nav>
+
+        <!-- Hero with Black Hole -->
+        <header id="mission" class="hero">
+            <div class="black-hole-container">
+                <div class="black-hole">
+                    <div class="accretion-disk"></div>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <div class="glitch-wrapper">
+                    <h1
+                        class="headline"
+                        data-text="PROVIDING THE BEST PROJECT EXPERIENCE"
+                    >
+                        PROVIDING THE BEST<br />PROJECT EXPERIENCE
+                    </h1>
+                </div>
+                <p class="subhead">
+                    <span class="prompt">></span> FULLSTACK_ENGINEER_DETECTED<br
+                    />
+                    <span class="output"
+                        >Website // Mobile // Software Development.</span
+                    >
+                </p>
+                <div class="cta-group">
+                    <a href="#deployed" class="btn primary">LEARN_MORE</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Tech Stack (Orbital Gravity Well) -->
+        <section id="tech" class="tech-section">
+            <div class="gravity-well">
+                <!-- Central Gravity Point (Visual only) -->
+                <div class="singularity"></div>
+
+                <!-- Orbiting Icons -->
+                <div class="orbit-ring ring-1">
+                    <div class="tech-icon icon-react"><Code /></div>
+                    <div class="tech-icon icon-ts"><Terminal /></div>
+                    <div class="tech-icon icon-next"><Globe /></div>
+                </div>
+
+                <div class="orbit-ring ring-2">
+                    <div class="tech-icon icon-astro"><Zap /></div>
+                    <div class="tech-icon icon-tailwind"><Layers /></div>
+                    <div class="tech-icon icon-node"><Cpu /></div>
+                    <div class="tech-icon icon-db"><Database /></div>
+                </div>
+
+                <div class="orbit-ring ring-3">
+                    <div class="tech-icon icon-vercel"><Rocket /></div>
+                    <div class="tech-icon icon-git"><Send /></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects (Holograms) -->
+        <section id="deployed" class="projects-section">
+            <h2 class="section-title">
+                <Rocket className="w-8 h-8 inline-block mr-4 text-cyan-glow" />
+                DEPLOYED_MISSIONS
+            </h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="hologram-effect"></div>
+                    <div class="project-content">
+                        <h3>NEBULA_DASH</h3>
+                        <p class="tech-tag">React // Node.js</p>
+                        <p>
+                            Real-time analytics dashboard for interstellar
+                            commerce.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="hologram-effect"></div>
+                    <div class="project-content">
+                        <h3>VOID_COMMERCE</h3>
+                        <p class="tech-tag">Next.js // Stripe</p>
+                        <p>
+                            Headless e-commerce solution for zero-gravity
+                            markets.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="hologram-effect"></div>
+                    <div class="project-content">
+                        <h3>ASTRO_DOCS</h3>
+                        <p class="tech-tag">Astro // MDX</p>
+                        <p>
+                            High-performance documentation portal for API
+                            consumers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact (Terminal) -->
+        <section id="contact" class="contact-section">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                    <span>uplink_terminal.exe</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="system-msg">
+                        > ESTABLISHING CONNECTION...<br />
+                        > CONNECTION SECURE.<br />
+                        > ENTER MESSAGE:
+                    </p>
+                    <form class="terminal-form">
+                        <div class="input-group">
+                            <label for="email">USER@ORIGIN:~$</label>
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="enter_email"
+                                required
+                            />
+                        </div>
+                        <div class="input-group">
+                            <label for="message">MESSAGE:~$</label>
+                            <textarea
+                                id="message"
+                                rows="3"
+                                placeholder="awaiting_input..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="send-btn">
+                            <Send className="w-4 h-4 mr-2" /> TRANSMIT
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <p>> END_OF_TRANSMISSION</p>
+        </footer>
+
+        <VibeDNA
+            description="Interstellar, Cyber-Future, and Technical. A portfolio for the space age."
+            fontHeader="Space Grotesk"
+            fontBody="JetBrains Mono"
+            palette={[
+                { hex: "#0B0B15", name: "Void" },
+                { hex: "#7B2CBF", name: "Nebula Purple" },
+                { hex: "#240046", name: "Event Horizon" },
+                { hex: "#E0AAFF", name: "Starlight" },
+                { hex: "#4CC9F0", name: "Cyan Glow" },
+            ]}
+        />
+    </div>
+</BlankLayout>
+
+<style>
+    :root {
+        --void: #0b0b15;
+        --nebula-purple: #7b2cbf;
+        --event-horizon: #240046;
+        --starlight: #e0aaff;
+        --cyan-glow: #4cc9f0;
+
+        --font-heading: "Space Grotesk", sans-serif;
+        --font-mono: "JetBrains Mono", monospace;
+    }
+
+    .cosmic-wrapper {
+        background-color: var(--void);
+        color: #fff;
+        font-family: var(--font-heading);
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    /* Starfield Background */
+    .stars,
+    .stars2,
+    .stars3 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .stars {
+        background-image:
+            radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
+            radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
+            radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0, 0, 0, 0)),
+            radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
+            radial-gradient(2px 2px at 130px 80px, #fff, rgba(0, 0, 0, 0));
+        background-repeat: repeat;
+        background-size: 200px 200px;
+        animation: stars 100s linear infinite;
+        opacity: 0.5;
+    }
+
+    .stars2 {
+        background-image:
+            radial-gradient(2px 2px at 50px 100px, #eee, rgba(0, 0, 0, 0)),
+            radial-gradient(2px 2px at 100px 140px, #fff, rgba(0, 0, 0, 0));
+        background-repeat: repeat;
+        background-size: 300px 300px;
+        animation: stars 150s linear infinite;
+        opacity: 0.3;
+    }
+
+    @keyframes stars {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 0 1000px;
+        }
+    }
+
+    /* Nav */
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 4rem;
+        position: relative;
+        z-index: 20;
+        border-bottom: 1px solid rgba(76, 201, 240, 0.1);
+        background: rgba(11, 11, 21, 0.8);
+        backdrop-filter: blur(10px);
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 1.2rem;
+        letter-spacing: -1px;
+    }
+
+    .logo span {
+        background: linear-gradient(90deg, var(--starlight), var(--cyan-glow));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        font-family: var(--font-mono);
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: var(--cyan-glow);
+        text-shadow: 0 0 10px var(--cyan-glow);
+    }
+
+    /* Hero with Black Hole */
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+        padding-top: 100px; /* Space for black hole */
+    }
+
+    .black-hole-container {
+        position: absolute;
+        top: -150px; /* Position at top */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .black-hole {
+        width: 300px;
+        height: 300px;
+        background: #000;
+        border-radius: 50%;
+        position: relative;
+        box-shadow:
+            0 0 60px 20px rgba(123, 44, 191, 0.6),
+            0 0 100px 50px rgba(76, 201, 240, 0.3),
+            inset 0 0 60px 20px rgba(0, 0, 0, 1);
+        z-index: 2;
+    }
+
+    .accretion-disk {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+            transparent 40%,
+            rgba(123, 44, 191, 0.8) 45%,
+            rgba(76, 201, 240, 0.8) 50%,
+            transparent 70%
+        );
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scaleY(0.3) rotate(0deg);
+        animation: spin-disk 10s linear infinite;
+        z-index: 1;
+        filter: blur(5px);
+        box-shadow: 0 0 50px rgba(123, 44, 191, 0.5);
+    }
+
+    @keyframes spin-disk {
+        0% {
+            transform: translate(-50%, -50%) scaleY(0.3) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) scaleY(0.3) rotate(360deg);
+        }
+    }
+
+    .hero-content {
+        text-align: center;
+        z-index: 10;
+        margin-top: 150px;
+    }
+
+    .headline {
+        font-size: 5rem;
+        line-height: 1.1;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: #fff;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .subhead {
+        font-family: var(--font-mono);
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 3rem;
+        line-height: 1.6;
+    }
+
+    .prompt {
+        color: var(--cyan-glow);
+        margin-right: 0.5rem;
+    }
+
+    .output {
+        color: var(--starlight);
+    }
+
+    .cta-group {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .btn {
+        font-family: var(--font-mono);
+        padding: 1rem 3rem;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+        transition: all 0.3s;
+        border-radius: 4px;
+    }
+
+    .btn.primary {
+        background: linear-gradient(
+            90deg,
+            var(--nebula-purple),
+            var(--event-horizon)
+        );
+        color: #fff;
+        border: 1px solid var(--starlight);
+        box-shadow: 0 0 20px rgba(123, 44, 191, 0.4);
+    }
+
+    .btn.primary:hover {
+        background: var(--starlight);
+        color: var(--void);
+        box-shadow: 0 0 40px rgba(224, 170, 255, 0.8);
+        transform: scale(1.05);
+    }
+
+    /* Tech Section (Gravity Well) */
+    .tech-section {
+        padding: 8rem 4rem;
+        position: relative;
+        z-index: 10;
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .gravity-well {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .singularity {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.8);
+        z-index: 10;
+        animation: pulse-singularity 2s infinite alternate;
+    }
+
+    @keyframes pulse-singularity {
+        0% {
+            transform: scale(1);
+            opacity: 0.8;
+        }
+        100% {
+            transform: scale(1.5);
+            opacity: 1;
+        }
+    }
+
+    .orbit-ring {
+        position: absolute;
+        border: 1px dashed rgba(76, 201, 240, 0.2);
+        border-radius: 50%;
+        animation: orbit-spin linear infinite;
+    }
+
+    .ring-1 {
+        width: 300px;
+        height: 300px;
+        animation-duration: 20s;
+    }
+
+    .ring-2 {
+        width: 500px;
+        height: 500px;
+        animation-duration: 35s;
+        animation-direction: reverse;
+    }
+
+    .ring-3 {
+        width: 700px;
+        height: 700px;
+        animation-duration: 50s;
+    }
+
+    @keyframes orbit-spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .tech-icon {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: rgba(11, 11, 21, 0.9);
+        border: 1px solid var(--cyan-glow);
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--starlight);
+        box-shadow: 0 0 15px rgba(76, 201, 240, 0.3);
+        animation: counter-spin linear infinite; /* Keeps icons upright */
+    }
+
+    /* Positioning icons on rings */
+    .ring-1 .tech-icon:nth-child(1) {
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .ring-1 .tech-icon:nth-child(2) {
+        bottom: 30px;
+        right: 0;
+    }
+    .ring-1 .tech-icon:nth-child(3) {
+        bottom: 30px;
+        left: 0;
+    }
+
+    .ring-2 .tech-icon:nth-child(1) {
+        top: 50px;
+        left: 20px;
+    }
+    .ring-2 .tech-icon:nth-child(2) {
+        top: 50px;
+        right: 20px;
+    }
+    .ring-2 .tech-icon:nth-child(3) {
+        bottom: 50px;
+        left: 100px;
+    }
+    .ring-2 .tech-icon:nth-child(4) {
+        bottom: 50px;
+        right: 100px;
+    }
+
+    .ring-3 .tech-icon:nth-child(1) {
+        top: 50%;
+        left: -30px;
+        transform: translateY(-50%);
+    }
+    .ring-3 .tech-icon:nth-child(2) {
+        top: 50%;
+        right: -30px;
+        transform: translateY(-50%);
+    }
+
+    /* Counter spin to keep icons upright relative to screen */
+    .ring-1 .tech-icon {
+        animation-duration: 20s;
+    }
+    .ring-2 .tech-icon {
+        animation-duration: 35s;
+        animation-direction: reverse;
+    }
+    .ring-3 .tech-icon {
+        animation-duration: 50s;
+    }
+
+    @keyframes counter-spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+
+    /* Reverse counter spin for reverse rings */
+    .ring-2 .tech-icon {
+        animation-name: counter-spin-reverse;
+    }
+
+    @keyframes counter-spin-reverse {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .tech-icon:hover {
+        background: var(--starlight);
+        color: var(--void);
+        box-shadow: 0 0 30px var(--starlight);
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    /* Projects Section */
+    .projects-section {
+        padding: 6rem 4rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .project-card {
+        background: rgba(11, 11, 21, 0.8);
+        border: 1px solid var(--cyan-glow);
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        padding: 2rem;
+        transition: all 0.3s;
+    }
+
+    .hologram-effect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            45deg,
+            transparent 40%,
+            rgba(76, 201, 240, 0.1) 45%,
+            rgba(76, 201, 240, 0.3) 50%,
+            rgba(76, 201, 240, 0.1) 55%,
+            transparent 60%
+        );
+        background-size: 200% 200%;
+        animation: hologram 3s linear infinite;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .project-card:hover .hologram-effect {
+        opacity: 1;
+    }
+
+    @keyframes hologram {
+        0% {
+            background-position: 100% 100%;
+        }
+        100% {
+            background-position: 0% 0%;
+        }
+    }
+
+    .project-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .project-content h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: #fff;
+    }
+
+    .tech-tag {
+        font-family: var(--font-mono);
+        color: var(--cyan-glow);
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 6rem 4rem;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    .terminal-window {
+        width: 100%;
+        max-width: 600px;
+        background: rgba(0, 0, 0, 0.8);
+        border: 1px solid #333;
+        border-radius: 8px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+    }
+
+    .terminal-header {
+        background: #222;
+        padding: 0.8rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+
+    .red {
+        background: #ff5f56;
+    }
+    .yellow {
+        background: #ffbd2e;
+    }
+    .green {
+        background: #27c93f;
+    }
+
+    .terminal-header span {
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        color: #888;
+        margin-left: 1rem;
+    }
+
+    .terminal-body {
+        padding: 2rem;
+        font-family: var(--font-mono);
+    }
+
+    .system-msg {
+        color: var(--cyan-glow);
+        margin-bottom: 2rem;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .input-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .input-group label {
+        display: block;
+        color: var(--starlight);
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid #444;
+        padding: 0.8rem;
+        color: #fff;
+        font-family: var(--font-mono);
+        border-radius: 4px;
+        transition: border-color 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border-color: var(--cyan-glow);
+        background: rgba(76, 201, 240, 0.05);
+    }
+
+    .send-btn {
+        background: var(--cyan-glow);
+        color: var(--void);
+        border: none;
+        padding: 0.8rem 2rem;
+        font-family: var(--font-mono);
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s;
+    }
+
+    .send-btn:hover {
+        background: #fff;
+        box-shadow: 0 0 20px var(--cyan-glow);
+    }
+
+    .page-footer {
+        text-align: center;
+        padding: 2rem;
+        font-family: var(--font-mono);
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 0.8rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            padding-top: 50px;
+        }
+
+        .black-hole-container {
+            height: 400px;
+            top: -100px;
+        }
+
+        .black-hole {
+            width: 200px;
+            height: 200px;
+        }
+
+        .accretion-disk {
+            width: 400px;
+            height: 400px;
+        }
+
+        .headline {
+            font-size: 3rem;
+        }
+
+        .tech-section {
+            padding: 4rem 1rem;
+        }
+
+        .gravity-well {
+            width: 100%;
+            height: 400px;
+        }
+
+        .ring-1 {
+            width: 200px;
+            height: 200px;
+        }
+        .ring-2 {
+            width: 300px;
+            height: 300px;
+        }
+        .ring-3 {
+            width: 380px;
+            height: 380px;
+        }
+
+        .nav {
+            padding: 1.5rem;
+        }
+
+        .nav-links {
+            display: none;
+        }
+    }
+</style>
