@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title?: string;
@@ -48,5 +49,6 @@ const { title = "Lumina Creative - Digital Violence" } = Astro.props;
     class="bg-void-black text-white transition-colors duration-300 font-body"
   >
     <slot />
+    <Footer />
   </body>
 </html>

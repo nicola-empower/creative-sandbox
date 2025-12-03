@@ -8,6 +8,10 @@ export default {
                 'electric-purple': '#BF00FF',
                 'acid-green': '#CCFF00',
                 'void-black': '#050505',
+                'empower-pink': '#E91E63',
+                'vibrant-magenta': '#C2185B',
+                'deep-purple': '#8E24AA',
+                'dark-violet': '#6A1B9A',
             },
             fontFamily: {
                 display: ['Syne', 'sans-serif'],
