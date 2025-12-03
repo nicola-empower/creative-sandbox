@@ -79,17 +79,6 @@ import VibeDNA from "../../components/VibeDNA.astro";
                 </div>
             </div>
 
-            <VibeDNA
-                description="Sleep Science. Data-driven rest. The quantified self."
-                fontHeader="Orbitron"
-                fontBody="Space Mono"
-                palette={[
-                    { hex: "#011C40", name: "Abyss Blue" },
-                    { hex: "#54ACBF", name: "Electric Cyan" },
-                    { hex: "#A7EBF2", name: "Glacial Ice" },
-                ]}
-            />
-
             <div class="dashboard-grid">
                 <!-- HRV Graph Card -->
                 <div class="card graph-card glass-panel">
@@ -126,6 +115,17 @@ import VibeDNA from "../../components/VibeDNA.astro";
                 </div>
             </div>
         </main>
+
+        <VibeDNA
+            description="Sleep Science. Data-driven rest. The quantified self."
+            fontHeader="Orbitron"
+            fontBody="Space Mono"
+            palette={[
+                { hex: "#011C40", name: "Abyss Blue" },
+                { hex: "#54ACBF", name: "Electric Cyan" },
+                { hex: "#A7EBF2", name: "Glacial Ice" },
+            ]}
+        />
     </div>
 
     <script>

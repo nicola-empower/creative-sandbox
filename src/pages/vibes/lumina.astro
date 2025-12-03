@@ -75,6 +75,12 @@ import VibeDNA from "../../components/VibeDNA.astro";
         >
     </div>
 
+    <Manifesto client:visible />
+    <Arsenal client:visible />
+    <FAQ client:visible />
+    <Work client:visible />
+    <Contact client:visible />
+
     <VibeDNA
         description="Digital Violence. Agency Portfolio. No boring campaigns."
         fontHeader="Syne"
@@ -85,12 +91,6 @@ import VibeDNA from "../../components/VibeDNA.astro";
             { hex: "#CCFF00", name: "Acid Green" },
         ]}
     />
-
-    <Manifesto client:visible />
-    <Arsenal client:visible />
-    <FAQ client:visible />
-    <Work client:visible />
-    <Contact client:visible />
 </BlankLayout>
 
 <style>
