@@ -443,6 +443,14 @@ import VibeDNA from "../../components/VibeDNA.astro";
             gap: 1.5rem;
         }
 
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
         .glass-panel {
             background: rgba(2, 56, 89, 0.6);
             backdrop-filter: blur(10px);
@@ -574,8 +582,8 @@ import VibeDNA from "../../components/VibeDNA.astro";
 
         @media (max-width: 768px) {
             .stat-card {
-                grid-column: span 4;
-            } /* Full width on mobile */
+                width: 100%; /* Full width on mobile */
+            }
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {

@@ -503,14 +503,43 @@ import VibeDNA from "../../components/VibeDNA.astro";
         }
         .hero-text {
             padding: 2rem;
-            min-height: 50vh;
+            min-height: auto; /* Allow text to take natural height */
+            padding-bottom: 4rem;
         }
         .hero-text h1 {
             font-size: 3rem;
         }
-        .product-grid {
-            grid-template-columns: 1fr;
+
+        .hero-image {
+            min-height: auto; /* Let content dictate height or keep fixed? */
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            padding: 4rem 2rem;
         }
+
+        .hero-img-full {
+            /* Keep it covering the area */
+            height: 100%;
+        }
+
+        .product-card {
+            position: relative;
+            top: auto !important;
+            left: auto !important;
+            right: auto !important;
+            bottom: auto !important;
+            width: 100%;
+            max-width: 300px;
+            transform: none !important; /* Reset hover transforms if needed, or keep them */
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px) !important;
+        }
+
         .steps {
             flex-direction: column;
             gap: 3rem;

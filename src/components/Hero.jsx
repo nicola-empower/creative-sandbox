@@ -44,13 +44,13 @@ const Hero = () => {
             {/* Content */}
             <div className="relative z-10 max-w-6xl mx-auto text-center">
                 {/* Main Headline */}
-                <h1 className="font-display font-black text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.95] mb-8">
+                <h1 className="font-display font-black text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.95] mb-8">
                     <span className="block text-black dark:text-white mb-4">
                         We don't just build websites.
                     </span>
                     <span className="block text-black dark:text-white">
                         We build{' '}
-                        <span className="inline-block min-w-[200px] md:min-w-[350px] text-left">
+                        <span className="inline-block min-w-[150px] sm:min-w-[200px] md:min-w-[350px] text-left">
                             <span className="text-electric-purple drop-shadow-none dark:drop-shadow-[0_0_20px_rgba(191,0,255,0.6)]">
                                 {displayText}
                                 <span className="animate-pulse">|</span>

@@ -172,6 +172,32 @@ import BlankLayout from "../layouts/BlankLayout.astro";
         opacity: 0.5;
     }
 
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .sandbox-container {
+            padding: 1rem;
+            align-items: flex-start; /* Allow scrolling from top */
+            padding-top: 4rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        .grid {
+            grid-template-columns: 1fr; /* Stack cards on mobile */
+            gap: 1rem;
+        }
+
+        .card {
+            padding: 2rem 1.5rem;
+        }
+    }
+
     /* Specific Card Styles */
     .disruptor:hover {
         background-color: #391b49;
