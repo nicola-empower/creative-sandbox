@@ -15,9 +15,6 @@ import VibeDNA from "../../components/VibeDNA.astro";
     </Fragment>
 
     <div class="slowroast-wrapper">
-        <!-- Grain Overlay -->
-        <div class="grain-overlay"></div>
-
         <!-- Nav -->
         <nav class="nav">
             <div class="logo">SLOW ROAST.</div>
@@ -26,6 +23,10 @@ import VibeDNA from "../../components/VibeDNA.astro";
 
         <!-- Hero -->
         <header class="hero">
+            <div class="hero-bg">
+                <img src="/images/artisan-hero.png" alt="Slow Roast Coffee" />
+                <div class="hero-overlay"></div>
+            </div>
             <div class="hero-content">
                 <span class="badge">EST. 2024</span>
                 <h1 class="headline">
@@ -37,103 +38,99 @@ import VibeDNA from "../../components/VibeDNA.astro";
                 </p>
                 <button class="cta-btn">Shop The Roast</button>
             </div>
-
-            <div class="hero-visual">
-                <img
-                    src="/images/artisan-hero.png"
-                    alt="Slow Roast Coffee"
-                    class="hero-img"
-                />
-            </div>
         </header>
+
+        <!-- Feature Grid -->
+        <section class="features">
+            <div class="features-inner">
+                <div class="feature-card">
+                    <h3>Fair Trade</h3>
+                    <p>Farmers first. Always.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Small Batch</h3>
+                    <p>Roasted Tuesdays.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Grind</h3>
+                    <p>Perfect consistency.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Roasts -->
+        <section class="roast-list">
+            <div class="roast-list-inner">
+                <div class="roast-header">
+                    <h2>Current Roasts</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="roast-grid">
+                    <div class="roast-item">
+                        <div class="bean-bag">
+                            <img
+                                src="/images/beanbag1.png"
+                                alt="Ethiopia Yirgacheffe"
+                                class="bean-img"
+                            />
+                        </div>
+                        <h3>Ethiopia Yirgacheffe</h3>
+                        <p>Floral. Citrus. Bright.</p>
+                        <span class="price">£14.00</span>
+                    </div>
+                    <div class="roast-item">
+                        <div class="bean-bag">
+                            <img
+                                src="/images/beanbag2.png"
+                                alt="Colombia Huila"
+                                class="bean-img"
+                            />
+                        </div>
+                        <h3>Colombia Huila</h3>
+                        <p>Caramel. Nutty. Smooth.</p>
+                        <span class="price">£12.50</span>
+                    </div>
+                    <div class="roast-item">
+                        <div class="bean-bag">
+                            <img
+                                src="/images/beanbag3.png"
+                                alt="Sumatra Mandheling"
+                                class="bean-img"
+                            />
+                        </div>
+                        <h3>Sumatra Mandheling</h3>
+                        <p>Earthy. Spicy. Bold.</p>
+                        <span class="price">£13.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Receipt Stats -->
+        <section class="receipt-section">
+            <div class="receipt">
+                <div class="receipt-header">
+                    <span>BATCH #4092</span>
+                    <span>24/10/25</span>
+                </div>
+                <div class="dashed-line"></div>
+                <div class="receipt-row">
+                    <span>ROASTED:</span>
+                    <span>YESTERDAY</span>
+                </div>
+                <div class="receipt-row">
+                    <span>ACIDITY:</span>
+                    <span>MEDIUM</span>
+                </div>
+                <div class="receipt-row">
+                    <span>NOTES:</span>
+                    <span>CHOCOLATE, FIG</span>
+                </div>
+                <div class="dashed-line"></div>
+                <div class="receipt-footer">THANK YOU FOR SLOWING DOWN.</div>
+            </div>
+        </section>
     </div>
-
-    <!-- Feature Grid -->
-    <section class="features">
-        <div class="feature-card">
-            <h3>Fair Trade</h3>
-            <p>Farmers first. Always.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Small Batch</h3>
-            <p>Roasted Tuesdays.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Grind</h3>
-            <p>Perfect consistency.</p>
-        </div>
-    </section>
-
-    <!-- Current Roasts -->
-    <section class="roast-list">
-        <div class="roast-header">
-            <h2>Current Roasts</h2>
-            <div class="line"></div>
-        </div>
-        <div class="roast-grid">
-            <div class="roast-item">
-                <div class="bean-bag">
-                    <img
-                        src="/images/beanbag1.png"
-                        alt="Ethiopia Yirgacheffe"
-                        class="bean-img"
-                    />
-                </div>
-                <h3>Ethiopia Yirgacheffe</h3>
-                <p>Floral. Citrus. Bright.</p>
-                <span class="price">£14.00</span>
-            </div>
-            <div class="roast-item">
-                <div class="bean-bag">
-                    <img
-                        src="/images/beanbag2.png"
-                        alt="Colombia Huila"
-                        class="bean-img"
-                    />
-                </div>
-                <h3>Colombia Huila</h3>
-                <p>Caramel. Nutty. Smooth.</p>
-                <span class="price">£12.50</span>
-            </div>
-            <div class="roast-item">
-                <div class="bean-bag">
-                    <img
-                        src="/images/beanbag3.png"
-                        alt="Sumatra Mandheling"
-                        class="bean-img"
-                    />
-                </div>
-                <h3>Sumatra Mandheling</h3>
-                <p>Earthy. Spicy. Bold.</p>
-                <span class="price">£13.00</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Receipt Stats -->
-    <section class="receipt-section">
-        <div class="receipt">
-            <div class="receipt-header">
-                <span>BATCH #4092</span>
-                <span>24/10/25</span>
-            </div>
-            <div class="dashed-line"></div>
-            <div class="receipt-row">
-                <span>ROASTED:</span>
-                <span>YESTERDAY</span>
-            </div>
-            <div class="receipt-row">
-                <span>ACIDITY:</span>
-                <span>MEDIUM</span>
-            </div>
-            <div class="receipt-row">
-                <span>NOTES:</span>
-                <span>CHOCOLATE, FIG</span>
-            </div>
-            <div class="dashed-line"></div>
-            <div class="receipt-footer">THANK YOU FOR SLOWING DOWN.</div>
-        </div>
-    </section>
 
     <VibeDNA
         description="Mornings, Reclaimed. Small batch coffee for people who sit down to drink it."
@@ -169,19 +166,6 @@ import VibeDNA from "../../components/VibeDNA.astro";
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
-        }
-
-        /* Grain Overlay */
-        .grain-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 50;
-            opacity: 0.4;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
         .nav {
@@ -221,21 +205,50 @@ import VibeDNA from "../../components/VibeDNA.astro";
             text-align: center;
             padding: 4rem 2rem;
             position: relative;
+            overflow: hidden;
+            min-height: 80vh;
+            justify-content: center;
         }
 
-        @media (min-width: 768px) {
-            .hero {
-                flex-direction: row;
-                text-align: left;
-                justify-content: space-between;
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 6rem 2rem;
-            }
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-color: #000; /* Ensure dark background for opacity reduction */
+            /* Fade out the bottom to avoid harsh line */
+            mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+            -webkit-mask-image: linear-gradient(
+                to bottom,
+                black 85%,
+                transparent 100%
+            );
+        }
 
-            .hero-content {
-                max-width: 50%;
-            }
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7; /* Reduced opacity for text visibility */
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3); /* Darken image for text contrast */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            color: #fff; /* White text for visibility */
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         .badge {
@@ -251,16 +264,16 @@ import VibeDNA from "../../components/VibeDNA.astro";
 
         .headline {
             font-family: var(--font-heading);
-            font-size: 4rem;
+            font-size: 6rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            color: var(--text-color);
+            color: #fff; /* Override default text color */
         }
 
         .italic {
             font-style: italic;
             font-weight: 300;
-            color: var(--accent-color);
+            color: var(--accent-color); /* Keep accent color */
         }
 
         .subhead {
@@ -268,6 +281,7 @@ import VibeDNA from "../../components/VibeDNA.astro";
             line-height: 1.6;
             margin-bottom: 2.5rem;
             opacity: 0.9;
+            color: #f0f0f0; /* Light text */
         }
 
         .cta-btn {
@@ -290,29 +304,6 @@ import VibeDNA from "../../components/VibeDNA.astro";
             box-shadow: 0 5px 15px rgba(74, 59, 50, 0.2);
         }
 
-        .hero-visual {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-            margin-top: 3rem;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        @media (min-width: 768px) {
-            .hero-visual {
-                margin-top: 0;
-                margin-right: 4rem;
-            }
-        }
-
-        .hero-img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px;
-        }
-
         /* Marquee */
         .marquee-container {
             background-color: var(--accent-color);
@@ -332,10 +323,14 @@ import VibeDNA from "../../components/VibeDNA.astro";
 
         /* Features */
         .features {
+            width: 100%;
+            padding: 4rem 2rem;
+        }
+
+        .features-inner {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            padding: 4rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
@@ -350,7 +345,13 @@ import VibeDNA from "../../components/VibeDNA.astro";
 
         /* Current Roasts */
         .roast-list {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            width: 100%;
             padding: 4rem 2rem;
+        }
+
+        .roast-list-inner {
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -370,7 +371,7 @@ import VibeDNA from "../../components/VibeDNA.astro";
 
         .roast-header .line {
             height: 1px;
-            background-color: var(--text-color);
+            background-color: var(--bg-color);
             width: 100%;
             opacity: 0.2;
         }

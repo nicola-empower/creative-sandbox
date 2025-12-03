@@ -7,64 +7,9 @@ const TheCode = () => {
             {/* Background Noise Texture */}
             <div className="absolute inset-0 opacity-5 pointer-events-none bg-noise mix-blend-overlay"></div>
 
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-4xl mx-auto">
 
-                {/* LEFT COLUMN: The Headline */}
-                <div className="relative z-10">
-                    <h2 className="font-display font-black text-6xl md:text-8xl tracking-tighter leading-[0.9] relative group">
-                        <span className="block text-black dark:text-white relative inline-block glitch-text" data-text="REALITY">REALITY</span>
-                        <span className="block text-black dark:text-white">IS</span>
-                        <span className="block text-[#BF00FF] dark:text-[#BF00FF] drop-shadow-none dark:drop-shadow-[0_0_15px_rgba(191,0,255,0.6)] relative inline-block glitch-text" data-text="BORING.">
-                            BORING.
-                        </span>
-
-                        <style jsx>{`
-                            .glitch-text {
-                                position: relative;
-                            }
-                            .glitch-text::before,
-                            .glitch-text::after {
-                                content: attr(data-text);
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                background: #050505; /* Match bg */
-                            }
-                            .glitch-text::before {
-                                left: 2px;
-                                text-shadow: -1px 0 #00ffff;
-                                clip: rect(44px, 450px, 56px, 0);
-                                animation: glitch-anim 5s infinite linear alternate-reverse;
-                            }
-                            .glitch-text::after {
-                                left: -2px;
-                                text-shadow: -1px 0 #ff00ff;
-                                clip: rect(44px, 450px, 56px, 0);
-                                animation: glitch-anim2 5s infinite linear alternate-reverse;
-                            }
-                            @keyframes glitch-anim {
-                                0% { clip: rect(30px, 9999px, 10px, 0); }
-                                20% { clip: rect(85px, 9999px, 90px, 0); }
-                                40% { clip: rect(10px, 9999px, 60px, 0); }
-                                60% { clip: rect(60px, 9999px, 20px, 0); }
-                                80% { clip: rect(20px, 9999px, 80px, 0); }
-                                100% { clip: rect(50px, 9999px, 40px, 0); }
-                            }
-                            @keyframes glitch-anim2 {
-                                0% { clip: rect(10px, 9999px, 80px, 0); }
-                                20% { clip: rect(80px, 9999px, 10px, 0); }
-                                40% { clip: rect(40px, 9999px, 50px, 0); }
-                                60% { clip: rect(90px, 9999px, 30px, 0); }
-                                80% { clip: rect(30px, 9999px, 20px, 0); }
-                                100% { clip: rect(60px, 9999px, 70px, 0); }
-                            }
-                        `}</style>
-                    </h2>
-                </div>
-
-                {/* RIGHT COLUMN: The Copy */}
+                {/* The Copy */}
                 <div className="space-y-8 relative z-10 font-body">
                     <p className="text-xl md:text-2xl font-medium text-[#171717] dark:text-[#E0E0E0] leading-relaxed">
                         NEXUS isn't clothing. It's <span className="font-bold text-[#BF00FF]">armor for the digital age.</span> Designed in the void. Worn in the streets.

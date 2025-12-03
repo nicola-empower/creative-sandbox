@@ -29,6 +29,14 @@ import VibeDNA from "../../components/VibeDNA.astro";
 
         <!-- Hero -->
         <header class="hero">
+            <div class="hero-bg">
+                <img
+                    src="/images/echo-hero1.png"
+                    alt="Echo Chamber Background"
+                />
+                <div class="overlay"></div>
+            </div>
+
             <div class="hero-content">
                 <h1 class="headline">
                     Stories That <span class="italic">Linger.</span>
@@ -44,15 +52,6 @@ import VibeDNA from "../../components/VibeDNA.astro";
                     </button>
                     <span class="cta-text">Start Listening</span>
                 </div>
-            </div>
-
-            <!-- Hero Image -->
-            <div class="hero-visual">
-                <img
-                    src="/images/echo-hero.png"
-                    alt="Echo Chamber Hero"
-                    class="hero-img"
-                />
             </div>
 
             <!-- Audio Visualizer Animation -->
@@ -180,6 +179,44 @@ import VibeDNA from "../../components/VibeDNA.astro";
             text-align: center;
             padding: 4rem 2rem;
             position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(10, 10, 18, 0.3),
+                rgba(10, 10, 18, 0.6)
+            );
+        }
+
+        .hero-content,
+        .visualizer,
+        .stats-section,
+        .features,
+        .footer {
+            position: relative;
+            z-index: 10;
         }
 
         .headline {
@@ -239,21 +276,6 @@ import VibeDNA from "../../components/VibeDNA.astro";
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
-        }
-
-        .hero-visual {
-            margin-top: 3rem;
-            width: 100%;
-            max-width: 600px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-img {
-            width: 100%;
-            height: auto;
-            display: block;
         }
 
         /* Visualizer */

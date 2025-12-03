@@ -2,6 +2,7 @@
 import BlankLayout from "../../layouts/BlankLayout.astro";
 import { ViewTransitions } from "astro:transitions";
 import TheCode from "../../components/nexus/TheCode";
+import NexusHero from "../../components/nexus/NexusHero.astro";
 import Collections from "../../components/nexus/Collections";
 import TheIntel from "../../components/nexus/TheIntel";
 import Lookbook from "../../components/nexus/Lookbook";
@@ -32,6 +33,8 @@ import VibeDNA from "../../components/VibeDNA.astro";
             <img src="/images/nexus-hero.png" alt="Nexus Cyberpunk Hero" />
             <div class="overlay"></div>
         </div>
+
+        <NexusHero />
 
         <div
             class="w-full overflow-hidden bg-black border-b border-neon-purple py-2 z-10 relative"
