@@ -17,7 +17,7 @@ import VibeDNA from "../../components/VibeDNA.astro";
     <div class="whisk-wrapper">
         <!-- Nav -->
         <nav class="nav">
-            <div class="logo">The Pastel Whisk</div>
+            <a href="/" class="logo">The Pastel Whisk</a>
             <div class="nav-links">
                 <a href="#">Shop</a>
                 <a href="#">Our Story</a>
@@ -36,72 +36,76 @@ import VibeDNA from "../../components/VibeDNA.astro";
                 <h1 class="headline">Life is Sweet.</h1>
                 <p class="subhead">
                     Intricate macarons, wedding favours, and elegant afternoon
-
-                    <div class="scroll-container">
-                        <!-- Rose Card -->
-                        <div class="flavour-card card-rose">
-                            <div class="card-blob"></div>
-                            <img
-                                src="/images/flavour1.png"
-                                alt="Rose & Raspberry"
-                                class="flavour-img"
-                            />
-                            <h4>Rose & Raspberry</h4>
-                            <p>
-                                Delicate rosewater buttercream with a tart
-                                raspberry jam core.
-                            </p>
-                            <span class="price-tag">£24.00</span>
-                        </div>
-
-                        <!-- Pistachio Card -->
-                        <div class="flavour-card card-pistachio">
-                            <div class="card-blob"></div>
-                            <img
-                                src="/images/flavour2.png"
-                                alt="Sicilian Pistachio"
-                                class="flavour-img"
-                            />
-                            <h4>Sicilian Pistachio</h4>
-                            <p>
-                                Roasted pistachio ganache rolled in crushed
-                                nuts.
-                            </p>
-                            <span class="price-tag">£26.00</span>
-                        </div>
-
-                        <!-- Earl Grey Card -->
-                        <div class="flavour-card card-lavender">
-                            <div class="card-blob"></div>
-                            <img
-                                src="/images/flavour3.png"
-                                alt="Earl Grey & Honey"
-                                class="flavour-img"
-                            />
-                            <h4>Earl Grey & Honey</h4>
-                            <p>
-                                Infused black tea ganache with a drop of local
-                                wildflower honey.
-                            </p>
-                            <span class="price-tag">£25.00</span>
-                        </div>
-
-                        <!-- Lemon Card -->
-                        <div class="flavour-card card-lemon">
-                            <div class="card-blob"></div>
-                            <img
-                                src="/images/flavour4.png"
-                                alt="Amalfi Lemon"
-                                class="flavour-img"
-                            />
-                            <h4>Amalfi Lemon</h4>
-                            <p>
-                                Zesty lemon curd with a white chocolate shell.
-                            </p>
-                            <span class="price-tag">£24.00</span>
-                        </div>
-                    </div>
+                    teas.
                 </p>
+
+                <div class="hero-visual">
+                    <img
+                        src="/images/pastelhero.png"
+                        alt="Pastel Whisk Treats"
+                        class="hero-img"
+                    />
+                </div>
+
+                <div class="scroll-container">
+                    <!-- Rose Card -->
+                    <div class="flavour-card card-rose">
+                        <div class="card-blob"></div>
+                        <img
+                            src="/images/flavour1.png"
+                            alt="Rose & Raspberry"
+                            class="flavour-img"
+                        />
+                        <h4>Rose & Raspberry</h4>
+                        <p>
+                            Delicate rosewater buttercream with a tart raspberry
+                            jam core.
+                        </p>
+                        <span class="price-tag">£24.00</span>
+                    </div>
+
+                    <!-- Pistachio Card -->
+                    <div class="flavour-card card-pistachio">
+                        <div class="card-blob"></div>
+                        <img
+                            src="/images/flavour2.png"
+                            alt="Sicilian Pistachio"
+                            class="flavour-img"
+                        />
+                        <h4>Sicilian Pistachio</h4>
+                        <p>Roasted pistachio ganache rolled in crushed nuts.</p>
+                        <span class="price-tag">£26.00</span>
+                    </div>
+
+                    <!-- Earl Grey Card -->
+                    <div class="flavour-card card-lavender">
+                        <div class="card-blob"></div>
+                        <img
+                            src="/images/flavour3.png"
+                            alt="Earl Grey & Honey"
+                            class="flavour-img"
+                        />
+                        <h4>Earl Grey & Honey</h4>
+                        <p>
+                            Infused black tea ganache with a drop of local
+                            wildflower honey.
+                        </p>
+                        <span class="price-tag">£25.00</span>
+                    </div>
+
+                    <!-- Lemon Card -->
+                    <div class="flavour-card card-lemon">
+                        <div class="card-blob"></div>
+                        <img
+                            src="/images/flavour4.png"
+                            alt="Amalfi Lemon"
+                            class="flavour-img"
+                        />
+                        <h4>Amalfi Lemon</h4>
+                        <p>Zesty lemon curd with a white chocolate shell.</p>
+                        <span class="price-tag">£24.00</span>
+                    </div>
+                </div>
 
                 <VibeDNA
                     description="Handcrafted with love. Intricate macarons, wedding favours, and elegant afternoon teas."
@@ -214,6 +218,7 @@ import VibeDNA from "../../components/VibeDNA.astro";
                 font-size: 2rem;
                 color: var(--btn-pink);
                 font-weight: 400;
+                text-decoration: none;
             }
 
             .nav-links {
@@ -250,6 +255,20 @@ import VibeDNA from "../../components/VibeDNA.astro";
                 justify-content: center;
             }
 
+            .hero-visual {
+                margin-top: 2rem;
+                position: relative;
+                z-index: 1;
+            }
+
+            .hero-img {
+                width: 100%;
+                max-width: 500px;
+                border-radius: 20px;
+                box-shadow: 20px 20px 0 rgba(255, 255, 255, 0.5);
+                transform: rotate(3deg);
+            }
+
             @media (min-width: 768px) {
                 .hero {
                     flex-direction: row;
@@ -261,6 +280,9 @@ import VibeDNA from "../../components/VibeDNA.astro";
                 .hero-content {
                     max-width: 500px;
                     z-index: 2;
+                }
+                .hero-visual {
+                    margin-top: 0;
                 }
             }
 
@@ -275,6 +297,7 @@ import VibeDNA from "../../components/VibeDNA.astro";
                 opacity: 0.8; /* Increased opacity */
                 z-index: 0;
                 filter: blur(40px);
+                animation: float 8s ease-in-out infinite;
             }
 
             .hero-blob-2 {
@@ -288,6 +311,19 @@ import VibeDNA from "../../components/VibeDNA.astro";
                 opacity: 0.7; /* Increased opacity */
                 z-index: 0;
                 filter: blur(40px);
+                animation: float 10s ease-in-out infinite reverse;
+            }
+
+            @keyframes float {
+                0% {
+                    transform: translate(0, 0);
+                }
+                50% {
+                    transform: translate(20px, -20px);
+                }
+                100% {
+                    transform: translate(0, 0);
+                }
             }
 
             /* ... */

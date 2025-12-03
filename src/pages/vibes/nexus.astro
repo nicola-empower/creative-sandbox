@@ -14,96 +14,140 @@ import VibeDNA from "../../components/VibeDNA.astro";
     <Fragment slot="head">
         <ViewTransitions />
         <script is:inline>
-            const theme = (() => {
-                if (
-                    typeof localStorage !== "undefined" &&
-                    localStorage.getItem("theme")
-                ) {
-                    return localStorage.getItem("theme");
-                }
-                if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                    return "dark";
-                }
-                return "light";
-            })();
-
-            if (theme === "dark") {
-                document.documentElement.classList.add("dark");
-            } else {
-                document.documentElement.classList.remove("dark");
-            }
-            document.documentElement.setAttribute("data-theme", theme);
+            // Force Dark Mode for Nexus
+            document.documentElement.classList.add("dark");
+            document.documentElement.setAttribute("data-theme", "dark");
         </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap"
+            rel="stylesheet"
+        />
     </Fragment>
 
-    <div class="w-full overflow-hidden bg-black dark:bg-white py-2">
-        <div class="animate-marquee whitespace-nowrap flex gap-8 items-center">
-            <span
-                class="text-2xl font-black text-white dark:text-black font-display"
-                >•</span
-            >
-            <span
-                class="text-2xl font-black text-white dark:text-black font-display"
-                >500 UNITS PER DROP</span
-            >
-            <span
-                class="text-2xl font-black text-white dark:text-black font-display"
-                >•</span
-            >
-            <span
-                class="text-2xl font-black text-white dark:text-black font-display"
-                >NO RESTOCKS EVER</span
-            >
-            <span
-                class="text-2xl font-black text-white dark:text-black font-display"
-                >•</span
-            >
-            <span
-                class="text-2xl font-black text-white dark:text-black font-display"
-                >DROP 001 SOLD OUT IN 48H</span
-            >
-            <span
-                class="text-2xl font-black text-white dark:text-black font-display"
-                >•</span
-            >
-            <span
-                class="text-2xl font-black text-white dark:text-black font-display"
-                >500 UNITS PER DROP</span
-            >
-            <span
-                class="text-2xl font-black text-white dark:text-black font-display"
-                >•</span
-            >
-            <span
-                class="text-2xl font-black text-white dark:text-black font-display"
-                >NO RESTOCKS EVER</span
-            >
-            <span
-                class="text-2xl font-black text-white dark:text-black font-display"
-                >•</span
-            >
+    <div class="nexus-wrapper">
+        <!-- Hero Background Image -->
+        <div class="hero-bg">
+            <img src="/images/nexus-hero.png" alt="Nexus Cyberpunk Hero" />
+            <div class="overlay"></div>
         </div>
+
+        <div
+            class="w-full overflow-hidden bg-black border-b border-neon-purple py-2 z-10 relative"
+        >
+            <div
+                class="animate-marquee whitespace-nowrap flex gap-8 items-center"
+            >
+                <span class="text-2xl font-black text-neon-cyan font-display"
+                    >•</span
+                >
+                <span class="text-2xl font-black text-white font-display"
+                    >500 UNITS PER DROP</span
+                >
+                <span class="text-2xl font-black text-neon-cyan font-display"
+                    >•</span
+                >
+                <span class="text-2xl font-black text-white font-display"
+                    >NO RESTOCKS EVER</span
+                >
+                <span class="text-2xl font-black text-neon-cyan font-display"
+                    >•</span
+                >
+                <span class="text-2xl font-black text-white font-display"
+                    >DROP 001 SOLD OUT IN 48H</span
+                >
+                <span class="text-2xl font-black text-neon-cyan font-display"
+                    >•</span
+                >
+                <span class="text-2xl font-black text-white font-display"
+                    >500 UNITS PER DROP</span
+                >
+                <span class="text-2xl font-black text-neon-cyan font-display"
+                    >•</span
+                >
+                <span class="text-2xl font-black text-white font-display"
+                    >NO RESTOCKS EVER</span
+                >
+                <span class="text-2xl font-black text-neon-cyan font-display"
+                    >•</span
+                >
+            </div>
+        </div>
+
+        <div class="content-layer relative z-10">
+            <TheCode client:visible />
+            <Collections client:visible />
+            <TheIntel client:visible />
+            <Lookbook client:visible />
+            <Waitlist client:visible />
+        </div>
+
+        <VibeDNA
+            description="Cyberpunk streetwear for the digital age. High-contrast, tactical, and unapologetically futuristic."
+            fontHeader="Orbitron"
+            fontBody="Rajdhani"
+            palette={[
+                { hex: "#050505", name: "Void Black" },
+                { hex: "#00F3FF", name: "Cyan Glitch" },
+                { hex: "#BC13FE", name: "Neon Purple" },
+            ]}
+        />
     </div>
-
-    <TheCode client:visible />
-    <Collections client:visible />
-    <TheIntel client:visible />
-    <Lookbook client:visible />
-    <Waitlist client:visible />
-
-    <VibeDNA
-        description="Cyberpunk streetwear for the digital age. High-contrast, tactical, and unapologetically futuristic."
-        fontHeader="Space Grotesk"
-        fontBody="Inter"
-        palette={[
-            { hex: "#000000", name: "Void Black" },
-            { hex: "#BF00FF", name: "Neon Purple" },
-            { hex: "#FFFFFF", name: "Static White" },
-        ]}
-    />
 </BlankLayout>
 
 <style>
+    :root {
+        --neon-cyan: #00f3ff;
+        --neon-purple: #bc13fe;
+        --void-black: #050505;
+    }
+
+    .nexus-wrapper {
+        min-height: 100vh;
+        width: 100%;
+        background-color: var(--void-black);
+        color: white;
+        font-family: "Rajdhani", sans-serif;
+        position: relative;
+    }
+
+    .hero-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .hero-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.4;
+    }
+
+    .hero-bg .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent, var(--void-black));
+    }
+
+    .text-neon-cyan {
+        color: var(--neon-cyan);
+        text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+    }
+
+    .border-neon-purple {
+        border-color: var(--neon-purple);
+        box-shadow: 0 0 15px rgba(188, 19, 254, 0.3);
+    }
+
     @keyframes marquee {
         0% {
             transform: translateX(0);
@@ -117,9 +161,26 @@ import VibeDNA from "../../components/VibeDNA.astro";
         animation: marquee 20s linear infinite;
     }
 
-    /* Ensure the wrapper takes full height/width if needed, though BlankLayout body is 100vh */
-    .nexus-wrapper {
-        min-height: 100vh;
-        width: 100%;
+    /* Global Overrides for Nexus Vibe */
+    :global(h1),
+    :global(h2),
+    :global(h3) {
+        font-family: "Orbitron", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    :global(.btn-primary) {
+        background: transparent;
+        border: 1px solid var(--neon-cyan);
+        color: var(--neon-cyan);
+        box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    :global(.btn-primary:hover) {
+        background: var(--neon-cyan);
+        color: var(--void-black);
+        box-shadow: 0 0 20px rgba(0, 243, 255, 0.6);
     }
 </style>

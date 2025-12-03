@@ -41,52 +41,6 @@ import VibeDNA from "../../components/VibeDNA.astro";
                     alt="HAVNN Skincare"
                     class="hero-img-full"
                 />
-
-                <!-- Product 1 -->
-                <div class="product-card p1">
-                    <div class="card-image">
-                        <img
-                            src="/images/product1.png"
-                            alt="Highland Moss Cleanser"
-                            class="prod-img"
-                        />
-                        <button class="add-to-cart">Add to Basket</button>
-                    </div>
-                    <div class="card-info">
-                        <h3>Highland Moss Cleanser</h3>
-                        <p>£28.00</p>
-                    </div>
-                </div>
-                <!-- Product 2 -->
-                <div class="product-card p2">
-                    <div class="card-image">
-                        <img
-                            src="/images/product2.png"
-                            alt="Sea Kelp Toner"
-                            class="prod-img"
-                        />
-                        <button class="add-to-cart">Add to Basket</button>
-                    </div>
-                    <div class="card-info">
-                        <h3>Sea Kelp Toner</h3>
-                        <p>£24.00</p>
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="product-card p3">
-                    <div class="card-image">
-                        <img
-                            src="/images/product2 (2).png"
-                            alt="Heather Honey Balm"
-                            class="prod-img"
-                        />
-                        <button class="add-to-cart">Add to Basket</button>
-                    </div>
-                    <div class="card-info">
-                        <h3>Heather Honey Balm</h3>
-                        <p>£32.00</p>
-                    </div>
-                </div>
             </div>
         </header>
         <VibeDNA
@@ -119,6 +73,57 @@ import VibeDNA from "../../components/VibeDNA.astro";
                         <span class="step-number">03</span>
                         <h3>Moisturise</h3>
                         <p>Lock in hydration with raw heather honey.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <div class="products-container">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img
+                            src="/images/product1.png"
+                            alt="Highland Moss Cleanser"
+                            class="prod-img"
+                        />
+                        <button class="add-to-cart">Add to Basket</button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Highland Moss Cleanser</h3>
+                        <p>£28.00</p>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img
+                            src="/images/product2.png"
+                            alt="Sea Kelp Toner"
+                            class="prod-img"
+                        />
+                        <button class="add-to-cart">Add to Basket</button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Sea Kelp Toner</h3>
+                        <p>£24.00</p>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img
+                            src="/images/product3.png"
+                            alt="Heather Honey Balm"
+                            class="prod-img"
+                        />
+                        <button class="add-to-cart">Add to Basket</button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Heather Honey Balm</h3>
+                        <p>£32.00</p>
                     </div>
                 </div>
             </div>
@@ -308,29 +313,26 @@ import VibeDNA from "../../components/VibeDNA.astro";
         z-index: 1;
     }
 
-    /* Floating Products */
-    .product-card {
-        position: absolute;
-        z-index: 10;
-        width: 200px;
-        background: rgba(255, 255, 255, 0.9);
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
+    /* Featured Products */
+    .featured-products {
+        padding: 6rem 3rem;
+        background-color: var(--bg-primary);
     }
 
-    .p1 {
-        top: 10%;
-        right: 10%;
+    .products-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 4rem;
     }
-    .p2 {
-        bottom: 15%;
-        right: 20%;
-    }
-    .p3 {
-        top: 40%;
-        left: 10%;
+
+    .product-card {
+        position: relative;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 1.5rem;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
     }
 
     .card-image {

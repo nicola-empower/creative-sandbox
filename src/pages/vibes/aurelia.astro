@@ -17,7 +17,7 @@ import VibeDNA from "../../components/VibeDNA.astro";
     <div class="aurelia-wrapper">
         <!-- Minimal Nav -->
         <nav class="nav">
-            <div class="logo">AURELIA.</div>
+            <a href="/" class="logo">AURELIA.</a>
             <div class="menu-btn">MENU</div>
         </nav>
 
@@ -89,6 +89,8 @@ import VibeDNA from "../../components/VibeDNA.astro";
                     font-size: 1.5rem;
                     letter-spacing: 2px;
                     font-weight: 600;
+                    color: var(--text-color);
+                    text-decoration: none;
                 }
 
                 .menu-btn {
@@ -272,24 +274,46 @@ import VibeDNA from "../../components/VibeDNA.astro";
                 <div class="signature">Aurelia.</div>
             </div>
             <div class="philosophy-image">
-                <div class="img-placeholder"></div>
+                <img
+                    src="/images/philosophy.png"
+                    alt="Aurelia Philosophy"
+                    class="philo-img"
+                />
             </div>
         </section>
 
         <!-- Rituals Grid -->
         <section class="rituals">
             <div class="ritual-card">
-                <div class="card-img"></div>
+                <div class="card-img">
+                    <img
+                        src="/images/ritual1.png"
+                        alt="The Cleanser"
+                        class="ritual-img"
+                    />
+                </div>
                 <h3>The Cleanser</h3>
                 <p>Purify without stripping.</p>
             </div>
             <div class="ritual-card">
-                <div class="card-img"></div>
+                <div class="card-img">
+                    <img
+                        src="/images/ritual2.png"
+                        alt="The Essence"
+                        class="ritual-img"
+                    />
+                </div>
                 <h3>The Essence</h3>
                 <p>Hydrate and prepare.</p>
             </div>
             <div class="ritual-card">
-                <div class="card-img"></div>
+                <div class="card-img">
+                    <img
+                        src="/images/ritual3.png"
+                        alt="The Oil"
+                        class="ritual-img"
+                    />
+                </div>
                 <h3>The Oil</h3>
                 <p>Nourish and protect.</p>
             </div>

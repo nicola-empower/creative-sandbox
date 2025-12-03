@@ -1,0 +1,817 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="The Dried Flower Bar | Artisan Everlasting Bouquets">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="florist-wrapper">
+        <!-- Grain Overlay -->
+        <div class="grain-overlay"></div>
+
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">The Dried Flower Bar</div>
+            <div class="nav-links">
+                <a href="#builder">BUILD BOUQUET</a>
+                <a href="#gallery">GALLERY</a>
+                <a href="#workshops">WORKSHOPS</a>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-content">
+                <div class="scrapbook-card">
+                    <div class="tape-top"></div>
+                    <h1 class="headline">Everlasting<br />Beauty</h1>
+                    <p class="subhead">
+                        Sustainable, artisan dried flowers for your home.
+                    </p>
+                    <button class="cta-btn">SHOP THE COLLECTION</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="photo-stack">
+                    <div class="photo photo-1">
+                        <img
+                            src="https://images.unsplash.com/photo-1596073419667-9d77d59f033f?q=80&w=600&auto=format&fit=crop"
+                            alt="Dried Flowers 1"
+                        />
+                        <div class="tape-corner"></div>
+                    </div>
+                    <div class="photo photo-2">
+                        <img
+                            src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=600&auto=format&fit=crop"
+                            alt="Dried Flowers 2"
+                        />
+                        <div class="tape-corner"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Bouquet Builder (Sticky Sidebar) -->
+        <section id="builder" class="builder-section">
+            <div class="builder-layout">
+                <!-- Sticky Sidebar -->
+                <aside class="builder-sidebar">
+                    <div class="sidebar-card">
+                        <div class="tape-top"></div>
+                        <h3>YOUR BOUQUET</h3>
+                        <div class="selected-items" id="selectedItems">
+                            <p class="empty-msg">Select flowers to begin...</p>
+                        </div>
+                        <div class="total-price">
+                            <span>TOTAL</span>
+                            <span id="totalPrice">£0.00</span>
+                        </div>
+                        <button class="checkout-btn">ADD TO BASKET</button>
+                    </div>
+                </aside>
+
+                <!-- Scrollable Options -->
+                <div class="flower-options">
+                    <div class="section-title">
+                        <h2>STEMS & GRASSES</h2>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="flower-grid">
+                        <!-- Flower 1 -->
+                        <div
+                            class="flower-card"
+                            data-name="Pampas Grass"
+                            data-price="12.00"
+                        >
+                            <div class="flower-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1598516963133-f6c34720937a?q=80&w=400&auto=format&fit=crop"
+                                    alt="Pampas Grass"
+                                />
+                            </div>
+                            <div class="flower-info">
+                                <h4>Pampas Grass</h4>
+                                <span class="price">£12.00</span>
+                                <button class="add-btn">+</button>
+                            </div>
+                        </div>
+                        <!-- Flower 2 -->
+                        <div
+                            class="flower-card"
+                            data-name="Dried Lavender"
+                            data-price="8.50"
+                        >
+                            <div class="flower-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1471943311424-646960669fbc?q=80&w=400&auto=format&fit=crop"
+                                    alt="Dried Lavender"
+                                />
+                            </div>
+                            <div class="flower-info">
+                                <h4>Dried Lavender</h4>
+                                <span class="price">£8.50</span>
+                                <button class="add-btn">+</button>
+                            </div>
+                        </div>
+                        <!-- Flower 3 -->
+                        <div
+                            class="flower-card"
+                            data-name="Bunny Tails"
+                            data-price="9.00"
+                        >
+                            <div class="flower-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1595356073289-42b740523005?q=80&w=400&auto=format&fit=crop"
+                                    alt="Bunny Tails"
+                                />
+                            </div>
+                            <div class="flower-info">
+                                <h4>Bunny Tails</h4>
+                                <span class="price">£9.00</span>
+                                <button class="add-btn">+</button>
+                            </div>
+                        </div>
+                        <!-- Flower 4 -->
+                        <div
+                            class="flower-card"
+                            data-name="Eucalyptus"
+                            data-price="10.50"
+                        >
+                            <div class="flower-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1614597396930-a69e078882d8?q=80&w=400&auto=format&fit=crop"
+                                    alt="Eucalyptus"
+                                />
+                            </div>
+                            <div class="flower-info">
+                                <h4>Eucalyptus</h4>
+                                <span class="price">£10.50</span>
+                                <button class="add-btn">+</button>
+                            </div>
+                        </div>
+                        <!-- Flower 5 -->
+                        <div
+                            class="flower-card"
+                            data-name="Cotton Stems"
+                            data-price="14.00"
+                        >
+                            <div class="flower-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1516205651411-a416745265dd?q=80&w=400&auto=format&fit=crop"
+                                    alt="Cotton Stems"
+                                />
+                            </div>
+                            <div class="flower-info">
+                                <h4>Cotton Stems</h4>
+                                <span class="price">£14.00</span>
+                                <button class="add-btn">+</button>
+                            </div>
+                        </div>
+                        <!-- Flower 6 -->
+                        <div
+                            class="flower-card"
+                            data-name="Wheat Sheaf"
+                            data-price="7.00"
+                        >
+                            <div class="flower-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1574632049286-66384180436d?q=80&w=400&auto=format&fit=crop"
+                                    alt="Wheat Sheaf"
+                                />
+                            </div>
+                            <div class="flower-info">
+                                <h4>Wheat Sheaf</h4>
+                                <span class="price">£7.00</span>
+                                <button class="add-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="gallery-section">
+            <div class="section-header">
+                <h2>STUDIO JOURNAL</h2>
+                <div class="line"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <img
+                            src="https://images.unsplash.com/photo-1508182314998-a27b60622743?q=80&w=600&auto=format&fit=crop"
+                            alt="Workshop"
+                        />
+                        <div class="sepia-overlay"></div>
+                    </div>
+                    <div class="polaroid-caption">Autumn Workshop</div>
+                    <div class="tape-top"></div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <img
+                            src="https://images.unsplash.com/photo-1523694576729-dc99e9c0f9b4?q=80&w=600&auto=format&fit=crop"
+                            alt="Studio"
+                        />
+                        <div class="sepia-overlay"></div>
+                    </div>
+                    <div class="polaroid-caption">Morning Light</div>
+                    <div class="tape-top"></div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <img
+                            src="https://images.unsplash.com/photo-1487035242901-d419a42d17af?q=80&w=600&auto=format&fit=crop"
+                            alt="Arrangement"
+                        />
+                        <div class="sepia-overlay"></div>
+                    </div>
+                    <div class="polaroid-caption">Custom Order</div>
+                    <div class="tape-top"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-logo">The Dried Flower Bar</div>
+            <p>Slow living. Sustainable beauty.</p>
+        </footer>
+
+        <VibeDNA
+            description="Muted, vintage, and nostalgic. A digital scrapbook for artisan florals."
+            fontHeader="Cormorant Garamond"
+            fontBody="Inter"
+            palette={[
+                { hex: "#F4E6EC", name: "Powder Blush" },
+                { hex: "#E3C5D5", name: "Lilac Mist" },
+                { hex: "#EADDD1", name: "Cream Petal" },
+                { hex: "#B58DAF", name: "Blush Mauve" },
+                { hex: "#D9A7A7", name: "Rose Dust" },
+            ]}
+        />
+    </div>
+</BlankLayout>
+
+<style>
+    :root {
+        --powder-blush: #f4e6ec;
+        --lilac-mist: #e3c5d5;
+        --cream-petal: #eaddd1;
+        --blush-mauve: #b58daf;
+        --rose-dust: #d9a7a7;
+
+        --font-heading: "Cormorant Garamond", serif;
+        --font-body: "Inter", sans-serif;
+    }
+
+    .florist-wrapper {
+        background-color: var(--powder-blush);
+        color: var(--blush-mauve);
+        font-family: var(--font-body);
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    /* Grain Texture */
+    .grain-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    /* Tape Effect */
+    .tape-top {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-2deg);
+        width: 60px;
+        height: 25px;
+        background-color: rgba(255, 255, 255, 0.6);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .tape-corner {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.6);
+        transform: rotate(45deg);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    /* Nav */
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 4rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .logo {
+        font-family: var(--font-heading);
+        font-style: italic;
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--blush-mauve);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        color: var(--blush-mauve);
+        text-decoration: none;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--rose-dust);
+        transition: width 0.3s;
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
+    }
+
+    /* Hero */
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 2rem;
+        min-height: 80vh;
+        position: relative;
+        z-index: 10;
+    }
+
+    .hero-content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .scrapbook-card {
+        background: #fff;
+        padding: 4rem;
+        text-align: center;
+        position: relative;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+        transform: rotate(-2deg);
+        max-width: 500px;
+    }
+
+    .headline {
+        font-family: var(--font-heading);
+        font-style: italic;
+        font-size: 4.5rem;
+        line-height: 1;
+        margin-bottom: 1.5rem;
+        color: var(--blush-mauve);
+    }
+
+    .subhead {
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 2.5rem;
+        color: #888;
+    }
+
+    .cta-btn {
+        background-color: var(--rose-dust);
+        color: #fff;
+        border: none;
+        padding: 1rem 2.5rem;
+        font-family: var(--font-body);
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .cta-btn:hover {
+        background-color: var(--blush-mauve);
+    }
+
+    .hero-visual {
+        flex: 1;
+        position: relative;
+        height: 500px;
+    }
+
+    .photo-stack {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .photo {
+        position: absolute;
+        padding: 1rem;
+        background: #fff;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .photo img {
+        display: block;
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+        filter: sepia(0.3) contrast(0.9);
+    }
+
+    .photo-1 {
+        top: 10%;
+        left: 10%;
+        transform: rotate(5deg);
+        z-index: 1;
+    }
+
+    .photo-2 {
+        top: 20%;
+        left: 30%;
+        transform: rotate(-3deg);
+        z-index: 2;
+    }
+
+    .photo:hover {
+        transform: scale(1.02) rotate(0deg);
+        z-index: 10;
+    }
+
+    /* Bouquet Builder */
+    .builder-section {
+        padding: 6rem 4rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .builder-layout {
+        display: flex;
+        gap: 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .builder-sidebar {
+        flex: 0 0 300px;
+        position: sticky;
+        top: 100px;
+        height: fit-content;
+    }
+
+    .sidebar-card {
+        background: var(--cream-petal);
+        padding: 2rem;
+        position: relative;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .sidebar-card h3 {
+        font-family: var(--font-heading);
+        font-style: italic;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(181, 141, 175, 0.2);
+        padding-bottom: 1rem;
+    }
+
+    .selected-items {
+        min-height: 150px;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .empty-msg {
+        text-align: center;
+        font-style: italic;
+        opacity: 0.6;
+        margin-top: 2rem;
+    }
+
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+        padding-bottom: 0.2rem;
+    }
+
+    .total-price {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(181, 141, 175, 0.2);
+    }
+
+    .checkout-btn {
+        width: 100%;
+        background-color: var(--blush-mauve);
+        color: #fff;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        font-family: var(--font-body);
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        transition: opacity 0.3s;
+    }
+
+    .checkout-btn:hover {
+        opacity: 0.9;
+    }
+
+    .flower-options {
+        flex: 1;
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+        font-family: var(--font-heading);
+        font-style: italic;
+        font-size: 2.5rem;
+        white-space: nowrap;
+    }
+
+    .line {
+        height: 1px;
+        background-color: var(--blush-mauve);
+        width: 100%;
+        opacity: 0.3;
+    }
+
+    .flower-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .flower-card {
+        background: #fff;
+        padding: 1rem;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s;
+    }
+
+    .flower-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .flower-img {
+        height: 250px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+    }
+
+    .flower-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: sepia(0.2);
+        transition: transform 0.5s;
+    }
+
+    .flower-card:hover .flower-img img {
+        transform: scale(1.05);
+    }
+
+    .flower-info {
+        text-align: center;
+    }
+
+    .flower-info h4 {
+        font-family: var(--font-heading);
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .price {
+        display: block;
+        font-size: 0.9rem;
+        color: #888;
+        margin-bottom: 1rem;
+    }
+
+    .add-btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid var(--rose-dust);
+        background: transparent;
+        color: var(--rose-dust);
+        cursor: pointer;
+        font-size: 1.2rem;
+        line-height: 1;
+        transition: all 0.2s;
+    }
+
+    .add-btn:hover {
+        background: var(--rose-dust);
+        color: #fff;
+    }
+
+    /* Gallery */
+    .gallery-section {
+        padding: 6rem 4rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .gallery-grid {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .polaroid {
+        background: #fff;
+        padding: 1rem 1rem 3rem 1rem;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+        transform: rotate(var(--r, 0deg));
+        position: relative;
+        width: 300px;
+        transition: transform 0.3s;
+    }
+
+    .polaroid:nth-child(1) {
+        --r: -3deg;
+    }
+    .polaroid:nth-child(2) {
+        --r: 2deg;
+    }
+    .polaroid:nth-child(3) {
+        --r: -1deg;
+    }
+
+    .polaroid:hover {
+        transform: scale(1.05) rotate(0deg);
+        z-index: 5;
+    }
+
+    .polaroid-img {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    .polaroid-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .sepia-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(165, 42, 42, 0.1); /* Warm tint */
+        mix-blend-mode: color;
+        pointer-events: none;
+    }
+
+    .polaroid-caption {
+        font-family: var(--font-heading);
+        font-style: italic;
+        font-size: 1.5rem;
+        text-align: center;
+        color: #555;
+    }
+
+    /* Footer */
+    .footer {
+        text-align: center;
+        padding: 4rem;
+        border-top: 1px solid rgba(181, 141, 175, 0.2);
+    }
+
+    .footer-logo {
+        font-family: var(--font-heading);
+        font-style: italic;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .hero-visual {
+            display: none; /* Hide complex stack on mobile for simplicity */
+        }
+
+        .builder-layout {
+            flex-direction: column;
+        }
+
+        .builder-sidebar {
+            position: relative;
+            top: 0;
+            width: 100%;
+        }
+    }
+</style>
+
+<script>
+    // Bouquet Builder Logic
+    interface FlowerItem {
+        name: string | undefined;
+        price: number;
+    }
+
+    const addBtns = document.querySelectorAll(".add-btn");
+    const selectedContainer = document.getElementById("selectedItems");
+    const totalPriceEl = document.getElementById("totalPrice");
+    let total = 0;
+    let items: FlowerItem[] = [];
+
+    addBtns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            const card = (e.target as HTMLElement).closest(
+                ".flower-card",
+            ) as HTMLElement;
+            const name = card.dataset.name;
+            const price = parseFloat(card.dataset.price || "0");
+
+            // Add item
+            items.push({ name, price });
+            total += price;
+
+            updateSidebar();
+        });
+    });
+
+    function updateSidebar() {
+        if (!selectedContainer || !totalPriceEl) return;
+
+        // Clear container
+        selectedContainer.innerHTML = "";
+
+        if (items.length === 0) {
+            selectedContainer.innerHTML =
+                '<p class="empty-msg">Select flowers to begin...</p>';
+        } else {
+            items.forEach((item) => {
+                const div = document.createElement("div");
+                div.className = "cart-item";
+                div.innerHTML = `<span>${item.name}</span><span>£${item.price.toFixed(2)}</span>`;
+                selectedContainer.appendChild(div);
+            });
+        }
+
+        // Update total
+        totalPriceEl.textContent = `£${total.toFixed(2)}`;
+    }
+</script>

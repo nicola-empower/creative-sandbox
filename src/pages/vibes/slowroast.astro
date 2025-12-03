@@ -38,7 +38,13 @@ import VibeDNA from "../../components/VibeDNA.astro";
                 <button class="cta-btn">Shop The Roast</button>
             </div>
 
-            GUATEMALA ANTIGUA ~ BRAZIL SANTOS ~
+            <div class="hero-visual">
+                <img
+                    src="/images/artisan-hero.png"
+                    alt="Slow Roast Coffee"
+                    class="hero-img"
+                />
+            </div>
         </header>
         <VibeDNA
             description="Mornings, Reclaimed. Small batch coffee for people who sit down to drink it."
@@ -284,12 +290,13 @@ import VibeDNA from "../../components/VibeDNA.astro";
             box-shadow: 0 5px 15px rgba(74, 59, 50, 0.2);
         }
 
-        /* Visual */
         .hero-visual {
             position: relative;
-            width: 300px;
-            height: 300px;
+            width: 100%;
+            max-width: 500px;
             margin-top: 3rem;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         @media (min-width: 768px) {
@@ -299,37 +306,11 @@ import VibeDNA from "../../components/VibeDNA.astro";
             }
         }
 
-        .blob {
+        .hero-img {
             width: 100%;
-            height: 100%;
-            background-color: var(--text-color);
-            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-            animation: morph 8s ease-in-out infinite;
-        }
-
-        .steam {
-            position: absolute;
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            filter: blur(10px);
-            animation: rise 3s infinite ease-in;
-            opacity: 0;
-        }
-
-        .steam-1 {
-            width: 20px;
-            height: 40px;
-            top: 20%;
-            left: 40%;
-            animation-delay: 0.5s;
-        }
-
-        .steam-2 {
-            width: 30px;
-            height: 50px;
-            top: 30%;
-            left: 60%;
-            animation-delay: 1.5s;
+            height: auto;
+            display: block;
+            border-radius: 8px;
         }
 
         /* Marquee */

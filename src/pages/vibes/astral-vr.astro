@@ -1,0 +1,775 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="Astral VR | Digital Reality">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rubik+Glitch&family=Inter:wght@300;400;600&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="astral-wrapper">
+        <!-- Background Elements -->
+        <div class="grid-overlay"></div>
+        <div class="noise-overlay"></div>
+
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">ASTRAL<span class="highlight">VR</span></div>
+            <div class="nav-links">
+                <a href="#games">GAMES</a>
+                <a href="#pricing">PRICING</a>
+                <button class="book-btn">BOOK SLOT</button>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="glitch-text" data-text="ESCAPE REALITY">
+                    ESCAPE REALITY
+                </h1>
+                <p class="subhead">
+                    Step into the void. The ultimate immersive VR experience.
+                </p>
+                <div class="cta-group">
+                    <button class="primary-btn">ENTER THE PORTAL</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="vr-headset-container">
+                    <!-- Abstract VR Headset representation using CSS shapes/gradients if no image -->
+                    <div class="visor-glow"></div>
+                    <div class="scan-line"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Games Library (Skewed Grid) -->
+        <section id="games" class="games-section">
+            <h2 class="section-title">SIMULATIONS</h2>
+            <div class="skew-container">
+                <div class="game-grid">
+                    <div class="game-card">
+                        <div class="card-content">
+                            <h3>ZOMBIE<br />OUTBREAK</h3>
+                            <span class="tag">HORROR</span>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="game-card">
+                        <div class="card-content">
+                            <h3>NEON<br />RACER</h3>
+                            <span class="tag">RACING</span>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="game-card">
+                        <div class="card-content">
+                            <h3>SPACE<br />ODYSSEY</h3>
+                            <span class="tag">SCI-FI</span>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="game-card">
+                        <div class="card-content">
+                            <h3>CYBER<br />NINJA</h3>
+                            <span class="tag">ACTION</span>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="pricing-section">
+            <h2 class="section-title">ACCESS PASSES</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>ROOKIE</h3>
+                    <div class="price">$25<span>/hr</span></div>
+                    <ul>
+                        <li>Standard Library</li>
+                        <li>Shared Booth</li>
+                        <li>1 Player</li>
+                    </ul>
+                    <button class="tier-btn">SELECT</button>
+                </div>
+                <div class="price-card featured">
+                    <div class="badge">MOST POPULAR</div>
+                    <h3>PRO GAMER</h3>
+                    <div class="price">$45<span>/2hrs</span></div>
+                    <ul>
+                        <li>Full Library Access</li>
+                        <li>Private Booth</li>
+                        <li>Haptic Vest Included</li>
+                        <li>Free Drink</li>
+                    </ul>
+                    <button class="tier-btn featured-btn">SELECT</button>
+                </div>
+                <div class="price-card">
+                    <h3>SQUAD</h3>
+                    <div class="price">$100<span>/hr</span></div>
+                    <ul>
+                        <li>4 Players</li>
+                        <li>Multiplayer Arena</li>
+                        <li>Video Recording</li>
+                    </ul>
+                    <button class="tier-btn">SELECT</button>
+                </div>
+            </div>
+        </section>
+
+        <VibeDNA
+            description="Electric, immersive, and magical. A portal to another dimension."
+            fontHeader="Rubik Glitch / Orbitron"
+            fontBody="Inter"
+            palette={[
+                { hex: "#391B49", name: "Russian Violet" },
+                { hex: "#795690", name: "Dark Lavender" },
+                { hex: "#9570C6", name: "Amethyst" },
+                { hex: "#C29CE4", name: "Bright Lavender" },
+                { hex: "#999ECF", name: "Ceil" },
+            ]}
+        />
+    </div>
+</BlankLayout>
+
+<style>
+    :root {
+        --russian-violet: #391b49;
+        --dark-lavender: #795690;
+        --amethyst: #9570c6;
+        --bright-lavender: #c29ce4;
+        --ceil: #999ecf;
+
+        --font-display: "Rubik Glitch", system-ui;
+        --font-heading: "Orbitron", sans-serif;
+        --font-body: "Inter", sans-serif;
+    }
+
+    .astral-wrapper {
+        background-color: var(--russian-violet);
+        color: #fff;
+        font-family: var(--font-body);
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    /* Background Effects */
+    .grid-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image:
+            linear-gradient(rgba(149, 112, 198, 0.1) 1px, transparent 1px),
+            linear-gradient(
+                90deg,
+                rgba(149, 112, 198, 0.1) 1px,
+                transparent 1px
+            );
+        background-size: 50px 50px;
+        transform: perspective(500px) rotateX(60deg);
+        transform-origin: center top;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.5;
+    }
+
+    .noise-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0.4;
+    }
+
+    /* Nav */
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 3rem;
+        position: relative;
+        z-index: 100;
+        backdrop-filter: blur(5px);
+    }
+
+    .logo {
+        font-family: var(--font-heading);
+        font-weight: 900;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+
+    .logo .highlight {
+        color: var(--bright-lavender);
+        text-shadow: 0 0 10px var(--amethyst);
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        color: var(--ceil);
+        text-decoration: none;
+        font-family: var(--font-heading);
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        transition:
+            color 0.3s,
+            text-shadow 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: var(--bright-lavender);
+        text-shadow: 0 0 8px var(--bright-lavender);
+    }
+
+    .book-btn {
+        background: var(--amethyst);
+        border: none;
+        padding: 0.8rem 2rem;
+        color: #fff;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 4px 4px 0 var(--dark-lavender);
+    }
+
+    .book-btn:hover {
+        background: var(--bright-lavender);
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0 var(--dark-lavender);
+    }
+
+    /* Hero */
+    .hero {
+        position: relative;
+        z-index: 10;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5%;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        max-width: 600px;
+    }
+
+    .glitch-text {
+        font-family: var(--font-display);
+        font-size: 6rem;
+        line-height: 1;
+        color: #fff;
+        position: relative;
+        margin-bottom: 1rem;
+        text-shadow: 4px 4px 0 var(--amethyst);
+    }
+
+    .glitch-text::before,
+    .glitch-text::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--russian-violet);
+    }
+
+    .glitch-text::before {
+        left: 2px;
+        text-shadow: -2px 0 #ff00c1;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-anim 5s infinite linear alternate-reverse;
+    }
+
+    .glitch-text::after {
+        left: -2px;
+        text-shadow: -2px 0 #00fff9;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-anim2 5s infinite linear alternate-reverse;
+    }
+
+    @keyframes glitch-anim {
+        0% {
+            clip: rect(30px, 9999px, 10px, 0);
+        }
+        5% {
+            clip: rect(80px, 9999px, 90px, 0);
+        }
+        10% {
+            clip: rect(10px, 9999px, 50px, 0);
+        }
+        15% {
+            clip: rect(60px, 9999px, 20px, 0);
+        }
+        20% {
+            clip: rect(10px, 9999px, 80px, 0);
+        }
+        25% {
+            clip: rect(90px, 9999px, 10px, 0);
+        }
+        100% {
+            clip: rect(50px, 9999px, 60px, 0);
+        }
+    }
+
+    @keyframes glitch-anim2 {
+        0% {
+            clip: rect(10px, 9999px, 80px, 0);
+        }
+        20% {
+            clip: rect(80px, 9999px, 10px, 0);
+        }
+        40% {
+            clip: rect(30px, 9999px, 50px, 0);
+        }
+        60% {
+            clip: rect(90px, 9999px, 20px, 0);
+        }
+        80% {
+            clip: rect(20px, 9999px, 60px, 0);
+        }
+        100% {
+            clip: rect(50px, 9999px, 30px, 0);
+        }
+    }
+
+    .subhead {
+        font-size: 1.5rem;
+        color: var(--ceil);
+        margin-bottom: 2.5rem;
+        max-width: 450px;
+    }
+
+    .primary-btn {
+        background: transparent;
+        border: 2px solid var(--bright-lavender);
+        color: var(--bright-lavender);
+        padding: 1rem 2.5rem;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: color 0.3s;
+    }
+
+    .primary-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--bright-lavender);
+        transition: left 0.3s ease;
+        z-index: -1;
+    }
+
+    .primary-btn:hover {
+        color: var(--russian-violet);
+    }
+
+    .primary-btn:hover::before {
+        left: 0;
+    }
+
+    /* Hero Visual */
+    .hero-visual {
+        position: relative;
+        width: 400px;
+        height: 400px;
+    }
+
+    .vr-headset-container {
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at center,
+            var(--dark-lavender),
+            var(--russian-violet)
+        );
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 0 0 50px rgba(149, 112, 198, 0.3);
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .visor-glow {
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        width: 80%;
+        height: 20%;
+        background: var(--bright-lavender);
+        border-radius: 20px;
+        filter: blur(15px);
+        opacity: 0.8;
+        animation: pulse-glow 3s infinite alternate;
+    }
+
+    .scan-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.5);
+        animation: scan 3s linear infinite;
+    }
+
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes pulse-glow {
+        from {
+            opacity: 0.5;
+            filter: blur(10px);
+        }
+        to {
+            opacity: 1;
+            filter: blur(20px);
+        }
+    }
+
+    @keyframes scan {
+        0% {
+            top: 0;
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            top: 100%;
+            opacity: 0;
+        }
+    }
+
+    /* Games Section */
+    .games-section {
+        position: relative;
+        z-index: 10;
+        padding: 6rem 2rem;
+        overflow: hidden;
+    }
+
+    .section-title {
+        font-family: var(--font-heading);
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 4rem;
+        color: #fff;
+        text-shadow: 0 0 20px var(--amethyst);
+    }
+
+    .skew-container {
+        transform: perspective(1000px) rotateY(10deg) rotateX(5deg);
+        max-width: 1200px;
+        margin: 0 auto;
+        transition: transform 0.5s ease;
+    }
+
+    .skew-container:hover {
+        transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+    }
+
+    .game-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .game-card {
+        background: rgba(121, 86, 144, 0.2);
+        border: 1px solid var(--amethyst);
+        height: 350px;
+        position: relative;
+        overflow: hidden;
+        transition:
+            transform 0.3s,
+            border-color 0.3s;
+        cursor: pointer;
+    }
+
+    .game-card:hover {
+        transform: scale(1.05);
+        border-color: var(--bright-lavender);
+        z-index: 20;
+    }
+
+    .card-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem;
+        background: linear-gradient(to top, var(--russian-violet), transparent);
+        z-index: 2;
+    }
+
+    .game-card h3 {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+    }
+
+    .tag {
+        font-size: 0.8rem;
+        color: var(--bright-lavender);
+        border: 1px solid var(--bright-lavender);
+        padding: 0.2rem 0.6rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+    }
+
+    .card-glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at center,
+            var(--amethyst),
+            transparent 70%
+        );
+        opacity: 0;
+        transition: opacity 0.3s;
+        mix-blend-mode: overlay;
+    }
+
+    .game-card:hover .card-glow {
+        opacity: 0.6;
+    }
+
+    /* Pricing */
+    .pricing-section {
+        position: relative;
+        z-index: 10;
+        padding: 6rem 2rem 10rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .pricing-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .price-card {
+        background: rgba(57, 27, 73, 0.8);
+        border: 1px solid var(--dark-lavender);
+        padding: 2rem;
+        width: 300px;
+        text-align: center;
+        position: relative;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s;
+    }
+
+    .price-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .price-card.featured {
+        border: 2px solid var(--bright-lavender);
+        transform: scale(1.1);
+        box-shadow: 0 0 30px rgba(194, 156, 228, 0.2);
+        z-index: 5;
+    }
+
+    .price-card.featured:hover {
+        transform: scale(1.15);
+    }
+
+    .badge {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--bright-lavender);
+        color: var(--russian-violet);
+        padding: 0.4rem 1rem;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 0.8rem;
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 90% 100%, 0 100%, 0 0);
+    }
+
+    .price-card h3 {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--ceil);
+    }
+
+    .price {
+        font-family: var(--font-display);
+        font-size: 3.5rem;
+        color: #fff;
+        margin-bottom: 2rem;
+    }
+
+    .price span {
+        font-family: var(--font-body);
+        font-size: 1rem;
+        color: var(--ceil);
+    }
+
+    .price-card ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+
+    .price-card li {
+        margin-bottom: 0.8rem;
+        padding-left: 1.5rem;
+        position: relative;
+        color: var(--ceil);
+    }
+
+    .price-card li::before {
+        content: ">";
+        position: absolute;
+        left: 0;
+        color: var(--amethyst);
+        font-weight: 700;
+    }
+
+    .tier-btn {
+        width: 100%;
+        padding: 1rem;
+        background: transparent;
+        border: 1px solid var(--ceil);
+        color: var(--ceil);
+        font-family: var(--font-heading);
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .tier-btn:hover {
+        background: var(--ceil);
+        color: var(--russian-violet);
+    }
+
+    .featured-btn {
+        background: var(--amethyst);
+        border: none;
+        color: #fff;
+        box-shadow: 0 0 15px var(--amethyst);
+        animation: pulse-btn 2s infinite;
+    }
+
+    .featured-btn:hover {
+        background: var(--bright-lavender);
+        color: var(--russian-violet);
+        animation: none;
+    }
+
+    @keyframes pulse-btn {
+        0% {
+            box-shadow: 0 0 0 0 rgba(149, 112, 198, 0.7);
+        }
+        70% {
+            box-shadow: 0 0 0 10px rgba(149, 112, 198, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(149, 112, 198, 0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding-top: 6rem;
+        }
+
+        .glitch-text {
+            font-size: 4rem;
+        }
+
+        .hero-visual {
+            margin-top: 3rem;
+            width: 300px;
+            height: 300px;
+        }
+
+        .skew-container {
+            transform: none;
+        }
+
+        .skew-container:hover {
+            transform: none;
+        }
+
+        .price-card.featured {
+            transform: scale(1);
+        }
+
+        .price-card.featured:hover {
+            transform: scale(1.02);
+        }
+    }
+</style>
+
+<script>
+    // Simple parallax/tilt effect for hero visual
+    document.addEventListener("mousemove", (e) => {
+        const heroVisual = document.querySelector(
+            ".hero-visual",
+        ) as HTMLElement;
+        if (!heroVisual) return;
+
+        const x = (window.innerWidth - e.pageX * 2) / 100;
+        const y = (window.innerHeight - e.pageY * 2) / 100;
+
+        heroVisual.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    });
+</script>

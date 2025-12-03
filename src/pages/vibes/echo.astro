@@ -46,6 +46,15 @@ import VibeDNA from "../../components/VibeDNA.astro";
                 </div>
             </div>
 
+            <!-- Hero Image -->
+            <div class="hero-visual">
+                <img
+                    src="/images/echo-hero.png"
+                    alt="Echo Chamber Hero"
+                    class="hero-img"
+                />
+            </div>
+
             <!-- Audio Visualizer Animation -->
             <div class="visualizer">
                 <div class="bar"></div><div class="bar"></div><div class="bar">
@@ -232,13 +241,28 @@ import VibeDNA from "../../components/VibeDNA.astro";
             text-transform: uppercase;
         }
 
+        .hero-visual {
+            margin-top: 3rem;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         /* Visualizer */
         .visualizer {
             display: flex;
             align-items: flex-end;
             gap: 6px;
             height: 60px;
-            margin-top: 4rem;
+            margin-top: 2rem;
         }
 
         .bar {

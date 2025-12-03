@@ -1,0 +1,733 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="CryoLife Scotland | Advanced Recovery">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="cryo-wrapper">
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">
+                <span class="logo-icon">❄</span> CRYOLIFE SCOTLAND
+            </div>
+            <div class="nav-links">
+                <a href="#science">THE SCIENCE</a>
+                <a href="#results">RESULTS</a>
+                <a href="#booking" class="book-btn">BOOK SESSION</a>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="eyebrow">ADVANCED RECOVERY TECHNOLOGY</span>
+                <h1 class="headline">OPTIMIZE YOUR<br />PHYSIOLOGY.</h1>
+                <p class="subhead">
+                    Whole-body cryotherapy for inflammation reduction, athletic
+                    recovery, and chronic pain management.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span class="stat-val">-110°C</span>
+                        <span class="stat-label">TEMPERATURE</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-val">3 MIN</span>
+                        <span class="stat-label">DURATION</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-val">800</span>
+                        <span class="stat-label">CALORIES</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Benefits Grid -->
+        <section id="science" class="benefits-section">
+            <div class="section-header">
+                <h2>CLINICAL BENEFITS</h2>
+                <div class="accent-line"></div>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="icon">⚡</div>
+                    <h3>RECOVERY</h3>
+                    <p>
+                        Accelerates muscle repair and reduces lactic acid
+                        buildup after intense training.
+                    </p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">🛡️</div>
+                    <h3>INFLAMMATION</h3>
+                    <p>
+                        Systemic vasoconstriction flushes toxins and reduces
+                        chronic inflammation markers.
+                    </p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">🧠</div>
+                    <h3>MENTAL CLARITY</h3>
+                    <p>
+                        Triggers endorphin release, boosting mood and focus
+                        while reducing cortisol.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thermal Slider (Before/After) -->
+        <section id="results" class="thermal-section">
+            <div class="section-header">
+                <h2>THERMAL IMAGING</h2>
+                <p>Visualizing inflammation reduction after one session.</p>
+            </div>
+
+            <div class="slider-container">
+                <div class="image-wrapper">
+                    <!-- Before Image (Simulated Thermal - Red/Orange) -->
+                    <div class="img-before">
+                        <div class="thermal-overlay hot"></div>
+                        <span class="label">BEFORE</span>
+                    </div>
+                    <!-- After Image (Simulated Thermal - Blue/Green) -->
+                    <div class="img-after">
+                        <div class="thermal-overlay cold"></div>
+                        <span class="label">AFTER</span>
+                    </div>
+                    <!-- Slider Handle -->
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="50"
+                        class="slider"
+                        id="thermalSlider"
+                    />
+                    <div class="slider-line"></div>
+                    <div class="slider-button">↔</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Widget -->
+        <section id="booking" class="booking-section">
+            <div class="booking-container">
+                <div class="booking-header">
+                    <h3>SELECT A TIME</h3>
+                    <div class="month-nav">
+                        <button>&lt;</button>
+                        <span>DECEMBER 2025</span>
+                        <button>&gt;</button>
+                    </div>
+                </div>
+                <div class="calendar-grid">
+                    <div class="day-name">MON</div>
+                    <div class="day-name">TUE</div>
+                    <div class="day-name">WED</div>
+                    <div class="day-name">THU</div>
+                    <div class="day-name">FRI</div>
+
+                    <!-- Row 1 -->
+                    <div class="time-slot unavailable">09:00</div>
+                    <div class="time-slot available">09:00</div>
+                    <div class="time-slot available">09:00</div>
+                    <div class="time-slot unavailable">09:00</div>
+                    <div class="time-slot available">09:00</div>
+
+                    <!-- Row 2 -->
+                    <div class="time-slot available">10:00</div>
+                    <div class="time-slot available">10:00</div>
+                    <div class="time-slot unavailable">10:00</div>
+                    <div class="time-slot available">10:00</div>
+                    <div class="time-slot available">10:00</div>
+
+                    <!-- Row 3 -->
+                    <div class="time-slot available">11:00</div>
+                    <div class="time-slot unavailable">11:00</div>
+                    <div class="time-slot available">11:00</div>
+                    <div class="time-slot available">11:00</div>
+                    <div class="time-slot unavailable">11:00</div>
+                </div>
+                <button class="confirm-btn">CONFIRM BOOKING</button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>CRYOLIFE SCOTLAND</h4>
+                    <p>123 Recovery Road, Edinburgh</p>
+                </div>
+                <div class="footer-col">
+                    <h4>CONTACT</h4>
+                    <p>info@cryolife.scot</p>
+                    <p>0131 555 0199</p>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 CryoLife Scotland. Medically Approved Technology.
+            </div>
+        </footer>
+
+        <VibeDNA
+            description="Clinical, sterile, and high-tech. Trustworthy science meets refreshing cold."
+            fontHeader="Montserrat"
+            fontBody="Inter"
+            palette={[
+                { hex: "#447F98", name: "Turquoise" },
+                { hex: "#629B85", name: "Slate Blue" },
+                { hex: "#DADEE1", name: "Platinum" },
+                { hex: "#B9D8E1", name: "Glacier" },
+                { hex: "#D6EBF3", name: "Ice Blue" },
+            ]}
+        />
+    </div>
+</BlankLayout>
+
+<style>
+    :root {
+        --turquoise: #447f98;
+        --slate-blue: #629b85;
+        --platinum: #dadee1;
+        --glacier: #b9d8e1;
+        --ice-blue: #d6ebf3;
+        --white: #ffffff;
+
+        --font-heading: "Montserrat", sans-serif;
+        --font-body: "Inter", sans-serif;
+    }
+
+    .cryo-wrapper {
+        background-color: var(--white);
+        color: #333;
+        font-family: var(--font-body);
+        min-height: 100vh;
+    }
+
+    /* Nav */
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 3rem;
+        background: var(--white);
+        border-bottom: 1px solid var(--platinum);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .logo {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        color: var(--turquoise);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        color: #555;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: var(--turquoise);
+    }
+
+    .book-btn {
+        background-color: var(--turquoise);
+        color: #fff !important;
+        padding: 0.8rem 1.5rem;
+        border-radius: 4px;
+        font-weight: 600 !important;
+        transition: background-color 0.3s;
+    }
+
+    .book-btn:hover {
+        background-color: var(--slate-blue);
+    }
+
+    /* Hero */
+    .hero {
+        position: relative;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        padding: 0 3rem;
+        overflow: hidden;
+    }
+
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=2000&auto=format&fit=crop"); /* Ice/Water texture */
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(185, 216, 225, 0.4) 100%
+        );
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 600px;
+    }
+
+    .eyebrow {
+        font-family: var(--font-heading);
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        color: var(--slate-blue);
+        font-weight: 600;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .headline {
+        font-family: var(--font-heading);
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1.1;
+        color: #222;
+        margin-bottom: 1.5rem;
+        letter-spacing: -1px;
+    }
+
+    .subhead {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 3rem;
+    }
+
+    .stats-grid {
+        display: flex;
+        gap: 3rem;
+        border-top: 1px solid var(--platinum);
+        padding-top: 2rem;
+    }
+
+    .stat {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stat-val {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--turquoise);
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #888;
+        letter-spacing: 1px;
+    }
+
+    /* Benefits */
+    .benefits-section {
+        padding: 6rem 3rem;
+        background-color: var(--ice-blue);
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .section-header h2 {
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        color: var(--turquoise);
+        margin-bottom: 1rem;
+    }
+
+    .accent-line {
+        width: 60px;
+        height: 4px;
+        background-color: var(--slate-blue);
+        margin: 0 auto;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .benefit-card {
+        background: var(--white);
+        padding: 3rem;
+        border: 1px solid var(--platinum);
+        border-radius: 8px;
+        transition:
+            transform 0.3s,
+            box-shadow 0.3s;
+    }
+
+    .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(68, 127, 152, 0.1);
+        border-color: var(--turquoise);
+    }
+
+    .icon {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .benefit-card h3 {
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    .benefit-card p {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    /* Thermal Slider */
+    .thermal-section {
+        padding: 6rem 3rem;
+        text-align: center;
+        background: var(--white);
+    }
+
+    .slider-container {
+        max-width: 800px;
+        margin: 3rem auto 0;
+        position: relative;
+    }
+
+    .image-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 60%; /* Aspect Ratio */
+        background: #000;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .img-before,
+    .img-after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .img-before {
+        /* Simulated Heat Map (Red/Orange) */
+        background: radial-gradient(
+            circle at center,
+            #ff0000 0%,
+            #ffaa00 40%,
+            #0000ff 100%
+        );
+        filter: blur(10px);
+    }
+
+    .img-after {
+        /* Simulated Cold Map (Blue/Green) */
+        background: radial-gradient(
+            circle at center,
+            #00ffff 0%,
+            #0000ff 60%,
+            #000033 100%
+        );
+        filter: blur(10px);
+        width: 50%; /* Initial Clip */
+        border-right: 2px solid var(--white);
+        z-index: 2;
+    }
+
+    .label {
+        position: absolute;
+        top: 20px;
+        padding: 5px 10px;
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.8rem;
+        border-radius: 4px;
+    }
+
+    .img-before .label {
+        right: 20px;
+    }
+    .img-after .label {
+        left: 20px;
+    }
+
+    .slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: col-resize;
+        z-index: 10;
+        margin: 0;
+    }
+
+    .slider-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        background: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: var(--turquoise);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        pointer-events: none;
+        z-index: 5;
+    }
+
+    /* Booking */
+    .booking-section {
+        padding: 6rem 3rem;
+        background-color: var(--platinum);
+        display: flex;
+        justify-content: center;
+    }
+
+    .booking-container {
+        background: var(--white);
+        padding: 3rem;
+        border-radius: 8px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .booking-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid var(--platinum);
+        padding-bottom: 1rem;
+    }
+
+    .booking-header h3 {
+        font-family: var(--font-heading);
+        color: var(--turquoise);
+        margin: 0;
+    }
+
+    .month-nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-weight: 600;
+        color: #555;
+    }
+
+    .month-nav button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+        color: var(--turquoise);
+    }
+
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .day-name {
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #888;
+        margin-bottom: 0.5rem;
+    }
+
+    .time-slot {
+        padding: 0.8rem 0;
+        text-align: center;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .available {
+        background-color: var(--ice-blue);
+        color: var(--turquoise);
+        border: 1px solid transparent;
+    }
+
+    .available:hover {
+        background-color: var(--turquoise);
+        color: var(--white);
+    }
+
+    .unavailable {
+        background-color: var(--platinum);
+        color: #999;
+        cursor: not-allowed;
+        text-decoration: line-through;
+    }
+
+    .confirm-btn {
+        width: 100%;
+        padding: 1rem;
+        background-color: var(--turquoise);
+        color: var(--white);
+        border: none;
+        border-radius: 4px;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .confirm-btn:hover {
+        background-color: var(--slate-blue);
+    }
+
+    /* Footer */
+    .footer {
+        background-color: #f8f9fa;
+        padding: 4rem 3rem;
+        border-top: 1px solid var(--platinum);
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto 3rem;
+    }
+
+    .footer-col h4 {
+        font-family: var(--font-heading);
+        color: var(--turquoise);
+        margin-bottom: 1rem;
+    }
+
+    .footer-col p {
+        color: #666;
+        margin-bottom: 0.5rem;
+    }
+
+    .copyright {
+        text-align: center;
+        color: #999;
+        font-size: 0.8rem;
+        border-top: 1px solid var(--platinum);
+        padding-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+            height: auto;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .stats-grid {
+            justify-content: center;
+        }
+
+        .calendar-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+</style>
+
+<script>
+    // Slider Logic
+    const slider = document.getElementById("thermalSlider") as HTMLInputElement;
+    const imgAfter = document.querySelector(".img-after") as HTMLElement;
+    const sliderBtn = document.querySelector(".slider-button") as HTMLElement;
+
+    if (slider && imgAfter && sliderBtn) {
+        slider.addEventListener("input", (e) => {
+            const val = (e.target as HTMLInputElement).value;
+            imgAfter.style.width = `${val}%`;
+            sliderBtn.style.left = `${val}%`;
+        });
+    }
+
+    // Booking Logic (Visual Only)
+    const slots = document.querySelectorAll(".time-slot.available");
+    slots.forEach((slot) => {
+        slot.addEventListener("click", () => {
+            // Deselect others
+            slots.forEach((s) => {
+                (s as HTMLElement).style.backgroundColor = "var(--ice-blue)";
+                (s as HTMLElement).style.color = "var(--turquoise)";
+            });
+            // Select this one
+            (slot as HTMLElement).style.backgroundColor = "var(--turquoise)";
+            (slot as HTMLElement).style.color = "var(--white)";
+        });
+    });
+</script>

@@ -1,0 +1,692 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="Oak & Hide | Handcrafted Leather Goods">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="oak-wrapper">
+        <!-- Noise Texture Overlay -->
+        <div class="noise-overlay"></div>
+
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">OAK & HIDE</div>
+            <div class="nav-links">
+                <a href="#shop">SHOP</a>
+                <a href="#process">PROCESS</a>
+                <a href="#journal">JOURNAL</a>
+                <button class="cart-btn">CART (0)</button>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">EST. 2024 • LONDON WORKSHOP</span>
+                <h1 class="headline">BUILT TO<br />LAST A LIFETIME.</h1>
+                <p class="subhead">
+                    Hand-stitched leather goods for the modern artisan.
+                </p>
+                <button class="cta-btn">EXPLORE COLLECTION</button>
+            </div>
+            <div class="hero-visual">
+                <!-- Abstract representation of needle/thread/leather -->
+                <div class="leather-swatch">
+                    <div class="stitch-line"></div>
+                    <div class="needle"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Shop Grid (Magnifier Zoom) -->
+        <section id="shop" class="shop-section">
+            <div class="section-header">
+                <h2>THE COLLECTION</h2>
+                <div class="line"></div>
+            </div>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div
+                        class="product-image-container"
+                        data-image="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=600&auto=format&fit=crop"
+                            alt="The Weekender"
+                            class="product-img"
+                        />
+                        <div class="magnifier"></div>
+                    </div>
+                    <div class="product-info">
+                        <h3>THE WEEKENDER</h3>
+                        <span class="price">£245.00</span>
+                    </div>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div
+                        class="product-image-container"
+                        data-image="https://images.unsplash.com/photo-1627123424574-724758594e93?q=80&w=1000&auto=format&fit=crop"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1627123424574-724758594e93?q=80&w=600&auto=format&fit=crop"
+                            alt="Chef's Roll"
+                            class="product-img"
+                        />
+                        <div class="magnifier"></div>
+                    </div>
+                    <div class="product-info">
+                        <h3>CHEF'S ROLL</h3>
+                        <span class="price">£185.00</span>
+                    </div>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div
+                        class="product-image-container"
+                        data-image="https://images.unsplash.com/photo-1606509036427-62243d4c702b?q=80&w=1000&auto=format&fit=crop"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1606509036427-62243d4c702b?q=80&w=600&auto=format&fit=crop"
+                            alt="Classic Billfold"
+                            class="product-img"
+                        />
+                        <div class="magnifier"></div>
+                    </div>
+                    <div class="product-info">
+                        <h3>CLASSIC BILLFOLD</h3>
+                        <span class="price">£85.00</span>
+                    </div>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Timeline (Horizontal Scroll) -->
+        <section id="process" class="process-section">
+            <div class="process-header">
+                <h2>THE PROCESS</h2>
+                <p>From hide to hand.</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-track">
+                    <div class="timeline-step">
+                        <div class="step-number">01</div>
+                        <h3>SELECTION</h3>
+                        <p>
+                            We source full-grain vegetable tanned leather from
+                            Tuscany.
+                        </p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">02</div>
+                        <h3>CUTTING</h3>
+                        <p>
+                            Each piece is hand-cut to ensure the perfect grain
+                            direction.
+                        </p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">03</div>
+                        <h3>STITCHING</h3>
+                        <p>
+                            Saddle stitched by hand using waxed linen thread for
+                            durability.
+                        </p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">04</div>
+                        <h3>BURNISHING</h3>
+                        <p>
+                            Edges are sanded and burnished with beeswax for a
+                            smooth finish.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journal -->
+        <section id="journal" class="journal-section">
+            <div class="section-header">
+                <h2>JOURNAL</h2>
+                <div class="line"></div>
+            </div>
+            <div class="journal-grid">
+                <article class="journal-entry">
+                    <span class="date">OCT 12, 2024</span>
+                    <h3>PATINA: THE STORY OF TIME</h3>
+                    <p>
+                        Why vegetable tanned leather gets better with age,
+                        developing a unique character that tells your story.
+                    </p>
+                    <blockquote class="pull-quote">
+                        "Good leather is like a good friend; it only improves
+                        with time."
+                    </blockquote>
+                    <a href="#" class="read-more">READ ARTICLE -></a>
+                </article>
+                <article class="journal-entry">
+                    <span class="date">SEP 28, 2024</span>
+                    <h3>CARE GUIDE</h3>
+                    <p>
+                        Essential tips for maintaining your leather goods to
+                        ensure they last a lifetime.
+                    </p>
+                    <a href="#" class="read-more">READ ARTICLE -></a>
+                </article>
+            </div>
+        </section>
+
+        <VibeDNA
+            description="Earthy, tactile, and authentic. A tribute to traditional craftsmanship."
+            fontHeader="Courier Prime"
+            fontBody="Roboto"
+            palette={[
+                { hex: "#343434", name: "Espresso Noir" },
+                { hex: "#623528", name: "Cold Brew" },
+                { hex: "#956643", name: "Mocha Latte" },
+                { hex: "#A98062", name: "Espresso Foam" },
+                { hex: "#D9A883", name: "Toasty" },
+            ]}
+        />
+    </div>
+</BlankLayout>
+
+<style>
+    :root {
+        --espresso-noir: #343434;
+        --cold-brew: #623528;
+        --mocha-latte: #956643;
+        --espresso-foam: #a98062;
+        --toasty: #d9a883;
+
+        --font-heading: "Courier Prime", monospace;
+        --font-body: "Roboto", sans-serif;
+    }
+
+    .oak-wrapper {
+        background-color: var(--toasty);
+        color: var(--espresso-noir);
+        font-family: var(--font-body);
+        min-height: 100vh;
+        position: relative;
+    }
+
+    .noise-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 0;
+        mix-blend-mode: multiply;
+    }
+
+    /* Nav */
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 3rem;
+        position: relative;
+        z-index: 10;
+        border-bottom: 1px solid rgba(52, 52, 52, 0.1);
+    }
+
+    .logo {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 1.5rem;
+        letter-spacing: -1px;
+        color: var(--espresso-noir);
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        color: var(--espresso-noir);
+        text-decoration: none;
+        font-family: var(--font-heading);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .cart-btn {
+        background: transparent;
+        border: 1px solid var(--espresso-noir);
+        padding: 0.5rem 1rem;
+        font-family: var(--font-heading);
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .cart-btn:hover {
+        background: var(--espresso-noir);
+        color: var(--toasty);
+    }
+
+    /* Hero */
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6rem 3rem;
+        position: relative;
+        z-index: 10;
+        min-height: 80vh;
+    }
+
+    .hero-content {
+        max-width: 600px;
+    }
+
+    .eyebrow {
+        font-family: var(--font-heading);
+        font-size: 0.9rem;
+        color: var(--cold-brew);
+        display: block;
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .headline {
+        font-family: var(--font-heading);
+        font-size: 4rem;
+        line-height: 1.1;
+        color: var(--espresso-noir);
+        margin-bottom: 1.5rem;
+    }
+
+    .subhead {
+        font-size: 1.2rem;
+        color: var(--cold-brew);
+        margin-bottom: 2.5rem;
+        max-width: 400px;
+        line-height: 1.6;
+    }
+
+    .cta-btn {
+        background-color: var(--mocha-latte);
+        color: #fff;
+        border: none;
+        padding: 1rem 2rem;
+        font-family: var(--font-body);
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .cta-btn:hover {
+        background-color: var(--cold-brew);
+    }
+
+    .hero-visual {
+        width: 400px;
+        height: 500px;
+        position: relative;
+    }
+
+    .leather-swatch {
+        width: 100%;
+        height: 100%;
+        background-color: var(--cold-brew);
+        position: relative;
+        box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .stitch-line {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: repeating-linear-gradient(
+            90deg,
+            #fff 0,
+            #fff 10px,
+            transparent 10px,
+            transparent 15px
+        );
+    }
+
+    .needle {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        width: 4px;
+        height: 100px;
+        background: silver;
+        transform: rotate(15deg);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Shop Grid */
+    .shop-section {
+        padding: 6rem 3rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .section-header {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .section-header h2 {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        white-space: nowrap;
+    }
+
+    .line {
+        height: 1px;
+        background-color: var(--espresso-noir);
+        width: 100%;
+        opacity: 0.2;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+    }
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .product-image-container {
+        width: 100%;
+        aspect-ratio: 1;
+        background-color: #e5e5e5;
+        position: relative;
+        overflow: hidden;
+        cursor: crosshair;
+    }
+
+    .product-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.2s;
+    }
+
+    .magnifier {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border: 2px solid var(--espresso-noir);
+        border-radius: 50%;
+        pointer-events: none;
+        display: none;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        z-index: 20;
+    }
+
+    .product-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-family: var(--font-heading);
+    }
+
+    .product-info h3 {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .price {
+        color: var(--cold-brew);
+        font-weight: 700;
+    }
+
+    .add-btn {
+        background: transparent;
+        border: 1px solid var(--espresso-noir);
+        padding: 0.8rem;
+        font-family: var(--font-body);
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.2s;
+        margin-top: 0.5rem;
+    }
+
+    .add-btn:hover {
+        background: var(--espresso-noir);
+        color: var(--toasty);
+    }
+
+    /* Process Timeline */
+    .process-section {
+        padding: 6rem 0;
+        background-color: var(--espresso-noir);
+        color: var(--toasty);
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+    }
+
+    .process-header {
+        padding: 0 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .process-header h2 {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-container {
+        overflow-x: auto;
+        padding-bottom: 2rem;
+        /* Hide scrollbar */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .timeline-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .timeline-track {
+        display: flex;
+        padding: 0 3rem;
+        gap: 4rem;
+        width: max-content;
+    }
+
+    .timeline-step {
+        width: 300px;
+        position: relative;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(217, 168, 131, 0.3);
+    }
+
+    .step-number {
+        font-family: var(--font-heading);
+        font-size: 4rem;
+        opacity: 0.2;
+        position: absolute;
+        top: -2rem;
+        left: 0;
+    }
+
+    .timeline-step h3 {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--espresso-foam);
+    }
+
+    .timeline-step p {
+        line-height: 1.6;
+        opacity: 0.8;
+    }
+
+    /* Journal */
+    .journal-section {
+        padding: 6rem 3rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .journal-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 4rem;
+    }
+
+    .journal-entry {
+        border-left: 4px solid var(--mocha-latte);
+        padding-left: 2rem;
+    }
+
+    .date {
+        font-family: var(--font-heading);
+        font-size: 0.8rem;
+        color: var(--espresso-foam);
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .journal-entry h3 {
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .journal-entry p {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .pull-quote {
+        font-family: var(--font-heading);
+        font-style: italic;
+        font-size: 1.2rem;
+        color: var(--cold-brew);
+        margin: 2rem 0;
+        padding-left: 1rem;
+        border-left: 2px solid var(--espresso-foam);
+    }
+
+    .read-more {
+        color: var(--mocha-latte);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            margin-bottom: 3rem;
+        }
+
+        .hero-visual {
+            width: 100%;
+            height: 300px;
+        }
+
+        .headline {
+            font-size: 2.5rem;
+        }
+
+        .nav {
+            padding: 1.5rem;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .journal-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<script>
+    // Magnifier Logic
+    const containers = document.querySelectorAll(".product-image-container");
+
+    containers.forEach((container) => {
+        const magnifier = container.querySelector(".magnifier") as HTMLElement;
+        const highResUrl = (container as HTMLElement).dataset.image;
+
+        if (!magnifier || !highResUrl) return;
+
+        magnifier.style.backgroundImage = `url('${highResUrl}')`;
+
+        container.addEventListener("mouseenter", () => {
+            magnifier.style.display = "block";
+        });
+
+        container.addEventListener("mouseleave", () => {
+            magnifier.style.display = "none";
+        });
+
+        container.addEventListener("mousemove", (e) => {
+            // Cast Event to MouseEvent to access pageX/pageY
+            const mouseEvent = e as MouseEvent;
+
+            const { left, top, width, height } =
+                container.getBoundingClientRect();
+            const x = mouseEvent.pageX - left - window.scrollX;
+            const y = mouseEvent.pageY - top - window.scrollY;
+
+            // Move magnifier
+            magnifier.style.left = `${x - 75}px`;
+            magnifier.style.top = `${y - 75}px`;
+
+            // Move background image inside magnifier
+            // Calculate percentage position
+            const xPercent = (x / width) * 100;
+            const yPercent = (y / height) * 100;
+
+            magnifier.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
+            magnifier.style.backgroundSize = `${width * 2}px ${height * 2}px`; // 2x zoom
+        });
+    });
+</script>

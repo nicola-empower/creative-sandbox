@@ -1,0 +1,526 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="Alchemy Digital Studio | Spiritual Branding">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="alchemy-wrapper" id="wrapper">
+        <!-- Parallax Stars -->
+        <div class="stars-layer layer-1" data-speed="0.2"></div>
+        <div class="stars-layer layer-2" data-speed="0.5"></div>
+        <div class="stars-layer layer-3" data-speed="0.8"></div>
+
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="logo">ALCHEMY DIGITAL</div>
+            <div class="nav-links">
+                <a href="#services">OFFERINGS</a>
+                <a href="#portfolio">PORTAL</a>
+                <a href="#contact" class="contact-btn">CONNECT</a>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">FOR THE SPIRITUAL ENTREPRENEUR</span>
+                <h1 class="headline">TRANSFORM<br />YOUR BRAND</h1>
+                <p class="subhead">
+                    Weaving magic into digital experiences for healers, mystics,
+                    and visionaries.
+                </p>
+                <div class="scroll-indicator">
+                    <span>SCROLL TO BEGIN</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Services -->
+        <section id="services" class="services-section">
+            <div class="section-header">
+                <h2>SACRED OFFERINGS</h2>
+                <div class="separator">✧ ✧ ✧</div>
+            </div>
+            <div class="cards-grid">
+                <div class="glow-card">
+                    <div class="card-icon">🔮</div>
+                    <h3>TAROT BRANDING</h3>
+                    <p>
+                        Visual identities rooted in archetypal wisdom and cosmic
+                        alignment.
+                    </p>
+                </div>
+                <div class="glow-card">
+                    <div class="card-icon">💎</div>
+                    <h3>CRYSTAL WEB DESIGN</h3>
+                    <p>
+                        Websites structured with sacred geometry for
+                        high-vibrational user flow.
+                    </p>
+                </div>
+                <div class="glow-card">
+                    <div class="card-icon">🌙</div>
+                    <h3>LUNAR STRATEGY</h3>
+                    <p>
+                        Content planning aligned with moon cycles for organic
+                        growth.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="section-header">
+                <h2>THE PORTAL</h2>
+                <div class="separator">✧ ✧ ✧</div>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1515516089376-88db1e26e9c0?q=80&w=600&auto=format&fit=crop"
+                        alt="Project 1"
+                    />
+                    <div class="overlay">
+                        <h3>THE SAGE'S PATH</h3>
+                        <span>Branding & Web</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1600609842388-43944d56be05?q=80&w=600&auto=format&fit=crop"
+                        alt="Project 2"
+                    />
+                    <div class="overlay">
+                        <h3>MOONLIGHT YOGA</h3>
+                        <span>Social Strategy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-logo">ALCHEMY DIGITAL</div>
+            <p>Manifesting digital dreams since 2024.</p>
+        </footer>
+
+        <VibeDNA
+            description="Mystic, transformative, and deep. A journey from the void to the light."
+            fontHeader="Cinzel Decorative"
+            fontBody="Raleway"
+            palette={[
+                { hex: "#0C0420", name: "Void" },
+                { hex: "#5D3C64", name: "Deep Plum" },
+                { hex: "#7B466A", name: "Haze" },
+                { hex: "#9F6496", name: "Mystic" },
+                { hex: "#D391B0", name: "Dusty Mauve" },
+                { hex: "#BA6E8F", name: "Soft Rose" },
+            ]}
+        />
+    </div>
+</BlankLayout>
+
+<style>
+    :root {
+        --void: #0c0420;
+        --deep-plum: #5d3c64;
+        --haze: #7b466a;
+        --mystic: #9f6496;
+        --dusty-mauve: #d391b0;
+        --soft-rose: #ba6e8f;
+
+        --font-heading: "Cinzel Decorative", cursive;
+        --font-body: "Raleway", sans-serif;
+    }
+
+    .alchemy-wrapper {
+        background-color: var(--void);
+        color: var(--mystic);
+        font-family: var(--font-body);
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+        transition: background-color 0.5s ease;
+    }
+
+    /* Stars */
+    .stars-layer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .layer-1 {
+        background-image:
+            radial-gradient(1px 1px at 10% 10%, #fff, transparent),
+            radial-gradient(1px 1px at 20% 20%, #fff, transparent),
+            radial-gradient(2px 2px at 50% 50%, #fff, transparent),
+            radial-gradient(1px 1px at 80% 80%, #fff, transparent);
+        background-size: 400px 400px;
+        opacity: 0.3;
+    }
+    .layer-2 {
+        background-image:
+            radial-gradient(
+                2px 2px at 15% 15%,
+                var(--dusty-mauve),
+                transparent
+            ),
+            radial-gradient(
+                2px 2px at 35% 35%,
+                var(--dusty-mauve),
+                transparent
+            ),
+            radial-gradient(2px 2px at 65% 65%, var(--dusty-mauve), transparent);
+        background-size: 600px 600px;
+        opacity: 0.4;
+    }
+    .layer-3 {
+        background-image:
+            radial-gradient(3px 3px at 5% 90%, var(--soft-rose), transparent),
+            radial-gradient(3px 3px at 95% 10%, var(--soft-rose), transparent);
+        background-size: 800px 800px;
+        opacity: 0.5;
+    }
+
+    /* Nav */
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 4rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        background: linear-gradient(
+            to bottom,
+            rgba(12, 4, 32, 0.9),
+            transparent
+        );
+    }
+
+    .logo {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        color: var(--dusty-mauve);
+        letter-spacing: 2px;
+        text-shadow: 0 0 10px var(--haze);
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        color: var(--mystic);
+        text-decoration: none;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: var(--dusty-mauve);
+        text-shadow: 0 0 8px var(--haze);
+    }
+
+    .contact-btn {
+        border: 1px solid var(--soft-rose);
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        transition: all 0.3s;
+    }
+
+    .contact-btn:hover {
+        background: var(--soft-rose);
+        color: var(--void) !important;
+        box-shadow: 0 0 15px var(--haze);
+    }
+
+    /* Hero */
+    .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    .eyebrow {
+        font-size: 0.9rem;
+        letter-spacing: 4px;
+        color: var(--haze);
+        display: block;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+    }
+
+    .headline {
+        font-family: var(--font-heading);
+        font-size: 5rem;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+        background: linear-gradient(
+            to right,
+            var(--dusty-mauve),
+            var(--mystic)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 0 20px rgba(123, 70, 106, 0.5));
+    }
+
+    .subhead {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 4rem;
+        color: #ccc;
+        font-weight: 300;
+    }
+
+    .scroll-indicator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        opacity: 0.6;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    .line {
+        width: 1px;
+        height: 60px;
+        background: linear-gradient(to bottom, var(--mystic), transparent);
+    }
+
+    /* Services */
+    .services-section {
+        padding: 8rem 4rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    .section-header h2 {
+        font-family: var(--font-heading);
+        font-size: 3rem;
+        color: var(--dusty-mauve);
+        margin-bottom: 1rem;
+    }
+
+    .separator {
+        color: var(--haze);
+        font-size: 1.5rem;
+        letter-spacing: 10px;
+    }
+
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .glow-card {
+        background: rgba(93, 60, 100, 0.1);
+        border: 1px solid rgba(159, 100, 150, 0.2);
+        padding: 3rem;
+        text-align: center;
+        border-radius: 4px;
+        transition: all 0.4s ease;
+        backdrop-filter: blur(5px);
+    }
+
+    .glow-card:hover {
+        transform: translateY(-10px);
+        box-shadow:
+            0 0 30px rgba(123, 70, 106, 0.3),
+            inset 0 0 20px rgba(123, 70, 106, 0.1);
+        border-color: var(--haze);
+    }
+
+    .card-icon {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        filter: drop-shadow(0 0 10px var(--haze));
+    }
+
+    .glow-card h3 {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--dusty-mauve);
+    }
+
+    .glow-card p {
+        font-weight: 300;
+        line-height: 1.6;
+        color: #ddd;
+    }
+
+    /* Portfolio */
+    .portfolio-section {
+        padding: 8rem 4rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .portfolio-item {
+        position: relative;
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        border-radius: 4px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+        filter: grayscale(0.4) contrast(1.1);
+    }
+
+    .portfolio-item:hover img {
+        transform: scale(1.05);
+        filter: grayscale(0) contrast(1);
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
+        background: linear-gradient(to top, var(--void), transparent);
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+
+    .portfolio-item:hover .overlay {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .overlay h3 {
+        font-family: var(--font-heading);
+        color: var(--dusty-mauve);
+        margin-bottom: 0.5rem;
+    }
+
+    .overlay span {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        color: var(--mystic);
+    }
+
+    /* Footer */
+    .footer {
+        text-align: center;
+        padding: 6rem 2rem;
+        border-top: 1px solid rgba(159, 100, 150, 0.1);
+        background: linear-gradient(to top, var(--deep-plum), var(--void));
+    }
+
+    .footer-logo {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        color: var(--dusty-mauve);
+        margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .headline {
+            font-size: 3rem;
+        }
+
+        .nav {
+            padding: 1.5rem 2rem;
+        }
+
+        .nav-links {
+            display: none; /* Simple hide for mobile for now */
+        }
+    }
+</style>
+
+<script>
+    // Parallax & Scroll Fade Logic
+    const wrapper = document.getElementById("wrapper");
+    const layers = document.querySelectorAll(".stars-layer");
+
+    window.addEventListener("scroll", () => {
+        const scrolled = window.scrollY;
+        const h = window.innerHeight;
+
+        // Parallax Stars
+        layers.forEach((layer) => {
+            const speed = parseFloat(
+                (layer as HTMLElement).dataset.speed || "0.2",
+            );
+            (layer as HTMLElement).style.transform =
+                `translateY(${scrolled * speed}px)`;
+        });
+
+        // Background Fade
+        // Interpolate between Void (#0C0420) and Deep Plum (#5D3C64)
+        // Only start fading after hero
+        if (scrolled > h * 0.5) {
+            // Simple class toggle or style injection for smoother gradient feel
+            // For this demo, we'll keep it subtle or use a fixed gradient background that is revealed?
+            // Let's try adjusting the background color directly for a "mood shift"
+
+            // Calculate a simple mix factor based on scroll depth
+            const maxScroll = document.body.scrollHeight - window.innerHeight;
+            const progress = Math.min(scrolled / maxScroll, 1);
+
+            // Very subtle shift towards plum at the bottom
+            // This is a bit complex to do purely with hex interpolation in vanilla JS without a helper,
+            // so we'll just adjust opacity of a "plum" overlay if we had one, or keep it simple.
+            // Let's just add a class when scrolling down deep.
+            if (wrapper) {
+                if (progress > 0.3) {
+                    wrapper.style.backgroundColor = "#1a0b3b"; // Slightly lighter void
+                } else {
+                    wrapper.style.backgroundColor = "#0C0420"; // Original void
+                }
+            }
+        }
+    });
+</script>

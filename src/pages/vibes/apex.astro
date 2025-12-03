@@ -17,10 +17,10 @@ import VibeDNA from "../../components/VibeDNA.astro";
     <div class="apex-wrapper">
         <!-- Nav -->
         <nav class="nav">
-            <div class="logo">
+            <a href="/" class="logo">
                 <div class="logo-icon"></div>
                 <span>APEX CAPITAL</span>
-            </div>
+            </a>
             <div class="nav-links">
                 <a href="#">Private Wealth</a>
                 <a href="#">Advisory</a>
@@ -88,86 +88,70 @@ import VibeDNA from "../../components/VibeDNA.astro";
                         <span class="tooltip">+$45,200</span>
                     </div>
                 </div>
+            </div>
+        </header>
 
-                <!-- Marquee -->
-                <div class="ticker-wrap">
-                    <div class="ticker">
-                        <div class="ticker-item">
-                            NASDAQ <span class="up">▲ 0.8%</span>
-                        </div>
-                        <div class="ticker-item">
-                            FTSE <span class="down">▼ 0.1%</span>
-                        </div>
-                        <div class="ticker-item">
-                            CRYPTO <span class="up">▲ 4.5%</span>
-                        </div>
-                        <div class="ticker-item">
-                            BONDS <span class="flat">▬ 0.0%</span>
-                        </div>
-                        <div class="ticker-item">
-                            REAL ESTATE <span class="up">▲ 0.5%</span>
-                        </div>
-                        <!-- Duplicate for seamless loop -->
-                        <div class="ticker-item">
-                            S&P 500 <span class="up">▲ 1.2%</span>
-                        </div>
-                        <div class="ticker-item">
-                            NASDAQ <span class="up">▲ 0.8%</span>
-                        </div>
-                        <div class="ticker-item">
-                            FTSE <span class="down">▼ 0.1%</span>
-                        </div>
-                        <div class="ticker-item">
-                            CRYPTO <span class="up">▲ 4.5%</span>
-                        </div>
-                        <div class="ticker-item">
-                            BONDS <span class="flat">▬ 0.0%</span>
-                        </div>
-                        <div class="ticker-item">
-                            REAL ESTATE <span class="up">▲ 0.5%</span>
-                        </div>
-                    </div>
+        <!-- Marquee -->
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <div class="ticker-item">
+                    NASDAQ <span class="up">▲ 0.8%</span>
+                </div>
+                <div class="ticker-item">
+                    FTSE <span class="down">▼ 0.1%</span>
+                </div>
+                <div class="ticker-item">
+                    CRYPTO <span class="up">▲ 4.5%</span>
+                </div>
+                <div class="ticker-item">
+                    CRYPTO <span class="up">▲ 4.5%</span>
+                </div>
+                <div class="ticker-item">
+                    BONDS <span class="flat">▬ 0.0%</span>
+                </div>
+                <div class="ticker-item">
+                    REAL ESTATE <span class="up">▲ 0.5%</span>
                 </div>
             </div>
+        </div>
 
-            <!-- Stats -->
-            <section class="stats-section">
-                <div class="stat-box">
-                    <span class="stat-value">$4B</span>
-                    <span class="stat-label">ASSETS UNDER MANAGEMENT</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-value">0%</span>
-                    <span class="stat-label">HIDDEN FEES</span>
-                </div>
-            </section>
+        <!-- Stats -->
+        <section class="stats-section">
+            <div class="stat-box">
+                <span class="stat-value">$4B</span>
+                <span class="stat-label">ASSETS UNDER MANAGEMENT</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">0%</span>
+                <span class="stat-label">HIDDEN FEES</span>
+            </div>
+        </section>
 
-            <!-- Feature Grid -->
-            <section class="features">
-                <div class="feature-card">
-                    <div class="icon-box">🔒</div>
-                    <h3>Security</h3>
-                    <p>Bank-grade encryption.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box">🤝</div>
-                    <h3>Advisory</h3>
-                    <p>Human experts, AI assisted.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box">💧</div>
-                    <h3>Liquidity</h3>
-                    <p>Access your cash instantly.</p>
-                </div>
-            </section>
+        <!-- Feature Grid -->
+        <section class="features">
+            <div class="feature-card">
+                <div class="icon-box">🔒</div>
+                <h3>Security</h3>
+                <p>Bank-grade encryption.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box">🤝</div>
+                <h3>Advisory</h3>
+                <p>Human experts, AI assisted.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box">💧</div>
+                <h3>Liquidity</h3>
+                <p>Access your cash instantly.</p>
+            </div>
+        </section>
 
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="footer-content">
-                    <p>&copy; 2025 APEX CAPITAL PARTNERS. MEMBER SIPC.</p>
-                </div>
-            </footer>
-        </header>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 APEX CAPITAL PARTNERS. MEMBER SIPC.</p>
+            </div>
+        </footer>
     </div>
     <VibeDNA
         description="Wealth Management 2.0. Compound your legacy. Secure and transparent."
@@ -229,6 +213,7 @@ import VibeDNA from "../../components/VibeDNA.astro";
             font-size: 1.2rem;
             letter-spacing: -0.5px;
             color: var(--primary);
+            text-decoration: none;
         }
 
         .logo-icon {
@@ -286,6 +271,18 @@ import VibeDNA from "../../components/VibeDNA.astro";
                 flex-direction: column;
                 padding: 4rem 1.5rem;
                 gap: 3rem;
+            }
+
+            .hero-visual {
+                height: 300px;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .hero-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
 
             .headline {
