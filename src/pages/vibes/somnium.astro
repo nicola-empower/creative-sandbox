@@ -1,0 +1,745 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="SOMNIUM | Master Your Rest">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Manrope:wght@300;400;600&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="somnium-wrapper">
+        <!-- Decoration / Background -->
+        <div class="void-bg"></div>
+
+        <!-- Header -->
+        <header class="header">
+            <a href="/" class="brand">SOMNIUM</a>
+            <nav class="nav">
+                <a href="#how-it-works">Technology</a>
+                <a href="#features">Features</a>
+                <a href="#preorder" class="btn-nav">Pre-order</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-bg">
+                    <!-- CSS Simulation of moving fluid/silk -->
+                    <div class="fluid-layer l1"></div>
+                    <div class="fluid-layer l2"></div>
+                </div>
+
+                <div class="hero-content">
+                    <h1 class="headline">Sleep Deeper.<br />Live Better.</h1>
+                    <p class="subhead">
+                        Optimized rest through bio-feedback precision. The next
+                        evolution of sleep technology is here.
+                    </p>
+                    <div class="cta-wrapper">
+                        <button class="primary-button">
+                            <span>Get Early Access</span>
+                            <div class="glow"></div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3D Ring Placeholder -->
+                <div class="hero-visual">
+                    <div class="ring-container">
+                        <div class="ring"></div>
+                        <div class="ring-glow"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works Section -->
+            <section id="how-it-works" class="how-it-works">
+                <div class="content-container">
+                    <div class="section-header">
+                        <h2>The Science of Silence</h2>
+                        <p>Real-time optimization of your circadian rhythm.</p>
+                    </div>
+
+                    <div class="graph-container">
+                        <h3>Hypnogram Visualization</h3>
+                        <div class="graph-visual">
+                            <!-- Background Grid -->
+                            <div class="grid-lines">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                            <!-- Animated Line (SVG) -->
+                            <svg
+                                class="data-line"
+                                viewBox="0 0 1000 200"
+                                preserveAspectRatio="none"
+                            >
+                                <path
+                                    d="M0,150 Q100,150 150,100 T300,50 T450,150 T600,180 T750,50 T900,100 T1000,150"
+                                    fill="none"
+                                    stroke="var(--accent-neon)"
+                                    stroke-width="3"
+                                    class="path-anim"></path>
+                                <path
+                                    d="M0,150 Q100,150 150,100 T300,50 T450,150 T600,180 T750,50 T900,100 T1000,150 L1000,200 L0,200 Z"
+                                    fill="url(#gradient)"
+                                    opacity="0.3"
+                                    class="area-anim"></path>
+                                <defs>
+                                    <linearGradient
+                                        id="gradient"
+                                        x1="0%"
+                                        y1="0%"
+                                        x2="0%"
+                                        y2="100%"
+                                    >
+                                        <stop
+                                            offset="0%"
+                                            stop-color="var(--accent-neon)"
+                                        ></stop>
+                                        <stop
+                                            offset="100%"
+                                            stop-color="transparent"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="pulse-dot"></div>
+                        </div>
+                        <div class="graph-labels">
+                            <span>Awake</span>
+                            <span>REM</span>
+                            <span>Light</span>
+                            <span>Deep</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Grid (Bento) -->
+            <section id="features" class="features-section">
+                <div class="content-container">
+                    <div class="bento-grid">
+                        <div class="bento-card large">
+                            <div class="card-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    ><path
+                                        d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                                    ></path></svg
+                                >
+                            </div>
+                            <h3>Biometric Security</h3>
+                            <p>
+                                Your sleep data is encrypted locally. Zero cloud
+                                dependency for maximum privacy.
+                            </p>
+                        </div>
+                        <div class="bento-card">
+                            <div class="card-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    ><circle cx="12" cy="12" r="10"
+                                    ></circle><polyline
+                                        points="12 6 12 12 16 14"
+                                    ></polyline></svg
+                                >
+                            </div>
+                            <h3>Smart Alarm</h3>
+                            <p>Wakes you at the optimal moment.</p>
+                        </div>
+                        <div class="bento-card">
+                            <div class="card-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    ><path d="M18.36 6.64a9 9 0 1 1-12.73 0"
+                                    ></path><line x1="12" y1="2" x2="12" y2="12"
+                                    ></line></svg
+                                >
+                            </div>
+                            <h3>Power Efficiency</h3>
+                            <p>7-day battery life on a single charge.</p>
+                        </div>
+                        <div class="bento-card wide">
+                            <div class="card-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    ><path d="M2 12h5l3 5 5-11 4 8 3-2"
+                                    ></path></svg
+                                >
+                            </div>
+                            <h3>Haptic Feedback</h3>
+                            <p>
+                                Gentle vibrations guide your breathing exercises
+                                to help you drift off faster.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="content-container footer-flex">
+                <div class="footer-brand">
+                    <h4>SOMNIUM</h4>
+                    <p>Master Your Rest.</p>
+                </div>
+                <div class="newsletter">
+                    <label>Join the Waitlist</label>
+                    <div class="input-group">
+                        <input type="email" placeholder="email@address.com" />
+                        <button>→</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Somnium Technologies</p>
+            </div>
+        </footer>
+
+        <VibeDNA
+            description="Luxury Sleep Tech. Moody, Futuristic, Fluid."
+            fontHeader="Cinzel"
+            fontBody="Manrope"
+            palette={[
+                { hex: "#081818", name: "The Void" },
+                { hex: "#04212C", name: "The Surface" },
+                { hex: "#06AAC5", name: "The Pulse" },
+            ]}
+        />
+    </div>
+
+    <style>
+        :root {
+            /* The "Somnium" Palette */
+            --bg-deep: #081818;
+            --bg-card: #04212c;
+            --accent-muted: #054455;
+            --accent-neon: #06aac5;
+
+            /* Text Colors */
+            --text-main: #ffffff;
+            --text-muted: #a0b0b5;
+
+            --font-head: "Cinzel", serif;
+            --font-body: "Manrope", sans-serif;
+        }
+
+        .somnium-wrapper {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(8, 24, 24, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(5, 68, 85, 0.3);
+        }
+
+        .brand {
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            color: var(--text-main);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+        }
+
+        .nav {
+            display: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .nav {
+                display: flex;
+            }
+        }
+
+        .nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: var(--accent-neon);
+        }
+
+        .btn-nav {
+            border: 1px solid var(--accent-muted);
+            padding: 0.5rem 1.2rem;
+            border-radius: 2px;
+        }
+
+        .btn-nav:hover {
+            background: var(--accent-muted);
+            color: var(--text-main) !important;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 5%;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.4;
+        }
+
+        .fluid-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(
+                circle at 50% 50%,
+                rgba(6, 170, 197, 0.15),
+                transparent 60%
+            );
+            animation: drift 20s infinite linear;
+        }
+
+        .l2 {
+            background: radial-gradient(
+                circle at 50% 50%,
+                rgba(5, 68, 85, 0.2),
+                transparent 50%
+            );
+            animation-duration: 30s;
+            animation-direction: reverse;
+        }
+
+        @keyframes drift {
+            0% {
+                transform: translate(-25%, -25%);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+        }
+
+        .headline {
+            font-family: var(--font-head);
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        @media (min-width: 768px) {
+            .headline {
+                font-size: 5rem;
+            }
+        }
+
+        .subhead {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            max-width: 400px;
+        }
+
+        .primary-button {
+            background-color: var(--accent-neon);
+            color: var(--bg-deep);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(6, 170, 197, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .primary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(6, 170, 197, 0.6);
+        }
+
+        .hero-visual {
+            position: absolute;
+            right: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-visual {
+                display: block;
+            }
+        }
+
+        /* 3D Ring Sim */
+        .ring-container {
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            position: relative;
+        }
+
+        .ring {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 20px solid #2a3a3a;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateX(60deg) rotateY(20deg);
+            box-shadow:
+                inset 0 0 20px rgba(0, 0, 0, 0.8),
+                0 0 20px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(135deg, #445, #111, #445);
+        }
+
+        .ring-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 210px;
+            height: 210px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) rotateX(60deg) rotateY(20deg);
+            box-shadow: 0 0 30px var(--accent-neon);
+            opacity: 0.5;
+            pointer-events: none;
+            animation: ringPulse 4s infinite alternate;
+        }
+
+        @keyframes ringPulse {
+            0% {
+                opacity: 0.3;
+                box-shadow: 0 0 20px var(--accent-neon);
+            }
+            100% {
+                opacity: 0.7;
+                box-shadow: 0 0 40px var(--accent-neon);
+            }
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 6rem 5%;
+            background: radial-gradient(
+                circle at center,
+                #0a1f24 0%,
+                var(--bg-deep) 70%
+            );
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+        }
+
+        .graph-container {
+            background: var(--bg-deep);
+            border: 1px solid var(--accent-muted);
+            padding: 2rem;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .graph-visual {
+            height: 300px;
+            position: relative;
+            margin: 2rem 0;
+            border-left: 1px solid var(--accent-muted);
+            border-bottom: 1px solid var(--accent-muted);
+        }
+
+        .grid-lines .line {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--accent-muted);
+            opacity: 0.2;
+        }
+
+        .grid-lines .line:nth-child(1) {
+            top: 25%;
+        }
+        .grid-lines .line:nth-child(2) {
+            top: 50%;
+        }
+        .grid-lines .line:nth-child(3) {
+            top: 75%;
+        }
+
+        .data-line {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .path-anim {
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+            animation: drawLine 4s ease-out forwards;
+        }
+
+        .area-anim {
+            opacity: 0;
+            animation: fadeIn 1s 3.5s forwards;
+        }
+
+        @keyframes drawLine {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 0.3;
+            }
+        }
+
+        .graph-labels {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            padding-top: 0.5rem;
+        }
+
+        /* Features */
+        .features-section {
+            padding: 6rem 5%;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .bento-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--accent-muted);
+            padding: 2rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bento-card:hover {
+            border-color: var(--accent-neon);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .bento-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--accent-neon);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .bento-card:hover::before {
+            opacity: 1;
+        }
+
+        @media (min-width: 900px) {
+            .bento-card.large {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            .bento-card.wide {
+                grid-column: span 2;
+            }
+        }
+
+        .card-icon {
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+        }
+
+        .bento-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-neon);
+        }
+
+        .bento-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--bg-card);
+            padding: 4rem 5% 2rem;
+            border-top: 1px solid var(--accent-muted);
+        }
+
+        .footer-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-flex {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .footer-brand h4 {
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+        }
+
+        .input-group {
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        .input-group input {
+            background: transparent;
+            border: 1px solid var(--accent-muted);
+            padding: 0.8rem;
+            color: var(--text-main);
+            outline: none;
+        }
+
+        .input-group input:focus {
+            border-color: var(--accent-neon);
+        }
+
+        .input-group button {
+            background: var(--accent-muted);
+            border: none;
+            color: var(--text-main);
+            padding: 0 1.5rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .input-group button:hover {
+            background: var(--accent-neon);
+            color: var(--bg-deep);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</BlankLayout>

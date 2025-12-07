@@ -1,0 +1,505 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="ROUGE & GLACÉ | Artisan Gelato">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="rouge-wrapper">
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="/" class="brand">Rouge & Glacé</a>
+            <div class="menu-links">
+                <a href="#flavors">Flavors</a>
+                <a href="#story">Our Story</a>
+                <a href="#visit" class="visit-btn">Visit Us</a>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="headline">
+                        One Spoonful.<br />Pure <span class="obsess"
+                            >Obsession.</span>
+                    </h1>
+                    <p class="subhead">
+                        Handcrafted small-batch gelato using the finest seasonal
+                        fruits and rich creams. Indulgence re-imagined.
+                    </p>
+                    <a href="#flavors" class="cta-btn">View Menu</a>
+                </div>
+                <div class="hero-visual">
+                    <div class="cherry-img"></div>
+                    <div class="drip-accent"></div>
+                </div>
+            </section>
+
+            <!-- Flavors Menu -->
+            <section id="flavors" class="flavors-section">
+                <div class="section-title">
+                    <h2>The Menu</h2>
+                    <p>Churned daily. Devoured instantly.</p>
+                </div>
+
+                <div class="flavor-grid">
+                    <!-- Flavor 1 -->
+                    <div class="flavor-card">
+                        <div class="scoop-visual s1">
+                            <div class="scoop"></div>
+                            <div class="drip"></div>
+                        </div>
+                        <h3>Black Cherry Merlot</h3>
+                        <p class="desc">
+                            Dark chocolate chunks in a rich roasted cherry and
+                            red wine reduction base.
+                        </p>
+                        <span class="price">£4.50</span>
+                    </div>
+
+                    <!-- Flavor 2 -->
+                    <div class="flavor-card">
+                        <div class="scoop-visual s2">
+                            <div class="scoop"></div>
+                            <div class="drip"></div>
+                        </div>
+                        <h3>Wild Raspberry Rose</h3>
+                        <p class="desc">
+                            Floral rose water infused cream with pockets of tart
+                            wild raspberry jam.
+                        </p>
+                        <span class="price">£4.50</span>
+                    </div>
+
+                    <!-- Flavor 3 -->
+                    <div class="flavor-card">
+                        <div class="scoop-visual s3">
+                            <div class="scoop"></div>
+                            <div class="drip"></div>
+                        </div>
+                        <h3>Salted Honey <br />& Fig</h3>
+                        <p class="desc">
+                            Local honey swirled with caramelized figs and a
+                            pinch of sea salt.
+                        </p>
+                        <span class="price">£4.75</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Story / CTA -->
+            <section id="story" class="story-section">
+                <div class="content">
+                    <h2>Made with Passion</h2>
+                    <p>
+                        We believe gelato is more than just a dessert. It's a
+                        moment of pure bliss. That's why we source our milk from
+                        local dairies and our fruit from farmers we know by
+                        name.
+                    </p>
+                    <button class="read-more">Read Our Story</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- Dripping Animation Top Border -->
+            <div class="drip-border">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+
+            <div class="footer-content">
+                <div class="brand-footer">Rouge & Glacé</div>
+                <div class="info">
+                    <p>12 High Street, Edinburgh</p>
+                    <p>Open Daily 11am - 10pm</p>
+                </div>
+                <div class="socials">
+                    <a href="#">Instagram</a> / <a href="#">Facebook</a>
+                </div>
+                <div class="copy">&copy; 2025 Rouge & Glacé</div>
+            </div>
+        </footer>
+
+        <VibeDNA
+            description="Artisan Gelato. Playful, Romantic, Mouth-watering."
+            fontHeader="Abril Fatface"
+            fontBody="Lato"
+            palette={[
+                { hex: "#F2E0D2", name: "Oat Milk" },
+                { hex: "#9E182B", name: "Red Wine" },
+                { hex: "#F9CBD6", name: "Rose Quartz" },
+                { hex: "#F2AFBC", name: "Blush" },
+            ]}
+        />
+    </div>
+
+    <style>
+        :root {
+            /* Palette */
+            --oat-milk: #f2e0d2;
+            --red-wine: #9e182b;
+            --rose: #f9cbd6;
+            --blush: #f2afbc;
+
+            --font-head: "Abril Fatface", cursive;
+            --font-body: "Lato", sans-serif;
+        }
+
+        .rouge-wrapper {
+            background-color: var(--oat-milk);
+            color: var(--red-wine);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Nav */
+        .nav {
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-family: var(--font-head);
+            font-size: 1.8rem;
+            color: var(--red-wine);
+            text-decoration: none;
+        }
+
+        .menu-links {
+            display: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .menu-links {
+                display: flex;
+            }
+        }
+
+        .menu-links a {
+            text-decoration: none;
+            color: var(--red-wine);
+            font-weight: 700;
+            transition: color 0.2s;
+        }
+
+        .menu-links a:hover {
+            color: var(--blush);
+        }
+
+        .visit-btn {
+            background-color: var(--red-wine);
+            color: var(--oat-milk) !important;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+        }
+
+        .visit-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 4rem 5%;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (min-width: 900px) {
+            .hero {
+                flex-direction: row;
+                align-items: center;
+                gap: 4rem;
+            }
+            .hero-content {
+                flex: 1;
+            }
+            .hero-visual {
+                flex: 1;
+                height: 500px;
+            }
+        }
+
+        .headline {
+            font-family: var(--font-head);
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .headline {
+                font-size: 5rem;
+            }
+        }
+
+        .obsess {
+            color: var(--red-wine);
+            font-style: italic;
+            position: relative;
+            display: inline-block;
+        }
+
+        .obsess::after {
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: var(--blush);
+            z-index: -1;
+            opacity: 0.6;
+            transform: skewX(-20deg);
+        }
+
+        .subhead {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--red-wine);
+            color: var(--oat-milk);
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(158, 24, 43, 0.2);
+            background-color: #801020;
+        }
+
+        .hero-visual {
+            position: relative;
+            background: url("https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=1000&auto=format&fit=crop")
+                center/cover;
+            border-radius: 200px 200px 20px 20px; /* Arch style again, fits theme */
+            box-shadow: 20px 20px 0 var(--rose);
+            margin-top: 2rem;
+            height: 400px;
+        }
+
+        /* Flavors */
+        .flavors-section {
+            background-color: var(--rose);
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-family: var(--font-head);
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .flavor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .flavor-card {
+            background-color: var(--oat-milk);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .flavor-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .scoop-visual {
+            width: 100px;
+            height: 100px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .s1 .scoop {
+            background-color: #3e0e13;
+        } /* Dark Cherry */
+        .s2 .scoop {
+            background-color: #d63e7b;
+        } /* Raspberry */
+        .s3 .scoop {
+            background-color: #e6a75c;
+        } /* Honey */
+
+        .scoop {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .flavor-card h3 {
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .price {
+            display: inline-block;
+            background-color: var(--blush);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* Floating Animation */
+        .flavor-card:nth-child(2) {
+            transform: translateY(-30px);
+        }
+        .flavor-card:nth-child(2):hover {
+            transform: translateY(-40px);
+        }
+
+        /* Story */
+        .story-section {
+            padding: 8rem 5%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            max-width: 700px;
+        }
+
+        .content h2 {
+            font-family: var(--font-head);
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .content p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+        }
+
+        .read-more {
+            background: transparent;
+            border: 2px solid var(--red-wine);
+            color: var(--red-wine);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .read-more:hover {
+            background: var(--red-wine);
+            color: var(--oat-milk);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--red-wine);
+            color: var(--oat-milk);
+            position: relative;
+            padding-bottom: 3rem;
+        }
+
+        .drip-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transform: translateY(-98%);
+            line-height: 0;
+        }
+
+        .shape-fill {
+            fill: var(--red-wine);
+        }
+
+        .footer-content {
+            padding: 4rem 5% 0;
+            text-align: center;
+        }
+
+        .brand-footer {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .info {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .socials a {
+            color: var(--blush);
+            text-decoration: none;
+            font-weight: 700;
+            margin: 0 0.5rem;
+        }
+
+        .socials a:hover {
+            color: var(--oat-milk);
+        }
+
+        .copy {
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+    </style>
+</BlankLayout>

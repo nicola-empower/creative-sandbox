@@ -1,0 +1,585 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="Terra & Flora | Artisan Pottery">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Nunito+Sans:wght@300;400;600&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="terra-wrapper">
+        <!-- Decoration / Background Texture -->
+        <div class="paper-texture"></div>
+
+        <!-- Header -->
+        <header class="header">
+            <a href="/" class="brand">Terra & Flora</a>
+            <nav class="nav">
+                <a href="#shop">Shop</a>
+                <a href="#story">Our Story</a>
+                <a href="#journal">Journal</a>
+                <a href="#cart" class="cart-link">Cart (0)</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-left">
+                    <div class="text-wrapper">
+                        <div class="blob-bg"></div>
+                        <h1 class="headline">Bring the <br />Earth Inside.</h1>
+                        <p class="subhead">
+                            Handcrafted ceramics for the slow living home. Each
+                            piece is a unique celebration of imperfection.
+                        </p>
+                        <button class="cta-button">Shop the Collection</button>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <!-- Placeholder for Hands on Wheel Image -->
+                    <div class="hero-image">
+                        <div class="img-texture"></div>
+                        <div class="placeholder-text">Artisan Hands</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Shop by Category (Arches) -->
+            <section id="shop" class="categories-section">
+                <div class="section-head">
+                    <h2>Curated Collections</h2>
+                    <p>Designed to be held.</p>
+                </div>
+
+                <div class="arch-scroll">
+                    <!-- Vases -->
+                    <div class="arch-card vase-theme">
+                        <div class="arch-image">
+                            <div class="img-placeholder"></div>
+                        </div>
+                        <h3>Vases</h3>
+                        <a href="#" class="shop-link">View Collection</a>
+                    </div>
+
+                    <!-- Tableware -->
+                    <div class="arch-card table-theme">
+                        <div class="arch-image">
+                            <div class="img-placeholder"></div>
+                        </div>
+                        <h3>Tableware</h3>
+                        <a href="#" class="shop-link">View Collection</a>
+                    </div>
+
+                    <!-- Decor -->
+                    <div class="arch-card decor-theme">
+                        <div class="arch-image">
+                            <div class="img-placeholder"></div>
+                        </div>
+                        <h3>Decor</h3>
+                        <a href="#" class="shop-link">View Collection</a>
+                    </div>
+
+                    <!-- Planters -->
+                    <div class="arch-card planter-theme">
+                        <div class="arch-image">
+                            <div class="img-placeholder"></div>
+                        </div>
+                        <h3>Planters</h3>
+                        <a href="#" class="shop-link">View Collection</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Story -->
+            <section id="story" class="story-section">
+                <!-- Wavy Divider -->
+                <div class="wavy-divider">
+                    <svg
+                        data-name="Layer 1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 1200 120"
+                        preserveAspectRatio="none"
+                    >
+                        <path
+                            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                            class="shape-fill"></path>
+                    </svg>
+                </div>
+
+                <div class="story-content">
+                    <div class="story-text">
+                        <h2>From the Kiln</h2>
+                        <p>
+                            We believe that the things you touch every day
+                            should bring you joy. Our studio uses locally
+                            sourced clay and natural glazes to create functional
+                            art that feels grounded and real.
+                        </p>
+                        <p>
+                            No two pieces are alike. The finger marks, the glaze
+                            drips, the slight asymmetry—these are the signatures
+                            of the human hand.
+                        </p>
+                        <button class="secondary-btn">Read Our Manifesto</button
+                        >
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="col">
+                    <h4>Terra & Flora</h4>
+                    <p>Pottery for the soul.</p>
+                </div>
+                <div class="col">
+                    <a href="#">Shipping</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Care Guide</a>
+                </div>
+                <div class="col">
+                    <a href="#">Instagram</a>
+                    <a href="#">Pinterest</a>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2025 Terra & Flora Ceramics</div>
+        </footer>
+
+        <VibeDNA
+            description="Artisan Pottery. Earthy, Cozy, Inviting."
+            fontHeader="Cormorant Garamond"
+            fontBody="Nunito Sans"
+            palette={[
+                { hex: "#F4F3C5", name: "The Canvas" },
+                { hex: "#1C646B", name: "The Anchor" },
+                { hex: "#D57D6D", name: "The Clay" },
+                { hex: "#A53852", name: "The Glaze" },
+                { hex: "#F9B264", name: "The Sun" },
+            ]}
+        />
+    </div>
+
+    <style>
+        :root {
+            /* The "Terra & Flora" Palette */
+            --bg-paper: #f4f3c5;
+            --text-primary: #1c646b;
+            --accent-sun: #f9b264;
+            --accent-clay: #d57d6d;
+            --accent-berry: #a53852;
+            --white: #ffffff;
+
+            --font-serif: "Cormorant Garamond", serif;
+            --font-sans: "Nunito Sans", sans-serif;
+        }
+
+        .terra-wrapper {
+            background-color: var(--bg-paper);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Texture Overlay */
+        .paper-texture {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .header {
+            position: relative;
+            z-index: 50;
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 600;
+            font-style: italic;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav {
+            display: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .nav {
+                display: flex;
+            }
+        }
+
+        .nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: var(--accent-clay);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            z-index: 10;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 900px) {
+            .hero {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        .hero-left {
+            flex: 1;
+            padding: 4rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-wrapper {
+            position: relative;
+            max-width: 500px;
+        }
+
+        .blob-bg {
+            position: absolute;
+            top: -20%;
+            left: -20%;
+            width: 140%;
+            height: 140%;
+            background: var(--accent-sun);
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            opacity: 0.3;
+            z-index: -1;
+            animation: morph 10s infinite alternate;
+        }
+
+        @keyframes morph {
+            0% {
+                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            }
+            100% {
+                border-radius: 60% 40% 30% 70% / 60% 50% 40% 50%;
+            }
+        }
+
+        .headline {
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .subhead {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            max-width: 400px;
+        }
+
+        .cta-button {
+            background-color: var(--accent-berry);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(165, 56, 82, 0.3);
+        }
+
+        .hero-right {
+            flex: 1;
+            height: 50vh;
+            padding: 2rem;
+        }
+
+        @media (min-width: 900px) {
+            .hero-right {
+                height: 80vh;
+            }
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            background-color: #e0d0b0;
+            border-radius: 20px; /* Soft edges */
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-texture {
+            background: url("https://images.unsplash.com/photo-1593560370603-c782071725b8?q=80&w=1000&auto=format&fit=crop")
+                center/cover no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: multiply;
+            opacity: 0.8;
+            transition: transform 10s ease;
+        }
+
+        .hero-image:hover .img-texture {
+            transform: scale(1.1);
+        }
+
+        .placeholder-text {
+            display: none; /* Hide placeholder text if we have the image class active */
+        }
+
+        /* Categories */
+        .categories-section {
+            padding: 6rem 5%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-head {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-head h2 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .arch-scroll {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            padding-bottom: 2rem;
+            justify-content: flex-start;
+        }
+
+        @media (min-width: 768px) {
+            .arch-scroll {
+                justify-content: center;
+            }
+        }
+
+        .arch-card {
+            min-width: 250px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .arch-image {
+            width: 100%;
+            height: 350px;
+            border-radius: 150px 150px 20px 20px; /* Arch shape */
+            background-color: #ddd;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 4px solid transparent;
+        }
+
+        .img-placeholder {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Theme Colors for Arches */
+        .vase-theme .arch-image {
+            background-color: var(--accent-clay);
+        }
+        .table-theme .arch-image {
+            background-color: var(--text-primary);
+        }
+        .decor-theme .arch-image {
+            background-color: var(--accent-sun);
+        }
+        .planter-theme .arch-image {
+            background-color: #8d99ae;
+        }
+
+        .arch-card:hover .arch-image {
+            border-color: var(--accent-berry);
+            transform: translateY(-10px);
+        }
+
+        .arch-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .shop-link {
+            text-decoration: none;
+            color: var(--accent-berry);
+            font-weight: 600;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .arch-card:hover .shop-link {
+            opacity: 1;
+        }
+
+        /* Story Section */
+        .story-section {
+            background-color: var(--text-primary);
+            color: var(--bg-paper);
+            position: relative;
+            padding-bottom: 6rem;
+        }
+
+        .wavy-divider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: translateY(-99%);
+        }
+
+        .wavy-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 60px;
+        }
+
+        .wavy-divider .shape-fill {
+            fill: var(--text-primary);
+        }
+
+        .story-content {
+            padding: 4rem 5%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .story-text {
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .story-text h2 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: var(--bg-paper);
+        }
+
+        .story-text p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .secondary-btn {
+            background: transparent;
+            border: 1px solid var(--bg-paper);
+            color: var(--bg-paper);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .secondary-btn:hover {
+            background: var(--bg-paper);
+            color: var(--text-primary);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--bg-paper);
+            border-top: 1px solid var(--accent-clay);
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+        }
+
+        .col h4 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .col a {
+            display: block;
+            text-decoration: none;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .col a:hover {
+            opacity: 1;
+            color: var(--accent-berry);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.5;
+        }
+    </style>
+</BlankLayout>

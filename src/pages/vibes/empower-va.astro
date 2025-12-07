@@ -1,0 +1,539 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="Empower Virtual Assistant Services">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="empower-wrapper">
+        <!-- Decoration / Background -->
+        <div class="bg-pattern"></div>
+
+        <!-- Header -->
+        <header class="header">
+            <a href="/" class="brand">EMPOWER <span class="accent">VA</span></a>
+            <nav class="nav">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact" class="contact-link">Get in Touch</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="location-tag">
+                        <span class="dot"></span> FALKIRK, SCOTLAND
+                    </div>
+                    <h1 class="headline">
+                        Simplify Your <span class="serif">Business.</span><br />
+                        Reclaim Your <span class="serif">Time.</span>
+                    </h1>
+                    <p class="subhead">
+                        Professional Virtual Assistant services for busy
+                        entrepreneurs. We handle the details so you can focus on
+                        the big picture.
+                    </p>
+                    <div class="cta-group">
+                        <a href="#contact" class="btn primary">Work With Us</a>
+                        <a href="#services" class="btn secondary"
+                            >View Services</a
+                        >
+                    </div>
+                </div>
+                <div class="hero-graphic">
+                    <!-- Abstract representation of organization/structure -->
+                    <div class="circle c1"></div>
+                    <div class="circle c2"></div>
+                    <div class="card-float">
+                        <span>Inbox Zero</span>
+                        <div class="check">✓</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about-section">
+                <div class="content-container">
+                    <h2 class="section-title">Scottish Roots, Global Reach</h2>
+                    <p class="body-text">
+                        Based in the heart of Falkirk, Empower Virtual Assistant
+                        Services brings Scottish reliability and warmth to
+                        remote support. We pride ourselves on building genuine
+                        partnerships with our clients, no matter where they are
+                        based. Efficient, discreet, and proactive support is our
+                        promise.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Services Grid -->
+            <section id="services" class="services-section">
+                <div class="content-container">
+                    <h2 class="section-title">How We Help</h2>
+                    <div class="grid">
+                        <div class="service-card">
+                            <h3>Admin Support</h3>
+                            <p>
+                                Email management, scheduling, and general
+                                administration to keep your office running
+                                smoothly.
+                            </p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Social Media</h3>
+                            <p>
+                                Content scheduling, community engagement, and
+                                basic graphics to maintain your online presence.
+                            </p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Lifestyle Management</h3>
+                            <p>
+                                Personal appointments, travel booking, and gift
+                                sourcing for the busy professional.
+                            </p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Project Coordination</h3>
+                            <p>
+                                Keeping your team on track and your deadlines in
+                                check with organized oversight.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact / CTA -->
+            <section id="contact" class="cta-section">
+                <div class="content-container">
+                    <h2>Ready to Empower Your Business?</h2>
+                    <p>Let's chat about how we can support your growth.</p>
+                    <a
+                        href="mailto:hello@empower-va.co.uk"
+                        class="btn primary white">Book a Discovery Call</a
+                    >
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">EMPOWER VA</div>
+                <div class="footer-meta">
+                    <p>&copy; 2025 Empower Virtual Assistant Services</p>
+                    <p>Falkirk, Scotland</p>
+                </div>
+            </div>
+        </footer>
+
+        <VibeDNA
+            description="Scottish Virtual Assistant Services. Professional, Efficient, Warm."
+            fontHeader="Playfair Display"
+            fontBody="Outfit"
+            palette={[
+                { hex: "#1e293b", name: "Slate Navy" },
+                { hex: "#a5b4fc", name: "Thistle Soft" },
+                { hex: "#ffffff", name: "Highland Mist" },
+            ]}
+        />
+    </div>
+
+    <style>
+        /* 
+        Palette Idea:
+        Dark: #1e293b (Slate 800)
+        Vibrant/Accent: #6366f1 (Indigo/Thistle-ish equivalent in modern web) -> Let's go softer: #818cf8
+        Background: #f8fafc (Slate 50)
+        */
+
+        :root {
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --accent-color: #6366f1; /* Modern Indigo/Purple */
+            --accent-soft: #e0e7ff;
+            --white: #ffffff;
+
+            --font-head: "Outfit", sans-serif;
+            --font-serif: "Playfair Display", serif;
+        }
+
+        .empower-wrapper {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-head);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Background Pattern */
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: radial-gradient(
+                var(--accent-soft) 1px,
+                transparent 1px
+            );
+            background-size: 30px 30px;
+            opacity: 0.5;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Header */
+        .header {
+            position: relative;
+            z-index: 50;
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--text-color);
+            letter-spacing: -0.02em;
+        }
+
+        .brand .accent {
+            color: var(--accent-color);
+        }
+
+        .nav {
+            display: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .nav {
+                display: flex;
+            }
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .contact-link {
+            padding: 0.5rem 1.2rem;
+            border: 1px solid var(--text-color);
+            border-radius: 2rem;
+        }
+
+        .contact-link:hover {
+            background: var(--text-color);
+            color: var(--white) !important;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            z-index: 10;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 5%;
+            gap: 3rem;
+        }
+
+        @media (min-width: 900px) {
+            .hero {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .hero-content {
+                max-width: 50%;
+            }
+            .hero-graphic {
+                width: 40%;
+                height: 400px;
+            }
+        }
+
+        .location-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .headline {
+            font-size: 3rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .headline .serif {
+            font-family: var(--font-serif);
+            font-style: italic;
+            color: var(--accent-color);
+        }
+
+        @media (min-width: 768px) {
+            .headline {
+                font-size: 4.5rem;
+            }
+        }
+
+        .subhead {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            opacity: 0.8;
+            max-width: 500px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 3rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn.primary {
+            background: var(--text-color);
+            color: var(--white);
+        }
+
+        .btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn.primary.white {
+            background: var(--white);
+            color: var(--text-color);
+        }
+
+        .btn.secondary {
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+        }
+
+        .btn.secondary:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        /* Graphic Placeholder */
+        .hero-graphic {
+            position: relative;
+            display: none; /* Show on desktop */
+        }
+
+        @media (min-width: 900px) {
+            .hero-graphic {
+                display: block;
+            }
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .c1 {
+            width: 300px;
+            height: 300px;
+            background: var(--accent-soft);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .c2 {
+            width: 200px;
+            height: 200px;
+            border: 2px solid var(--accent-color);
+            top: 60%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        .card-float {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-5deg);
+            background: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 600;
+        }
+
+        .check {
+            width: 24px;
+            height: 24px;
+            background: #10b981;
+            color: white;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 0.8rem;
+        }
+
+        /* Sections */
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+
+        .about-section {
+            background: var(--white);
+            position: relative;
+            z-index: 10;
+        }
+
+        .body-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            opacity: 0.9;
+        }
+
+        /* Services Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-family: var(--font-serif);
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--accent-color);
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 5%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+            font-family: var(--font-serif);
+        }
+
+        .cta-section p {
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-color);
+            color: var(--white);
+            padding: 3rem 5%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .footer-meta {
+            text-align: right;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+    </style>
+</BlankLayout>

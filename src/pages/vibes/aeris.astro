@@ -1,0 +1,522 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="AERIS | Smart Air Purification">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="aeris-wrapper">
+        <!-- Sticky Glass Nav -->
+        <nav class="glass-nav">
+            <div class="nav-content">
+                <a href="/" class="brand">AERIS</a>
+                <div class="links">
+                    <a href="#features">Features</a>
+                    <a href="#tech">Technology</a>
+                    <a href="#order" class="order-btn">Pre-Order</a>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Breathe <span class="clarity">Clarity.</span></h1>
+                    <p>
+                        The world’s most advanced air purification system. <br
+                        />
+                        Silence. Purity. Design.
+                    </p>
+                </div>
+
+                <!-- Pulsing Air Quality Indicator -->
+                <div class="indicator-container">
+                    <div class="pulse-ring r1"></div>
+                    <div class="pulse-ring r2"></div>
+                    <div class="pulse-ring r3"></div>
+                    <div class="core-circle">
+                        <span class="aqi-label">AQI</span>
+                        <span class="aqi-value">12</span>
+                        <span class="aqi-status">EXCELLENT</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" class="features-section">
+                <div class="container grid">
+                    <div class="glass-card">
+                        <div class="icon-circle">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                ><path
+                                    d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"
+                                ></path><path
+                                    d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"
+                                ></path></svg
+                            >
+                        </div>
+                        <h3>HEPA H14</h3>
+                        <p>
+                            Medical-grade filtration captures 99.995% of
+                            particles.
+                        </p>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="icon-circle">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                ><path d="M12 2v4"></path><path
+                                    d="m16.2 7.8 2.9-2.9"></path><path
+                                    d="M18 12h4"></path><path
+                                    d="m16.2 16.2 2.9 2.9"></path><path
+                                    d="M12 18v4"></path><path
+                                    d="m4.9 19.1 2.9-2.9"></path><path
+                                    d="M2 12h4"></path><path
+                                    d="m4.9 4.9 2.9 2.9"></path></svg
+                            >
+                        </div>
+                        <h3>Silent Mode</h3>
+                        <p>
+                            Operates at a whisper-quiet 24dB for undisturbed
+                            sleep.
+                        </p>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="icon-circle">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                ><rect
+                                    width="16"
+                                    height="20"
+                                    x="4"
+                                    y="2"
+                                    rx="2"
+                                    ry="2"></rect><path d="M12 18h.01"
+                                ></path></svg
+                            >
+                        </div>
+                        <h3>App Control</h3>
+                        <p>Monitor quality and control Aeris from anywhere.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tech / Image Section -->
+            <section id="tech" class="tech-section">
+                <div class="tech-content">
+                    <h2>Engineered for Life.</h2>
+                    <p>
+                        Designed with a sleek aluminum unibody and a tempered
+                        glass interface, Aeris blends seamlessly into modern
+                        interiors while delivering industrial performance.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-flex">
+                <div class="brand">AERIS</div>
+                <div class="footer-links">
+                    <a href="#">Support</a>
+                    <a href="#">Warranty</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="copy">&copy; 2025 Aeris Inc.</div>
+            </div>
+        </footer>
+
+        <VibeDNA
+            description="Smart Air Purification. Minimalist, Clinical, Glassmorphism."
+            fontHeader="Inter"
+            fontBody="Inter"
+            palette={[
+                { hex: "#DADEE1", name: "Platinum" },
+                { hex: "#447F98", name: "Turquoise" },
+                { hex: "#D6EBF3", name: "Ice Blue" },
+                { hex: "#6298B5", name: "Slate Blue" },
+                { hex: "#B9D8E1", name: "Glacier" },
+            ]}
+        />
+    </div>
+
+    <style>
+        :root {
+            /* Palette */
+            --platinum: #dadee1;
+            --turquoise: #447f98;
+            --ice-blue: #d6ebf3;
+            --slate-blue: #6298b5;
+            --glacier: #b9d8e1;
+
+            --font-main: "Inter", sans-serif;
+        }
+
+        .aeris-wrapper {
+            background-color: var(--platinum);
+            color: var(--turquoise);
+            font-family: var(--font-main);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Nav */
+        .glass-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(218, 222, 225, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--slate-blue);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+        }
+
+        .links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: var(--turquoise);
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .links a:hover {
+            color: var(--slate-blue);
+        }
+
+        .order-btn {
+            border: 1px solid var(--slate-blue);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .order-btn:hover {
+            background-color: var(--slate-blue);
+            color: #fff !important;
+        }
+
+        /* Hero */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            padding: 4rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (min-width: 900px) {
+            .hero {
+                flex-direction: row;
+                text-align: left;
+                gap: 5rem;
+            }
+            .hero-content {
+                flex: 1;
+                max-width: 500px;
+            }
+            .indicator-container {
+                flex: 1;
+            }
+        }
+
+        .hero h1 {
+            font-weight: 300;
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            color: var(--slate-blue);
+            line-height: 1.1;
+        }
+
+        .clarity {
+            font-weight: 600;
+            color: var(--turquoise);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        /* Pulsing UI */
+        .indicator-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .core-circle {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(
+                135deg,
+                var(--glacier),
+                var(--ice-blue)
+            );
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow:
+                0 10px 30px rgba(98, 152, 181, 0.2),
+                inset 0 0 20px rgba(255, 255, 255, 0.5);
+            z-index: 10;
+        }
+
+        .aqi-label {
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            opacity: 0.7;
+        }
+
+        .aqi-value {
+            font-size: 4rem;
+            font-weight: 600;
+            line-height: 1;
+            color: var(--slate-blue);
+        }
+
+        .aqi-status {
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            color: var(--turquoise);
+        }
+
+        .pulse-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 1px solid var(--ice-blue);
+            opacity: 0;
+            z-index: 0;
+        }
+
+        .r1 {
+            animation: pulse 3s infinite ease-out;
+            width: 180px;
+            height: 180px;
+        }
+        .r2 {
+            animation: pulse 3s infinite ease-out 1s;
+            width: 180px;
+            height: 180px;
+        }
+        .r3 {
+            animation: pulse 3s infinite ease-out 2s;
+            width: 180px;
+            height: 180px;
+        }
+
+        @keyframes pulse {
+            0% {
+                width: 180px;
+                height: 180px;
+                opacity: 0.8;
+                border-width: 2px;
+            }
+            100% {
+                width: 400px;
+                height: 400px;
+                opacity: 0;
+                border-width: 0px;
+            }
+        }
+
+        /* Features */
+        .features-section {
+            padding: 6rem 5%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            transition:
+                transform 0.3s,
+                box-shadow 0.3s;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(68, 127, 152, 0.1);
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            background-color: var(--ice-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--slate-blue);
+        }
+
+        .glass-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .glass-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+
+        /* Tech */
+        .tech-section {
+            background: linear-gradient(
+                to bottom,
+                var(--platinum),
+                var(--ice-blue)
+            );
+            padding: 8rem 5%;
+            text-align: center;
+        }
+
+        .tech-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tech-content h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            color: var(--slate-blue);
+        }
+
+        .tech-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 4rem 5%;
+            background-color: #fff;
+            border-top: 1px solid var(--platinum);
+        }
+
+        .footer-flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-flex {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--turquoise);
+            font-size: 0.9rem;
+        }
+
+        .copy {
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+    </style>
+</BlankLayout>
