@@ -1,0 +1,902 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="FocusFlow | Unlock Your Brain">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="focus-wrapper">
+        <!-- Navbar -->
+        <nav class="nav">
+            <div class="container nav-content">
+                <div class="logo">
+                    FOCUS<span class="gradient-text">FLOW</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#download" class="btn-small">Get App</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <h1>
+                        UNLOCK YOUR <br /><span class="gradient-text"
+                            >BRAIN.</span
+                        >
+                    </h1>
+                    <p class="hero-sub">
+                        The bio-hacking app engineered for deep work and
+                        sustained flow states. No jitters. No crash. Just pure
+                        focus.
+                    </p>
+                    <div class="hero-btns">
+                        <button class="btn btn-primary">
+                            <span></span> Download iOS
+                        </button>
+                        <button class="btn btn-secondary">
+                            <span>🤖</span> Download Android
+                        </button>
+                    </div>
+                </div>
+                <!-- Abstract "Brain/Flow" Visual -->
+                <div class="hero-visual reveal delay-200">
+                    <div class="orb orb-1"></div>
+                    <div class="orb orb-2"></div>
+                    <div class="glass-card">
+                        <div class="stat">
+                            <span class="label">Current Streak</span>
+                            <span class="value">4h 23m</span>
+                        </div>
+                        <div class="graph">
+                            <div class="bar" style="height: 40%"></div>
+                            <div class="bar" style="height: 60%"></div>
+                            <div class="bar" style="height: 85%"></div>
+                            <div class="bar active" style="height: 100%"></div>
+                            <div class="bar" style="height: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Features -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>
+                        ENGINEERED FOR <span class="gradient-text"
+                            >PERFORMANCE</span
+                        >
+                    </h2>
+                    <p>Science-backed soundscapes and binaural beats.</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card reveal delay-100">
+                        <div class="icon">⚡</div>
+                        <h3>Sustained Energy</h3>
+                        <p>
+                            Optimized frequencies that keep your brain in Beta
+                            range without the caffeine spikes.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal delay-200">
+                        <div class="icon">🚫</div>
+                        <h3>No Mental Crash</h3>
+                        <p>
+                            Unlike energy drinks, our audio-stimulants provide a
+                            gentle landing when your session ends.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal delay-300">
+                        <div class="icon">🛡️</div>
+                        <h3>Distraction Free</h3>
+                        <p>
+                            A UI designed to disappear. Visual noise reduction
+                            helps you lock in on what matters.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="section bg-darker">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>
+                        INVEST IN YOUR <span class="gradient-text">FOCUS</span>
+                    </h2>
+                </div>
+
+                <!-- Toggle -->
+                <div class="pricing-toggle-wrapper reveal">
+                    <span class="toggle-label">Monthly</span>
+                    <label class="switch">
+                        <input type="checkbox" id="pricing-toggle" />
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="toggle-label"
+                        >Yearly <span class="save-tag">SAVE 20%</span></span
+                    >
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="price-card reveal delay-100">
+                        <div class="tier">Free Tier</div>
+                        <div class="price">£0</div>
+                        <ul class="features">
+                            <li>3 Soundscapes</li>
+                            <li>Basic Timer</li>
+                            <li>No Offline Mode</li>
+                        </ul>
+                        <button class="btn btn-outline full-width"
+                            >Start Free</button
+                        >
+                    </div>
+                    <div class="price-card featured reveal delay-200">
+                        <div class="popular-tag">MOST POPULAR</div>
+                        <div class="tier">Pro Tier</div>
+                        <div class="price" id="pro-price">
+                            £10<span class="period">/mo</span>
+                        </div>
+                        <ul class="features">
+                            <li>Unlimited Soundscapes</li>
+                            <li>Advanced Analytics</li>
+                            <li>Offline Mode</li>
+                            <li>Binaural Beats</li>
+                        </ul>
+                        <button class="btn btn-primary full-width"
+                            >Go Pro</button
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>FAQ</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item reveal">
+                        <button class="faq-question">
+                            How does it work?
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                We use binaural beats and isochronic tones to
+                                entrain your brainwaves to frequencies
+                                associated with deep focus and concentration.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <button class="faq-question">
+                            Does it work offline?
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Yes, the Pro tier allows you to download all
+                                soundscapes for offline use, perfect for
+                                airplanes or deep work zones.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <button class="faq-question">
+                            Can I cancel anytime?
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Absolutely. You can manage your subscription
+                                directly from your account settings. No hidden
+                                fees.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-logo">
+                    FOCUS<span class="gradient-text">FLOW</span>
+                </div>
+                <p>&copy; 2025 FocusFlow Inc. Unlock your potential.</p>
+            </div>
+        </footer>
+
+        <VibeDNA
+            description="Dark Mode Productivity App. Neon, Tech, Rounded. Interactive."
+            fontHeader="Outfit"
+            fontBody="Outfit"
+            palette={[
+                { hex: "#050510", name: "Deep Void" },
+                { hex: "#00F0FF", name: "Cyber Cyan" },
+                { hex: "#FF00aa", name: "Neon Pink" },
+            ]}
+        />
+    </div>
+
+    <!-- Interactivity Script -->
+    <script>
+        document.addEventListener("astro:page-load", () => {
+            initFocusFlow();
+        });
+
+        // Fallback for initial load
+        document.addEventListener("DOMContentLoaded", initFocusFlow);
+
+        function initFocusFlow() {
+            // Pricing Toggle
+            const toggle = document.getElementById("pricing-toggle");
+            const priceDisplay = document.getElementById("pro-price");
+
+            if (toggle && priceDisplay && toggle instanceof HTMLInputElement) {
+                toggle.addEventListener("change", (e) => {
+                    const target = e.target;
+                    if (target instanceof HTMLInputElement && target.checked) {
+                        // Yearly
+                        priceDisplay.innerHTML =
+                            '£96<span class="period">/yr</span>';
+                    } else {
+                        // Monthly
+                        priceDisplay.innerHTML =
+                            '£10<span class="period">/mo</span>';
+                    }
+                });
+            }
+
+            // FAQ Accordion
+            const questions = document.querySelectorAll(".faq-question");
+            questions.forEach((q) => {
+                q.addEventListener("click", () => {
+                    const item = q.parentElement;
+                    if (!item) return;
+
+                    const isActive = item.classList.contains("active");
+
+                    // Close all
+                    document
+                        .querySelectorAll(".faq-item")
+                        .forEach((i) => i.classList.remove("active"));
+
+                    // Toggle current
+                    if (!isActive) {
+                        item.classList.add("active");
+                    }
+                });
+            });
+
+            // Scroll Animations (Intersection Observer)
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px",
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            document
+                .querySelectorAll(".reveal")
+                .forEach((el) => observer.observe(el));
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-dark: #050510;
+            --bg-darker: #020205;
+            --cyan: #00f0ff;
+            --pink: #ff00aa;
+            --white: #ffffff;
+            --text-grey: #a0a0b0;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --font-main: "Outfit", sans-serif;
+            --border-glow: rgba(0, 240, 255, 0.3);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--white);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+        }
+
+        .focus-wrapper {
+            position: relative;
+        }
+
+        /* Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, var(--cyan), var(--pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section {
+            padding: 8rem 0;
+        }
+
+        .bg-darker {
+            background-color: var(--bg-darker);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: var(--text-grey);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Navbar */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 1.5rem 0;
+            backdrop-filter: blur(10px);
+            background: rgba(5, 5, 16, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .nav-links a {
+            color: var(--text-grey);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-main);
+        }
+
+        .btn-small {
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+        }
+
+        .btn-small:hover {
+            background: var(--white);
+            color: var(--bg-dark) !important;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--cyan), var(--pink));
+            color: var(--bg-dark);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--text-grey);
+            color: var(--white);
+            width: 100%;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--white);
+        }
+
+        .full-width {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding-top: 80px; /* Nav spacing */
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(
+                circle,
+                rgba(100, 0, 255, 0.15) 0%,
+                rgba(5, 5, 16, 0) 70%
+            );
+            border-radius: 50%;
+            z-index: 0;
+            filter: blur(80px);
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (min-width: 900px) {
+            .hero-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            max-width: 500px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .glass-card {
+            width: 300px;
+            height: 180px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: 1;
+            opacity: 0.6;
+        }
+
+        .orb-1 {
+            width: 200px;
+            height: 200px;
+            background: var(--cyan);
+            top: 20%;
+            left: 20%;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .orb-2 {
+            width: 150px;
+            height: 150px;
+            background: var(--pink);
+            bottom: 20%;
+            right: 20%;
+            animation: float 8s infinite ease-in-out reverse;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(20px, -20px);
+            }
+        }
+
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .stat .label {
+            color: var(--text-grey);
+            font-size: 0.9rem;
+        }
+        .stat .value {
+            color: var(--cyan);
+        }
+
+        .graph {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 80px;
+            gap: 10px;
+        }
+
+        .bar {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        .bar.active {
+            background: linear-gradient(to top, var(--cyan), var(--pink));
+            box-shadow: 0 0 15px rgba(255, 0, 170, 0.4);
+        }
+
+        /* Features */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--border-glow);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Pricing */
+        .pricing-toggle-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem 0;
+            font-weight: 600;
+        }
+
+        .save-tag {
+            color: var(--cyan);
+            font-size: 0.8rem;
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 5px;
+        }
+
+        /* Switch CSS */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #2a2a35;
+            transition: 0.4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+        }
+
+        input:checked + .slider {
+            background-color: var(--pink);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .price-card.featured {
+            border: 1px solid var(--pink);
+            background: linear-gradient(
+                180deg,
+                rgba(255, 0, 170, 0.1) 0%,
+                rgba(5, 5, 16, 0) 100%
+            );
+        }
+
+        .popular-tag {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--pink);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .tier {
+            font-size: 1.2rem;
+            color: var(--text-grey);
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+
+        .period {
+            font-size: 1rem;
+            color: var(--text-grey);
+            font-weight: 400;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+            color: var(--text-grey);
+            text-align: left;
+        }
+
+        .features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .features li:last-child {
+            border: none;
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.2rem;
+            padding: 1.5rem 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-main);
+            font-weight: 600;
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+            color: var(--cyan);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition:
+                max-height 0.3s ease-out,
+                opacity 0.3s;
+            opacity: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            opacity: 1;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 4rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 {
+            transition-delay: 0.1s;
+        }
+        .delay-200 {
+            transition-delay: 0.2s;
+        }
+        .delay-300 {
+            transition-delay: 0.3s;
+        }
+    </style>
+</BlankLayout>

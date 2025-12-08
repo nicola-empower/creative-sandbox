@@ -1,0 +1,903 @@
+---
+import BlankLayout from "../../layouts/BlankLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+import VibeDNA from "../../components/VibeDNA.astro";
+---
+
+<BlankLayout title="D.M. Joinery & Renovations">
+    <Fragment slot="head">
+        <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="dm-wrapper">
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-content">
+                <a href="#" class="brand"
+                    >D.M. <span class="accent">JOINERY</span></a
+                >
+                <div class="nav-links">
+                    <a href="#work">Our Work</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact" class="btn-nav">Get Quote</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="badge">EST. 2024</div>
+                <h1>
+                    BESPOKE JOINERY.<br /><span class="outline"
+                        >BUILT TO LAST.</span
+                    >
+                </h1>
+                <p class="hero-sub">
+                    From custom kitchens to structural alterations, we bring
+                    craftsmanship back to the local trade.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn primary"
+                        >Get a Free Estimate</a
+                    >
+                    <a href="#work" class="btn secondary">View Portfolio</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Pillars Section -->
+        <section class="pillars">
+            <div class="container">
+                <div class="pillar-grid">
+                    <div class="pillar">
+                        <div class="pillar-icon">01</div>
+                        <h3>Quality Materials</h3>
+                        <p>
+                            We don't cut corners. We use sustainably sourced,
+                            premium timber and hardware that stands the test of
+                            time.
+                        </p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">02</div>
+                        <h3>Clean Workspace</h3>
+                        <p>
+                            Respect for your home is paramount. We leave every
+                            job site exactly as we found it—spotless.
+                        </p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">03</div>
+                        <h3>On Time</h3>
+                        <p>
+                            Reliability is our trade. We show up when we say we
+                            will and finish the job on schedule.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <div class="container split-layout">
+                <div class="about-text">
+                    <span class="section-label">THE TRADESMAN</span>
+                    <h2>More Than Just <br />Woodwork.</h2>
+                    <p>
+                        I'm not just a joiner; I'm a craftsman who believes in
+                        doing things properly. In a world of flat-pack furniture
+                        and quick fixes, D.M. Joinery stands for solidity and
+                        permanence.
+                    </p>
+                    <p>
+                        Whether it's a bespoke media wall or a full kitchen
+                        renovation, I bring the same level of precision and care
+                        to every project. No salespeople, no middlemen—just
+                        honest advice and quality work.
+                    </p>
+                    <div class="signature">David Miller</div>
+                </div>
+                <div class="about-image">
+                    <!-- Placeholder for hands sanding wood or construction detail -->
+                    <div class="img-placeholder"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio (Bento Grid) -->
+        <section id="work" class="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">RECENT PROJECTS</span>
+                    <h2>Craftsmanship in Detail</h2>
+                </div>
+
+                <div class="bento-grid">
+                    <div
+                        class="bento-item large"
+                        style="background-image: url('/images/placeholder-kitchen.jpg');"
+                    >
+                        <div class="bento-overlay">
+                            <h3>Project: Oak & Iron</h3>
+                            <p>Full Kitchen Renovation</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bento-item tall"
+                        style="background-image: url('/images/placeholder-stairs.jpg');"
+                    >
+                        <div class="bento-overlay">
+                            <h3>Staircase Refurb</h3>
+                            <p>Oak & Glass</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bento-item medium"
+                        style="background-image: url('/images/placeholder-media.jpg');"
+                    >
+                        <div class="bento-overlay">
+                            <h3>Media Wall</h3>
+                            <p>Bespoke Storage</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bento-item medium"
+                        style="background-image: url('/images/placeholder-deck.jpg');"
+                    >
+                        <div class="bento-overlay">
+                            <h3>Garden Decking</h3>
+                            <p>Composite & Timber</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bento-item wide"
+                        style="background-image: url('/images/placeholder-detail.jpg');"
+                    >
+                        <div class="bento-overlay">
+                            <h3>The Details</h3>
+                            <p>It's the little things.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-label">WHAT WE DO</span>
+                    <h2>Our Services</h2>
+                </div>
+                <div class="service-list">
+                    <div class="service-item">
+                        <h3>Kitchen Fitting</h3>
+                        <p>
+                            From design to installation, we handle everything
+                            including plumbing and electrical coordination.
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Bespoke Storage</h3>
+                        <p>
+                            Custom wardrobes, alcove units, and media walls
+                            designed to fit your space perfectly.
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Flooring</h3>
+                        <p>
+                            Expert installation of solid wood, engineered oak,
+                            and laminate flooring.
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Doors & Skirtings</h3>
+                        <p>
+                            Internal and external door hanging, architraves, and
+                            skirting board replacement.
+                        </p>
+                    </div>
+                </div>
+                <div class="service-cta">
+                    <p>Don't see what you need? Just ask.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <div class="contact-content">
+                        <h2>Get a Free Estimate</h2>
+                        <p>
+                            Tell us about your project. Timely responses
+                            guaranteed.
+                        </p>
+                        <form class="contact-form">
+                            >
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="John Smith"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="postcode">Postcode</label>
+                                <input
+                                    type="text"
+                                    id="postcode"
+                                    placeholder="FK1 1AB"
+                                />
+                            </div>
+                            <div class="form-group full">
+                                <label for="desc">Job Description</label>
+                                <textarea
+                                    id="desc"
+                                    rows="4"
+                                    placeholder="I need a new kitchen fitted..."
+                                ></textarea>
+                            </div>
+                            <button type="submit" class="btn primary full-width"
+                                >Request Call Back</button
+                            >
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3>D.M. Joinery</h3>
+                        <p>Based in Falkirk, Serving Central Scotland.</p>
+                        <ul class="info-list">
+                            <li>07123 456 789</li>
+                            <li>hello@dmjoinery.co.uk</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-flex">
+                    <div class="footer-brand">D.M. JOINERY</div>
+                    <div class="copyright">
+                        &copy; 2025 D.M. Joinery & Renovations. All rights
+                        reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <VibeDNA
+            description="Solid. Industrial. Trustworthy. High-end bespoke woodwork."
+            fontHeader="Oswald"
+            fontBody="Roboto"
+            palette={[
+                { hex: "#0A192F", name: "Navy Blue" },
+                { hex: "#C4A484", name: "Oak Wood" },
+                { hex: "#FFFFFF", name: "Clean White" },
+            ]}
+        />
+    </div>
+
+    <style>
+        :root {
+            --navy: #0a192f;
+            --oak: #c4a484;
+            --white: #ffffff;
+            --grey-light: #f3f4f6;
+            --grey-dark: #374151;
+
+            --font-head: "Oswald", sans-serif;
+            --font-body: "Roboto", sans-serif;
+        }
+
+        /* Base Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
+            color: var(--navy);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        .brand,
+        .btn,
+        .section-label,
+        .badge {
+            font-family: var(--font-head);
+            text-transform: uppercase;
+        }
+
+        p {
+            line-height: 1.6;
+            color: var(--grey-dark);
+        }
+
+        .dm-wrapper {
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            padding: 0 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .brand .accent {
+            color: var(--oak);
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--oak);
+        }
+
+        .btn-nav {
+            border: 2px solid var(--oak);
+            padding: 0.5rem 1.5rem;
+            color: var(--oak) !important;
+            font-weight: 500;
+        }
+
+        .btn-nav:hover {
+            background: var(--oak);
+            color: var(--navy) !important;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            background-image: url("https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2070&auto=format&fit=crop"); /* Kitchen/Woodwork Image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(10, 25, 47, 0.9) 0%,
+                rgba(10, 25, 47, 0.7) 50%,
+                rgba(10, 25, 47, 0.4) 100%
+            );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding: 0 5%;
+            max-width: 800px;
+            margin-left: 5%;
+        }
+
+        .badge {
+            background: var(--oak);
+            color: var(--navy);
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 3.5rem;
+            line-height: 1;
+            margin: 0 0 1.5rem 0;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 .outline {
+            -webkit-text-stroke: 2px var(--white);
+            color: transparent;
+        }
+
+        .hero-sub {
+            color: #e2e8f0;
+            font-size: 1.25rem;
+            max-width: 500px;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn.primary {
+            background: var(--oak);
+            color: var(--navy);
+            border: 2px solid var(--oak);
+        }
+
+        .btn.primary:hover {
+            background: transparent;
+            color: var(--oak);
+        }
+
+        .btn.secondary {
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn.secondary:hover {
+            background: var(--white);
+            color: var(--navy);
+        }
+
+        /* Pillars */
+        .pillars {
+            background: var(--navy);
+            padding: 6rem 0;
+            color: var(--white);
+        }
+
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+        }
+
+        .pillar-icon {
+            font-family: var(--font-head);
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.1);
+            font-weight: 700;
+            margin-bottom: -2rem;
+            margin-left: -0.5rem;
+        }
+
+        .pillar h3 {
+            font-size: 1.5rem;
+            color: var(--oak);
+            margin-bottom: 1rem;
+        }
+
+        .pillar p {
+            color: #94a3b8;
+        }
+
+        /* About */
+        .about {
+            padding: 8rem 0;
+        }
+
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (min-width: 900px) {
+            .split-layout {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .section-label {
+            color: var(--oak);
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .about h2 {
+            font-size: 3rem;
+            color: var(--navy);
+            line-height: 1.1;
+            margin: 0 0 2rem 0;
+        }
+
+        .about p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .signature {
+            font-family:
+                "Mrs Saint Delafield", cursive; /* Fallback to standard if not loaded, but good to add if possible. For now standard. */
+            font-family: var(--font-head);
+            font-style: italic;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            color: var(--navy);
+        }
+
+        .img-placeholder {
+            width: 100%;
+            height: 500px;
+            background-color: var(--grey-light);
+            background-image: url("https://images.unsplash.com/photo-1621258525091-744315277579?q=80&w=2070&auto=format&fit=crop"); /* Hand sanding wood */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Portfolio (Bento) */
+        .portfolio {
+            background: var(--grey-light);
+            padding: 6rem 0;
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin: 0;
+        }
+
+        .section-header.center {
+            text-align: center;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 300px);
+            gap: 1.5rem;
+        }
+
+        .bento-item {
+            position: relative;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+            border-radius: 4px; /* Slight roundness */
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .bento-item:hover {
+            transform: scale(1.02);
+            z-index: 2;
+            box-shadow:
+                0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .large {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .tall {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+
+        .medium {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .wide {
+            grid-column: span 3;
+            grid-row: span 1;
+        }
+
+        /* Mobile Bento Fallback */
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            .bento-item {
+                grid-column: span 1 !important;
+                grid-row: span 1 !important;
+                height: 300px;
+            }
+        }
+
+        .bento-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.8),
+                transparent
+            );
+            padding: 2rem 1.5rem 1.5rem;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .bento-item:hover .bento-overlay {
+            opacity: 1;
+        }
+
+        .bento-overlay h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            color: var(--oak);
+        }
+
+        .bento-overlay p {
+            margin: 0.25rem 0 0;
+            color: #e2e8f0;
+            font-size: 0.9rem;
+        }
+
+        /* Services */
+        .services {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .service-item {
+            padding: 2rem;
+            border: 1px solid var(--grey-light);
+            transition: border-color 0.3s;
+        }
+
+        .service-item:hover {
+            border-color: var(--oak);
+        }
+
+        .service-item h3 {
+            color: var(--navy);
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        .service-cta {
+            text-align: center;
+            margin-top: 4rem;
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 6rem 0;
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .contact-box {
+            display: grid;
+            grid-template-columns: 1fr;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        @media (min-width: 900px) {
+            .contact-box {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        .contact-content {
+            padding: 4rem;
+            color: var(--navy);
+        }
+
+        .contact-content h2 {
+            font-size: 2.5rem;
+            margin: 0 0 1rem 0;
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .full {
+            grid-column: span 2;
+        }
+        @media (max-width: 600px) {
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+            .full {
+                grid-column: span 1;
+            }
+        }
+
+        label {
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        input,
+        textarea {
+            padding: 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: 2px solid var(--oak);
+            border-color: transparent;
+        }
+
+        .full-width {
+            grid-column: span 2;
+            width: 100%;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            .full-width {
+                grid-column: span 1;
+            }
+        }
+
+        .contact-info {
+            background: var(--oak);
+            padding: 4rem;
+            color: var(--navy);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin: 0 0 1rem 0;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0 0 0;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .info-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #050d18;
+            color: var(--white);
+            padding: 3rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0.6;
+        }
+
+        .footer-brand {
+            font-family: var(--font-head);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+    </style>
+</BlankLayout>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+        const form = document.querySelector(".contact-form");
+        if (form) {
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+            });
+        }
+    });
+    // Fallback
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector(".contact-form");
+        if (form) {
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+            });
+        }
+    });
+</script>
