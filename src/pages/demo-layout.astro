@@ -1,0 +1,146 @@
+---
+import BlankLayout from "../layouts/BlankLayout.astro";
+
+// Image Configuration
+// Intended: 12 unique spots.
+const images = [
+    // Column 1
+    "/landscaper.png",
+    "/builder.png", // New Builder Image
+    "/dm-joinery.png", // Replaced Placeholder with D.M. Joinery
+    "/electrician.png",
+
+    // Column 2
+    "/chroma-decor.png", // Replaced Painter with Chroma Decor
+    "/gas-engineer.png", // Gas Engineer Added Previously
+    "/elite-plumbing.png", // Replaced Plumber with Elite Plumbing
+    "/hero-placeholder.png",
+
+    // Column 3
+    "/joiner.png",
+    "/cleaner.png",
+    "/locksmith.png",
+    "/roofer.png",
+];
+
+// Helper to chunk array
+const chunk = (arr: string[], size: number) =>
+    Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
+        arr.slice(i * size, i * size + size),
+    );
+
+const columns = chunk(images, 4); // 3 columns x 4 rows
+---
+
+<BlankLayout title="Demo Layout">
+    <main
+        class="relative w-full h-screen overflow-hidden bg-[#0d0b1e] flex items-center justify-center"
+    >
+        {/* Background Content / Hero Text (Optional, for context) */}
+        {/* Background Content / Hero Text (Optional, for context) */}
+        <div
+            class="absolute z-10 text-white text-left pointer-events-none mix-blend-screen left-16 top-[60%]"
+        >
+            <h1 class="text-8xl font-bold tracking-tighter mb-6 text-glow">
+                ELEVATE
+            </h1>
+            <p
+                class="text-2xl opacity-90 text-glow-subtle leading-relaxed ml-2"
+            >
+                Stop competing on price.<br />Start winning on brand.
+            </p>
+        </div>
+
+        {/* The Angled Container */}
+        <div class="angled-container flex gap-6 p-4">
+            {
+                columns.map((colImages, i) => (
+                    <div
+                        class={`col flex flex-col gap-6 ${i === 0 ? "animate-scroll-slow" : i === 1 ? "animate-scroll-medium" : "animate-scroll-fast"} ${i === 1 ? "pt-12" : ""}`}
+                    >
+                        {colImages.map((src: string, j: number) => (
+                            <div class="device-mockup">
+                                <img
+                                    src={src}
+                                    alt={`Demo ${i}-${j}`}
+                                    class="w-full h-auto rounded-lg"
+                                />
+                            </div>
+                        ))}
+                        {/* Duplicate for infinite scroll loop effect if needed, but for 4 items sticking to simple flow first */}
+                        {colImages.map((src: string, j: number) => (
+                            <div class="device-mockup" aria-hidden="true">
+                                <img
+                                    src={src}
+                                    alt={`Demo ${i}-${j}-duplicate`}
+                                    class="w-full h-auto rounded-lg"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                ))
+            }
+        </div>
+    </main>
+</BlankLayout>
+
+<style>
+    .angled-container {
+        /* Rotating negative Z creates a Top-Left to Bottom-Right diagonal (\) 
+       Positioning it to start from Top-Middle */
+        transform: rotateX(20deg) rotateY(10deg) rotateZ(-30deg) scale(1.2);
+        transform-style: preserve-3d;
+        perspective: 1000px;
+
+        position: absolute;
+        /* Start near the top middle and flow to right edge */
+        top: -20%; /* Adjusted up slightly to fit taller columns */
+        left: 45%;
+        right: auto;
+    }
+
+    .device-mockup {
+        background: #1a1a1a;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        box-shadow:
+            0 20px 25px -5px rgba(0, 0, 0, 0.5),
+            0 8px 10px -6px rgba(0, 0, 0, 0.5),
+            inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        width: 250px; /* Adjust size generally */
+    }
+
+    /* Optional Scroll Animations */
+    @keyframes scroll {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-50px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .animate-scroll-slow {
+        animation: scroll 15s ease-in-out infinite;
+    }
+    .animate-scroll-medium {
+        animation: scroll 12s ease-in-out infinite reverse;
+    }
+    .animate-scroll-fast {
+        animation: scroll 18s ease-in-out infinite;
+    }
+
+    .text-glow {
+        text-shadow:
+            0 0 20px rgba(255, 255, 255, 0.6),
+            0 0 40px rgba(100, 100, 255, 0.4);
+    }
+
+    .text-glow-subtle {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+</style>
